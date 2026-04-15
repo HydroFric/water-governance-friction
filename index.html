@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>HydroFric | Water Governance Friction Diagnostic Tool</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', 'Calibri', 'Arial', sans-serif;
@@ -18,246 +14,64 @@
             color: #1A2A3A;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1400px; margin: 0 auto; }
 
-        .header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
+        .header { text-align: center; margin-bottom: 32px; }
+        .header h1 { font-size: 1.8rem; color: #0A5C6E; letter-spacing: -0.5px; }
+        .header h1 span { font-weight: 400; color: #2C7DA0; }
+        .header p { color: #5A6E7C; margin-top: 8px; font-size: 0.85rem; }
+        .badge { display: inline-block; background: #E9ECEF; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; color: #2C7DA0; margin-top: 10px; }
 
-        .header h1 {
-            font-size: 1.8rem;
-            color: #0A5C6E;
-            letter-spacing: -0.5px;
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
 
-        .header h1 span {
-            font-weight: 400;
-            color: #2C7DA0;
-        }
-
-        .header p {
-            color: #5A6E7C;
-            margin-top: 8px;
-            font-size: 0.85rem;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #E9ECEF;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            color: #2C7DA0;
-            margin-top: 10px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-
-        .card-header {
-            padding: 14px 18px;
-            font-weight: 600;
-            font-size: 1rem;
-            border-bottom: 3px solid;
-        }
-
+        .card { background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; }
+        .card-header { padding: 14px 18px; font-weight: 600; font-size: 1rem; border-bottom: 3px solid; }
         .card-header.p { border-bottom-color: #2C7DA0; background: #F5FAFF; }
         .card-header.i { border-bottom-color: #E9C46A; background: #FFFCF5; }
         .card-header.e { border-bottom-color: #E76F51; background: #FFF8F5; }
         .card-header.h { border-bottom-color: #2A9D8F; background: #F5FCFA; }
+        .card-header small { font-size: 0.7rem; font-weight: normal; color: #5A6E7C; display: block; margin-top: 4px; }
+        .card-body { padding: 16px; }
 
-        .card-header small {
-            font-size: 0.7rem;
-            font-weight: normal;
-            color: #5A6E7C;
-            display: block;
-            margin-top: 4px;
-        }
+        .option { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #E9ECEF; }
+        .option:last-child { border-bottom: none; }
+        .option-label { flex: 1; font-size: 0.85rem; font-weight: 500; line-height: 1.3; }
+        .option input[type="radio"] { width: 18px; height: 18px; margin-left: 12px; cursor: pointer; accent-color: #2C7DA0; }
 
-        .card-body {
-            padding: 16px;
-        }
+        .data-quality { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #DCE5EC; display: flex; align-items: center; justify-content: space-between; }
+        .data-quality label { font-size: 0.7rem; font-weight: 500; color: #5A6E7C; }
+        .data-quality select { padding: 4px 8px; font-size: 0.75rem; border-radius: 6px; border: 1px solid #DCE5EC; background: white; cursor: pointer; }
 
-        .option {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #E9ECEF;
-        }
+        .results { background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); padding: 24px; margin-bottom: 24px; }
+        .results h3 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: #0A5C6E; border-left: 4px solid #2C7DA0; padding-left: 12px; }
 
-        .option:last-child {
-            border-bottom: none;
-        }
+        .score-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; justify-content: space-between; }
+        .score-card { background: #F8FAFC; border-radius: 12px; padding: 10px 16px; text-align: center; flex: 1; min-width: 100px; }
+        .score-card .label { font-size: 0.7rem; text-transform: uppercase; color: #5A6E7C; letter-spacing: 0.5px; font-weight: 500; }
+        .score-card .value { font-size: 1.6rem; font-weight: 700; font-family: 'Consolas', monospace; color: #1A2A3A; }
 
-        .option-label {
-            flex: 1;
-            font-size: 0.85rem;
-            font-weight: 500;
-            line-height: 1.3;
-        }
+        .friction-scale { text-align: center; font-size: 0.65rem; color: #6C7E8F; margin-bottom: 20px; padding: 8px; background: #F8FAFC; border-radius: 30px; }
 
-        .option input[type="radio"] {
-            width: 18px;
-            height: 18px;
-            margin-left: 12px;
-            cursor: pointer;
-            accent-color: #2C7DA0;
-        }
-
-        .data-quality {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px dashed #DCE5EC;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .data-quality label {
-            font-size: 0.7rem;
-            font-weight: 500;
-            color: #5A6E7C;
-        }
-
-        .data-quality select {
-            padding: 4px 8px;
-            font-size: 0.75rem;
-            border-radius: 6px;
-            border: 1px solid #DCE5EC;
-            background: white;
-            cursor: pointer;
-        }
-
-        .results {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-
-        .results h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #0A5C6E;
-            border-left: 4px solid #2C7DA0;
-            padding-left: 12px;
-        }
-
-        .score-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-bottom: 24px;
-            justify-content: space-between;
-        }
-
-        .score-card {
-            background: #F8FAFC;
-            border-radius: 12px;
-            padding: 10px 16px;
-            text-align: center;
-            flex: 1;
-            min-width: 100px;
-        }
-
-        .score-card .label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            color: #5A6E7C;
-            letter-spacing: 0.5px;
-            font-weight: 500;
-        }
-
-        .score-card .value {
-            font-size: 1.6rem;
-            font-weight: 700;
-            font-family: 'Consolas', monospace;
-            color: #1A2A3A;
-        }
-
-        .level {
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 30px;
-            display: inline-block;
-            font-size: 0.85rem;
-        }
-
+        .level { font-weight: 600; padding: 4px 12px; border-radius: 30px; display: inline-block; font-size: 0.85rem; }
+        .level-verylow { background: #D1ECF1; color: #0C6B7E; }
         .level-low { background: #D4EDDA; color: #155724; }
         .level-moderate { background: #FFF3CD; color: #856404; }
         .level-high { background: #F8D7DA; color: #721C24; }
+        .level-critical { background: #F5C6CB; color: #721C24; font-weight: 700; }
 
-        .narrative-section {
-            margin-top: 20px;
-            border-top: 1px solid #E9ECEF;
-            padding-top: 20px;
-        }
+        .narrative-row { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .narrative-box { flex: 1; background: #F8FAFC; border-radius: 12px; padding: 18px; border-left: 4px solid #2C7DA0; }
+        .narrative-box h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #2C7DA0; margin-bottom: 12px; }
+        .narrative-box p { font-size: 0.85rem; line-height: 1.5; margin-bottom: 8px; }
+        .narrative-box p:last-child { margin-bottom: 0; }
+        .gap-breakdown { font-size: 0.7rem; color: #6C7E8F; font-family: monospace; margin-top: 12px; padding-top: 8px; border-top: 1px dashed #DCE5EC; text-align: center; }
 
-        .narrative-section h4 {
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #2C7DA0;
-            margin-bottom: 12px;
-        }
-
-        .narrative-box {
-            background: #F8FAFC;
-            border-radius: 12px;
-            padding: 20px;
-            border-left: 4px solid #2C7DA0;
-        }
-
-        .narrative-box p {
-            margin-bottom: 12px;
-            line-height: 1.5;
-            font-size: 0.9rem;
-        }
-
-        .gap-breakdown {
-            font-size: 0.75rem;
-            color: #6C7E8F;
-            font-family: monospace;
-            margin-top: 12px;
-            padding-top: 8px;
-            border-top: 1px dashed #DCE5EC;
-        }
-
-        .footer {
-            text-align: center;
-            font-size: 0.7rem;
-            color: #6C7E8F;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #DCE5EC;
-        }
+        .footer { text-align: center; font-size: 0.7rem; color: #6C7E8F; margin-top: 30px; padding-top: 20px; border-top: 1px solid #DCE5EC; }
 
         @media (max-width: 700px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .score-grid {
-                flex-direction: column;
-            }
+            .grid { grid-template-columns: 1fr; }
+            .score-grid { flex-direction: column; }
+            .narrative-row { flex-direction: column; }
         }
     </style>
 </head>
@@ -279,18 +93,24 @@
             <div class="score-card"><div class="label">Friction Level</div><div class="value" id="level">—</div></div>
             <div class="score-card"><div class="label">Dominant Gap</div><div class="value" id="dominant">—</div></div>
         </div>
+        <div class="friction-scale" id="frictionScale"></div>
 
-        <div class="narrative-section">
-            <h4>📋 Diagnostic Narrative</h4>
-            <div class="narrative-box" id="narrativeBox">
-                <p>Select scores for P, I, E, H to begin diagnosis.</p>
+        <div class="narrative-row">
+            <div class="narrative-box" id="analysisBox">
+                <h4>📊 System Friction Analysis</h4>
+                <p>Select scores to begin analysis.</p>
+            </div>
+            <div class="narrative-box" id="interventionBox">
+                <h4>🎯 Priority Intervention</h4>
+                <p>Select scores to begin analysis.</p>
             </div>
         </div>
+        <div class="gap-breakdown" id="gapBreakdown">✓ Gap contributions: —</div>
         <div style="font-size: 0.65rem; color: #6C7E8F; margin-top: 16px;">*Adjusted score accounts for data quality weights (3=High, 2=Moderate, 1=Low)</div>
     </div>
 
     <div class="footer">
-        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v2.0
+        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v3.0
     </div>
 </div>
 
@@ -348,14 +168,52 @@
         return map[gap] || gap;
     }
 
-    function getPriorityIntervention(gap) {
+    function getFrictionLevel(score) {
+        if (score <= 2) return { level: "VERY LOW", class: "level-verylow" };
+        if (score <= 8) return { level: "LOW", class: "level-low" };
+        if (score <= 20) return { level: "MODERATE", class: "level-moderate" };
+        if (score <= 36) return { level: "HIGH", class: "level-high" };
+        return { level: "CRITICAL", class: "level-critical" };
+    }
+
+    function getPriorityIntervention(dominant, P, I, E, H, levelScore) {
+        const allOne = (P === 1 && I === 1 && E === 1 && H === 1);
+        const allFive = (P === 5 && I === 5 && E === 5 && H === 5);
+        
+        if (allOne) {
+            return "⚠️ SYSTEMIC COLLAPSE: All domains are at critical failure. Immediate structural reform required across policy, institutions, execution, and household support. No single intervention will suffice. Prioritize emergency relief while rebuilding governance from the ground up.";
+        }
+        if (allFive) {
+            return "✅ SYSTEM ALIGNED: No significant friction detected. All governance levels are functioning optimally. Maintain current systems, monitor for emerging pressures, and document best practices for replication elsewhere.";
+        }
+        
         const interventions = {
-            "P-H": "Reform policies that exclude marginalized groups or strengthen household-level infrastructure and services.",
-            "P-I": "Strengthen institutional capacity through increased budget, staffing, training, and oversight mechanisms.",
-            "I-E": "Improve project management, strengthen accountability, and ensure timely follow-through on institutional commitments.",
-            "E-H": "Engage communities in service design, address quality and reliability issues, and reduce access barriers."
+            "P-H": "Reform policies that exclude marginalized groups or strengthen household-level infrastructure and services. Ensure policy commitments translate into measurable improvements in daily water access, affordability, and reliability.",
+            "P-I": "Strengthen institutional capacity through increased budget allocation, staffing, training programs, and independent oversight mechanisms. Address the gap between policy ambition and implementation capacity.",
+            "I-E": "Improve project management systems, strengthen accountability frameworks, and ensure timely follow-through on institutional commitments. Address delays, cost overruns, and weak supervision.",
+            "E-H": "Engage communities in service design and delivery. Address water quality, reliability, and accessibility issues. Reduce distance to water points and ensure affordable tariffs for all households."
         };
-        return interventions[gap] || "Review all governance levels to identify friction sources.";
+        return interventions[dominant] || "Review all governance levels to identify friction sources and prioritize the largest gap contributions.";
+    }
+
+    function getSystemAnalysis(P, I, E, H, dominant, levelScore) {
+        const allOne = (P === 1 && I === 1 && E === 1 && H === 1);
+        const allFive = (P === 5 && I === 5 && E === 5 && H === 5);
+        
+        if (allOne) {
+            return "The system has completely collapsed across all four governance domains. Policies are absent or actively harmful, institutions have no functional capacity, execution has failed entirely, and households face extreme hardship. This represents a humanitarian crisis requiring immediate multi-level intervention.";
+        }
+        if (allFive) {
+            return "The system is fully aligned and operating at optimal levels. Policies are exemplary, institutions have strong capacity, execution meets or exceeds standards, and households report positive experiences. This represents a best-practice model for water governance.";
+        }
+        
+        const analysis = {
+            "P-H": `The dominant friction is between Policy Intent (${P}) and Household Experience (${H}). This indicates that while policies may be sound on paper, they are not translating into meaningful improvements for households. Communities likely face exclusion, unaffordable tariffs, or unreliable services despite policy commitments to universal access.`,
+            "P-I": `The dominant friction is between Policy Intent (${P}) and Institutional Capacity (${I}). Policy ambition exceeds what institutions can deliver. This suggests underfunded mandates, staff shortages, weak coordination, or outdated legal frameworks that prevent effective implementation.`,
+            "I-E": `The dominant friction is between Institutional Capacity (${I}) and Execution Reality (${E}). Plans and mandates exist but are not translating into effective on-the-ground action. Projects likely face delays, cost overruns, weak supervision, or maintenance failures.`,
+            "E-H": `The dominant friction is between Execution Reality (${E}) and Household Experience (${H}). Infrastructure and services are being delivered, but they are not meeting household needs. This suggests quality, reliability, distance, or affordability gaps that communities experience daily.`
+        };
+        return analysis[dominant] || "Multiple gaps are contributing to system friction. Review each domain to identify where misalignments are most severe.";
     }
 
     function updateAll() {
@@ -370,17 +228,14 @@
         const gapPH = Math.pow(P - H, 2);
         const rawScore = gapPI + gapIE + gapEH + gapPH;
 
-        // Weighted adjustment based on data quality
         const weights = { P: quality.P / 3, I: quality.I / 3, E: quality.E / 3, H: quality.H / 3 };
         const avgWeight = (weights.P + weights.I + weights.E + weights.H) / 4;
         let adjScore = rawScore * avgWeight;
         adjScore = Math.round(adjScore * 10) / 10;
 
-        let level = '';
-        let levelClass = '';
-        if (adjScore <= 8) { level = 'LOW'; levelClass = 'level-low'; }
-        else if (adjScore <= 20) { level = 'MODERATE'; levelClass = 'level-moderate'; }
-        else { level = 'HIGH'; levelClass = 'level-high'; }
+        const frictionInfo = getFrictionLevel(adjScore);
+        const levelText = frictionInfo.level;
+        const levelClass = frictionInfo.class;
 
         const gaps = [
             { name: "P-I", value: gapPI },
@@ -392,16 +247,17 @@
 
         document.getElementById('rawScore').innerHTML = rawScore;
         document.getElementById('adjScore').innerHTML = adjScore;
-        document.getElementById('level').innerHTML = `<span class="level ${levelClass}">${level}</span>`;
+        document.getElementById('level').innerHTML = `<span class="level ${levelClass}">${levelText}</span>`;
         document.getElementById('dominant').innerHTML = `${dominant} (${getGapDescription(dominant)})`;
-
-        const intervention = getPriorityIntervention(dominant);
-        const narrativeHTML = `
-            <p><strong>System exhibits ${level} friction (${adjScore}). Dominant gap: ${dominant} (${getGapDescription(dominant)}).</strong></p>
-            <p><strong>Priority intervention:</strong> ${intervention}</p>
-            <div class="gap-breakdown">✓ Gap contributions: P-I:${gapPI} | I-E:${gapIE} | E-H:${gapEH} | P-H:${gapPH}</div>
-        `;
-        document.getElementById('narrativeBox').innerHTML = narrativeHTML;
+        
+        document.getElementById('frictionScale').innerHTML = `📏 Friction Scale: Very Low (0-2) | Low (3-8) | Moderate (9-20) | High (21-36) | Critical (>36)`;
+        
+        const systemAnalysis = getSystemAnalysis(P, I, E, H, dominant, adjScore);
+        const priorityIntervention = getPriorityIntervention(dominant, P, I, E, H, adjScore);
+        
+        document.getElementById('analysisBox').innerHTML = `<h4>📊 System Friction Analysis</h4><p>${systemAnalysis}</p>`;
+        document.getElementById('interventionBox').innerHTML = `<h4>🎯 Priority Intervention</h4><p>${priorityIntervention}</p>`;
+        document.getElementById('gapBreakdown').innerHTML = `✓ Gap contributions: P-I:${gapPI} | I-E:${gapIE} | E-H:${gapEH} | P-H:${gapPH}`;
     }
 
     function createCard(varName) {
@@ -432,7 +288,6 @@
             optionsContainer.appendChild(div);
         }
 
-        // Add Data Quality Selector
         const qualityDiv = document.createElement('div');
         qualityDiv.className = 'data-quality';
         qualityDiv.innerHTML = `
