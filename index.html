@@ -19,71 +19,56 @@
         /* Header */
         .header {
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         .header h1 {
             font-size: 1.8rem;
             color: #0A5C6E;
             letter-spacing: -0.5px;
+            margin-bottom: 6px;
         }
         .header h1 span { font-weight: 400; color: #2C7DA0; }
-        .tagline {
+        .powered-by {
+            font-size: 0.8rem;
             color: #5A6E7C;
-            font-size: 0.9rem;
-            margin-top: 6px;
-            font-style: italic;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
         }
-        .methodology-link {
-            margin-top: 10px;
-            font-size: 0.75rem;
-        }
-        .methodology-link a {
+        .tagline {
             color: #2C7DA0;
-            text-decoration: none;
-            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 8px;
         }
-        .methodology-link a:hover { text-decoration: underline; }
-        .methodology-content {
-            display: none;
-            background: #F8FAFC;
-            padding: 12px 16px;
-            border-radius: 12px;
-            margin-top: 12px;
-            font-size: 0.75rem;
-            text-align: left;
-            border-left: 3px solid #2C7DA0;
-        }
-        .methodology-content.show { display: block; }
 
-        /* Friction Scale Legend */
-        .friction-legend {
-            background: white;
-            border-radius: 40px;
-            padding: 10px 20px;
-            margin-bottom: 20px;
+        /* Friction Scale Legend - compact for below scores */
+        .friction-scale-compact {
+            background: #F8FAFC;
+            border-radius: 30px;
+            padding: 8px 16px;
+            margin: 16px 0 10px 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-        }
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            gap: 16px;
             font-size: 0.7rem;
             font-weight: 500;
         }
-        .legend-color {
-            width: 24px;
-            height: 12px;
-            border-radius: 6px;
+        .scale-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
-        .legend-color.verylow { background: #2A9D8F; }
-        .legend-color.low { background: #52B788; }
-        .legend-color.moderate { background: #E9C46A; }
-        .legend-color.high { background: #E76F51; }
-        .legend-color.critical { background: #D62828; }
+        .scale-color {
+            width: 20px;
+            height: 10px;
+            border-radius: 5px;
+        }
+        .scale-color.vlow { background: #2A9D8F; }
+        .scale-color.low { background: #52B788; }
+        .scale-color.mod { background: #E9C46A; }
+        .scale-color.high { background: #E76F51; }
+        .scale-color.crit { background: #D62828; }
 
         /* Reset Button */
         .reset-btn {
@@ -134,7 +119,7 @@
         .results { background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); padding: 24px; margin-bottom: 24px; }
         .results h3 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: #0A5C6E; border-left: 4px solid #2C7DA0; padding-left: 12px; }
 
-        .score-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; justify-content: space-between; }
+        .score-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; justify-content: space-between; }
         .score-card { background: #F8FAFC; border-radius: 12px; padding: 10px 16px; text-align: center; flex: 1; min-width: 100px; }
         .score-card .label { font-size: 0.7rem; text-transform: uppercase; color: #5A6E7C; letter-spacing: 0.5px; font-weight: 500; }
         .score-card .value { font-size: 1.6rem; font-weight: 700; font-family: 'Consolas', monospace; color: #1A2A3A; }
@@ -158,7 +143,7 @@
             .grid { grid-template-columns: 1fr; }
             .score-grid { flex-direction: column; }
             .narrative-row { flex-direction: column; }
-            .friction-legend { flex-direction: column; align-items: center; gap: 8px; }
+            .friction-scale-compact { flex-direction: column; align-items: center; gap: 8px; }
         }
     </style>
 </head>
@@ -166,26 +151,8 @@
 <div class="container">
     <div class="header">
         <h1>💧 HydroFric <span>| Water Governance Friction Diagnostic Tool</span></h1>
-        <div class="tagline">"Bridging the gap between policy and household reality"</div>
-        <div class="methodology-link">
-            <a onclick="toggleMethodology()">📖 How it works (methodology)</a>
-        </div>
-        <div id="methodology" class="methodology-content">
-            <strong>The Friction Equation (simplified):</strong><br>
-            Friction is measured by comparing four domains: Policy Intent (P), Institutional Capacity (I), Execution Reality (E), and Household Experience (H).<br>
-            Higher scores mean better performance. The larger the gap between domains, the higher the friction.<br>
-            <em>F = (P-I)² + (I-E)² + (E-H)² + (P-H)²</em><br>
-            Scores: 1=Very Poor, 2=Poor, 3=Moderate, 4=Good, 5=Excellent.
-        </div>
-    </div>
-
-    <!-- Friction Scale Legend -->
-    <div class="friction-legend">
-        <div class="legend-item"><div class="legend-color verylow"></div><span>Very Low (0-2)</span></div>
-        <div class="legend-item"><div class="legend-color low"></div><span>Low (3-8)</span></div>
-        <div class="legend-item"><div class="legend-color moderate"></div><span>Moderate (9-20)</span></div>
-        <div class="legend-item"><div class="legend-color high"></div><span>High (21-36)</span></div>
-        <div class="legend-item"><div class="legend-color critical"></div><span>Critical (>36)</span></div>
+        <div class="powered-by">Powered by: Socio-Technical Friction (STF) Framework</div>
+        <div class="tagline">Integrating Policy Intent with Point-of-Use Experience</div>
     </div>
 
     <!-- Reset Button -->
@@ -204,6 +171,15 @@
             <div class="score-card"><div class="label">Dominant Gap</div><div class="value" id="dominant">—</div></div>
         </div>
 
+        <!-- Friction Scale directly below scores -->
+        <div class="friction-scale-compact">
+            <div class="scale-item"><div class="scale-color vlow"></div><span>Very Low (0-2)</span></div>
+            <div class="scale-item"><div class="scale-color low"></div><span>Low (3-8)</span></div>
+            <div class="scale-item"><div class="scale-color mod"></div><span>Moderate (9-20)</span></div>
+            <div class="scale-item"><div class="scale-color high"></div><span>High (21-36)</span></div>
+            <div class="scale-item"><div class="scale-color crit"></div><span>Critical (>36)</span></div>
+        </div>
+
         <div class="narrative-row">
             <div class="narrative-box" id="analysisBox">
                 <h4>📊 System Friction Analysis</h4>
@@ -219,7 +195,7 @@
     </div>
 
     <div class="footer">
-        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v3.1
+        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v3.2
     </div>
 </div>
 
@@ -328,8 +304,6 @@
         qualityDiv.querySelector('select').addEventListener('change', (e) => { quality[varName]=parseInt(e.target.value); updateAll(); });
         optionsContainer.appendChild(qualityDiv);
     }
-
-    function toggleMethodology() { document.getElementById('methodology').classList.toggle('show'); }
 
     createCard('P'); createCard('I'); createCard('E'); createCard('H');
     document.getElementById('resetBtn').addEventListener('click', resetAll);
