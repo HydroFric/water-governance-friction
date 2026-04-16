@@ -16,7 +16,6 @@
 
         .container { max-width: 1400px; margin: 0 auto; }
 
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 20px;
@@ -41,7 +40,6 @@
             margin-top: 8px;
         }
 
-        /* Friction Scale Compact */
         .friction-scale-compact {
             background: #F8FAFC;
             border-radius: 30px;
@@ -70,7 +68,6 @@
         .scale-color.high { background: #E76F51; }
         .scale-color.crit { background: #D62828; }
 
-        /* Reset Button */
         .reset-btn {
             background: #E9ECEF;
             border: none;
@@ -82,14 +79,10 @@
             transition: all 0.2s ease;
             margin-bottom: 20px;
         }
-        .reset-btn:hover {
-            background: #DCE5EC;
-        }
+        .reset-btn:hover { background: #DCE5EC; }
 
-        /* Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
 
-        /* Cards */
         .card { background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; }
         .card-header { padding: 14px 18px; font-weight: 600; font-size: 1rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid; }
         .card-header.p { border-bottom-color: #2C7DA0; background: #F5FAFF; }
@@ -110,12 +103,10 @@
         .option-label { flex: 1; font-size: 0.85rem; font-weight: 500; line-height: 1.3; }
         .option input[type="radio"] { width: 18px; height: 18px; margin-left: 12px; cursor: pointer; }
 
-        /* Data Quality */
         .data-quality { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #DCE5EC; display: flex; align-items: center; justify-content: space-between; }
         .data-quality label { font-size: 0.7rem; font-weight: 500; color: #5A6E7C; }
         .data-quality select { padding: 4px 8px; font-size: 0.75rem; border-radius: 6px; border: 1px solid #DCE5EC; background: white; cursor: pointer; }
 
-        /* Results */
         .results { background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); padding: 24px; margin-bottom: 24px; }
         .results h3 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: #0A5C6E; border-left: 4px solid #2C7DA0; padding-left: 12px; }
 
@@ -193,23 +184,23 @@
     </div>
 
     <div class="footer">
-        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v3.3
+        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v3.4
     </div>
 </div>
 
 <script>
     const tooltips = {
-        P: "How strong are the policies on paper? Do they promise universal access, equity, and sustainability?",
-        I: "Do the institutions responsible have enough budget, staff, training, and oversight to deliver?",
-        E: "What is actually happening on the ground? Are projects completed on time? Are water points functional?",
-        H: "What do households experience daily? Do they have reliable, affordable, safe water within a reasonable distance?"
+        P: "Formal policy commitments, legal frameworks, and service standards.",
+        I: "Budget allocation, staffing levels, technical capacity, and organizational stability.",
+        E: "Physical infrastructure delivery, functionality, and maintenance performance.",
+        H: "Affordability, access distance, reliability, water quality, and user satisfaction."
     };
 
     const descriptions = {
-        P: ["1 – Very Weak / Absent (no policy or actively excludes)","2 – Weak / Minimal (vague, outdated)","3 – Moderate / Partial (clear but gaps remain)","4 – Strong / Comprehensive (up-to-date, covers all)","5 – Very Strong / Exemplary (binding targets, accountability)"],
-        I: ["1 – Very Low (no capacity, non-functional)","2 – Low / Minimal (severely under-resourced)","3 – Moderate / Adequate (functions with constraints)","4 – Good / Capable (minor constraints)","5 – Excellent / High (exceeds requirements)"],
-        E: ["1 – Very Poor (complete failure, no service)","2 – Poor / Minimal (severely inadequate)","3 – Moderate / Partial (partially meets needs)","4 – Good / Adequate (meets most needs)","5 – Excellent / Full (continuous, meets standards)"],
-        H: ["1 – Very Negative (severe hardship, <20 L/day, unsafe)","2 – Negative / Poor (significant hardship, coping unsustainable)","3 – Moderate / Mixed (hardship but coping possible)","4 – Good / Satisfactory (minor concerns)","5 – Excellent / Positive (all needs met, no coping burden)"]
+        P: ["1 – Very Weak / Absent","2 – Weak / Minimal","3 – Moderate / Partial","4 – Strong / Comprehensive","5 – Very Strong / Exemplary"],
+        I: ["1 – Very Low","2 – Low / Minimal","3 – Moderate / Adequate","4 – Good / Capable","5 – Excellent / High"],
+        E: ["1 – Very Poor","2 – Poor / Minimal","3 – Moderate / Partial","4 – Good / Adequate","5 – Excellent / Full"],
+        H: ["1 – Very Negative","2 – Negative / Poor","3 – Moderate / Mixed","4 – Good / Satisfactory","5 – Excellent / Positive"]
     };
 
     const titles = {
@@ -221,7 +212,7 @@
     let quality = { P: 2, I: 2, E: 2, H: 2 };
 
     function getGapDescription(gap) {
-        const map = { "P-H": "Policy vs Household", "P-I": "Policy vs Institutional Capacity", "I-E": "Institutional vs Execution", "E-H": "Execution vs Household" };
+        const map = { "P-H": "Policy vs Household", "P-I": "Policy vs Capacity", "I-E": "Institutional vs Execution", "E-H": "Execution vs Household" };
         return map[gap] || gap;
     }
 
@@ -233,149 +224,40 @@
         return { level: "CRITICAL", class: "level-critical" };
     }
 
-    // ============================================================
-    // SYSTEM FRICTION ANALYSIS - EXPERT VOICE (DEEP VERSION)
-    // ============================================================
-
+    // Professional, concise analysis (40-60 words)
     function getSystemAnalysis(P, I, E, H, dominant) {
         if (P===1 && I===1 && E===1 && H===1) {
-            return "The system has collapsed entirely. There are no functioning policies, no institutional capacity, no infrastructure delivery, and households face extreme hardship. This is not a governance problem—it is a governance void. People are likely drinking from unsafe rivers, walking more than an hour to collect water, or relying on expensive informal vendors. Immediate emergency intervention is required, followed by rebuilding from the ground up.";
+            return "System-wide failure across all governance domains. No functional policy framework, institutional capacity, service delivery, or household access. Requires foundational rebuilding starting with basic infrastructure and institutional establishment.";
         }
         if (P===5 && I===5 && E===5 && H===5) {
-            return "The system is fully aligned and operating at optimal levels. Policy commitments are being met, institutions have the capacity to deliver, infrastructure functions reliably, and households report positive experiences. This is a best-practice model worth documenting and replicating elsewhere. Maintain current systems, monitor for emerging pressures, and consider mentoring neighboring utilities.";
+            return "Optimal alignment across all domains. Policy commitments are matched by institutional capacity, execution, and household outcomes. Maintain current systems with routine monitoring for early detection of emerging gaps.";
         }
         
-        if (dominant === "I-E") {
-            return `The critical friction point is between Institutional Capacity (${I}) and Execution Reality (${E}). This means the institution has the mandate, budget, and staff—but somehow, that capacity is not translating into working infrastructure on the ground. 
-
-What this looks like in real communities: A water utility has qualified engineers and a budget for borehole drilling, but the boreholes are not being maintained. Or a district council has vehicles and fuel, but the mechanics never visit the remote villages. The community sees government vehicles passing through, but no one stops to fix the broken hand pump.
-
-The root cause is often weak project management, fragmented accountability, or a disconnect between planning and supervision. Sometimes it is because the institution measures success by "money spent" rather than "pumps fixed." This gap—I-E—is where good intentions go to die.`;
-        }
-        
-        if (dominant === "E-H") {
-            return `The critical friction point is between Execution Reality (${E}) and Household Experience (${H}). Infrastructure exists—boreholes have been drilled, pipes have been laid—but households are not benefiting. 
-
-What this looks like in real communities: A borehole was drilled, but the water is too salty to drink. A communal tap was installed, but it is 3 kilometers from the village. The water flows, but only for two hours every third day. Or the water is clean, but the community cannot afford the tariffs.
-
-This is the "last mile" problem. The technical work has been done, but the service has not reached the person. The gap often reflects a lack of community engagement in siting decisions, or a failure to consider affordability and distance. The infrastructure exists, but the household experience is still one of struggle.`;
-        }
-        
-        if (dominant === "P-I") {
-            return `The critical friction point is between Policy Intent (${P}) and Institutional Capacity (${I}). The policy is ambitious—it promises universal access, equity, and sustainability. But the institution responsible for delivering on that promise lacks the budget, staff, training, or equipment to make it happen.
-
-What this looks like in real communities: A national water policy declares that every household should have a tap within 200 meters. But the district council has only one broken vehicle and two engineers for 500 villages. The policy exists on paper, but the institution is set up to fail.
-
-This is "institutional overstretch." The government has promised more than it can deliver. The friction here is not laziness or corruption—it is a mismatch between ambition and resourcing. The solution is either to increase institutional capacity (more budget, more staff) or to right-size the policy to match current reality.`;
-        }
-        
-        if (dominant === "P-H") {
-            return `The critical friction point is between Policy Intent (${P}) and Household Experience (${H}). This is the most fundamental gap in water governance. The policy promises one thing—universal access, safe water, affordability—but the household experiences the opposite.
-
-What this looks like in real communities: The constitution declares water a human right. The national development plan commits to 100% coverage. But in practice, women still walk 3 kilometers every day to fetch water from a river shared with livestock. The child still misses school because there is no water at home. The grandmother still pays 40% of her pension to a water vendor.
-
-This gap—P-H—is the sum of all other failures. When policy and household reality diverge so sharply, it erodes trust in government. People stop believing that the state can deliver anything. The solution requires closing all the intermediate gaps: strengthening institutions (P-I), improving execution (I-E), and ensuring that infrastructure actually serves households (E-H).`;
-        }
-        
-        return `The system shows significant friction across multiple gaps. The most affected domains are ${getAffectedDomains(P, I, E, H)}. This suggests systemic fragmentation rather than a single point of failure. 
-
-What this looks like in real communities: The policy is weak, the institution is under-resourced, the infrastructure is failing, and households are struggling. Each gap reinforces the others. A comprehensive reform program is needed, not just a single intervention. Start by assessing which gap is most feasible to address first, then build momentum.`;
+        const gapMap = {
+            "I-E": `Institutional capacity (${I}) exceeds or falls short of execution reality (${E}). Resources and mandates exist but are not translating into field-level outcomes. Focus on project management, accountability systems, and supervision protocols.`,
+            "E-H": `Execution (${E}) is misaligned with household experience (${H}). Infrastructure exists but does not adequately serve end-users. Address service quality, accessibility, affordability, and reliability gaps.`,
+            "P-I": `Policy ambition (${P}) is mismatched with institutional capacity (${I}). Commitments exceed what delivery systems can realistically achieve. Either increase institutional resources or right-size policy targets.`,
+            "P-H": `Policy intent (${P}) diverges from household experience (${H}). The most fundamental governance gap. Requires closing intermediate gaps (P-I, I-E, E-H) through coordinated institutional and infrastructure improvements.`
+        };
+        return gapMap[dominant] || `Multiple gaps detected. Primary friction between ${dominant}. Systematic assessment needed across all governance levels.`;
     }
 
-    function getAffectedDomains(P, I, E, H) {
-        let lowScores = [];
-        if (P <= 2) lowScores.push("Policy (P)");
-        if (I <= 2) lowScores.push("Institutional Capacity (I)");
-        if (E <= 2) lowScores.push("Execution (E)");
-        if (H <= 2) lowScores.push("Household Experience (H)");
-        if (lowScores.length === 0) return "all domains show moderate scores but misalignment between them";
-        return lowScores.join(", ");
-    }
-
-    // ============================================================
-    // PRIORITY INTERVENTION - EXPERT VOICE (DEEP VERSION)
-    // ============================================================
-
+    // Professional, concise interventions (40-60 words)
     function getPriorityIntervention(dominant, P, I, E, H) {
         if (P===1 && I===1 && E===1 && H===1) {
-            return "Immediate priorities: (1) Emergency water trucking to affected communities. (2) Rapid assessment of what minimal infrastructure can be restored with available resources. (3) Engagement with traditional leaders and community committees to identify quick wins. (4) Development of a phased recovery plan that rebuilds policy, capacity, execution, and household trust simultaneously. Do not attempt to fix everything at once—start with the most vulnerable communities and build outward.";
+            return "Establish basic governance framework: (1) Develop minimal policy standards, (2) Allocate emergency institutional capacity, (3) Deploy interim service delivery mechanisms, (4) Conduct baseline household assessment.";
         }
         if (P===5 && I===5 && E===5 && H===5) {
-            return "Maintain current systems: (1) Document best practices as a case study for other utilities. (2) Establish a monitoring system to detect early signs of friction before they become crises. (3) Invest in preventative maintenance to avoid the slow decay that leads to E-H gaps. (4) Consider mentoring neighboring utilities or sharing lessons learned through regional water associations.";
+            return "Sustain alignment through: (1) Preventative maintenance programs, (2) Regular performance monitoring, (3) Stakeholder feedback systems, (4) Knowledge sharing with other utilities.";
         }
         
-        if (dominant === "I-E") {
-            return `The priority is to bridge the gap between what the institution can do and what actually gets executed on the ground. 
-
-Recommended actions:
-1. Conduct a project management audit: Review recent projects to identify where delays, cost overruns, and quality failures occurred. This is not about blaming individuals—it is about understanding systemic weaknesses.
-
-2. Strengthen supervision and accountability: Assign clear responsibility for each project phase. Ensure that there is a feedback loop between field teams and headquarters. If a borehole breaks, who is responsible for fixing it, and within what timeframe?
-
-3. Shift performance metrics: If the institution currently measures success by "money spent" or "reports written," change the metrics to "functional water points" and "days without breakdown." What gets measured gets managed.
-
-4. Invest in middle management: Often, the gap between institutional capacity and execution occurs because mid-level supervisors lack authority, resources, or training. Empower them to make decisions at the local level.
-
-This gap is often the most frustrating for communities because they see government vehicles passing by, but no one stops to help. Closing I-E requires not more policy, but better management.`;
-        }
-        
-        if (dominant === "E-H") {
-            return `The priority is to align what is being delivered with what households actually need. Infrastructure alone is not enough—it must be accessible, affordable, and reliable.
-
-Recommended actions:
-1. Conduct community mapping exercises: Involve households in deciding where water points should be located. The technical optimum (e.g., near the main road) may not be the social optimum (e.g., near where women and children walk daily).
-
-2. Address affordability barriers: If tariffs are too high, consider lifeline rates for low-income households, cross-subsidies from commercial users, or government subsidies for the poorest. No amount of infrastructure will help if people cannot afford to use it.
-
-3. Improve reliability: A borehole that works only half the time is almost as useless as no borehole at all. Invest in preventative maintenance, spare parts supply chains, and rapid repair teams.
-
-4. Listen to household complaints: Set up a simple system—a phone number, a suggestion box, or regular community meetings—where households can report problems and see that their complaints lead to action.
-
-This gap—E-H—is where the "last mile" fails. Closing it requires shifting from an engineering mindset (build it) to a service mindset (make it work for people).`;
-        }
-        
-        if (dominant === "P-I") {
-            return `The priority is to align what policy promises with what institutions can realistically deliver. Over-ambitious policy is not a virtue—it is a liability when it creates expectations that cannot be met.
-
-Recommended actions:
-1. Conduct a policy capacity audit: For each major policy commitment, ask: Does the institution have the budget, staff, training, and equipment to deliver? If not, either increase capacity or revise the commitment.
-
-2. Right-size policy targets: It is better to have a modest policy that is fully implemented than an ambitious policy that exists only on paper. Consider phased targets: "By 2028, all district capitals will have reliable water; by 2035, all villages."
-
-3. Strengthen inter-ministerial coordination: Often, the gap between policy and capacity occurs because different ministries are not aligned. The Ministry of Finance controls the budget; the Ministry of Water has the mandate; the Ministry of Local Government oversees implementation. These need to work together.
-
-4. Build capacity strategically: If budget is the constraint, advocate for increased allocation. If staffing is the constraint, invest in training and recruitment. If equipment is the constraint, prioritize the most cost-effective interventions first.
-
-This gap—P-I—is where good policies go to die. Closing it requires honest conversations about what is actually feasible, not just what looks good in a policy document.`;
-        }
-        
-        if (dominant === "P-H") {
-            return `The priority is to rebuild the broken promise between the state and its citizens. When policy and household reality diverge so sharply, it erodes trust in government. The solution requires closing all intermediate gaps, but here are the most urgent actions:
-
-Recommended actions:
-1. Prioritize visible, tangible improvements: Choose one or two communities where the gap between policy and reality is largest. Fix the most visible problem—a broken borehole, a dry tap, a long walk. Success here will build credibility for larger reforms.
-
-2. Engage traditional and community leaders: Government cannot close the P-H gap alone. Partner with chiefs, religious leaders, and women's groups who have the trust of the community. They can communicate honestly about what is possible and what is not.
-
-3. Establish a community feedback mechanism: Create a simple, low-cost system for households to report problems and see that their reports lead to action. This could be as simple as a phone number posted at the water point.
-
-4. Communicate transparently: If the policy promise cannot be met immediately, say so. Explain the constraints—budget, staffing, logistics—and show the plan to address them. Silence breeds distrust; honest communication, even when the news is bad, builds credibility.
-
-This gap—P-H—is the most damaging to social trust. Closing it requires not just technical fixes, but a genuine commitment to listening, responding, and delivering.`;
-        }
-        
-        return `The system shows friction across multiple gaps. A comprehensive approach is needed:
-
-Recommended actions:
-1. Conduct a full system diagnostic using the HydroFric tool, paying attention to which gaps are largest and which are most feasible to address.
-
-2. Engage stakeholders from all four domains: policymakers, utility managers, field engineers, and community representatives. Each group sees different parts of the problem.
-
-3. Start with a quick win: Identify one gap that can be closed with available resources and within a short timeframe. Success builds momentum.
-
-4. Develop a phased reform plan: Address the most critical gaps first, then systematically work through the others. Monitor friction scores over time to track progress.
-
-The HydroFric tool is designed to help you prioritize. Use the dominant gap as your starting point, but do not ignore secondary gaps. Systemic reform requires addressing multiple misalignments simultaneously.`;
+        const interventionMap = {
+            "I-E": "Strengthen project management systems. Enhance supervision, accountability frameworks, and performance metrics. Ensure institutional resources translate into measurable field outcomes. Consider management audits and staff training.",
+            "E-H": "Align infrastructure delivery with household needs. Improve service quality, access distance, affordability, and reliability. Engage communities in siting decisions and service design. Invest in maintenance systems.",
+            "P-I": "Realign policy targets with institutional capacity. Conduct capacity audits, adjust timelines, or increase resourcing. Coordinate across ministries responsible for finance, water, and local government.",
+            "P-H": "Close intermediate gaps systematically. Strengthen institutional capacity (P-I), improve execution systems (I-E), and align infrastructure with household needs (E-H). Monitor progress at each stage."
+        };
+        return interventionMap[dominant] || "Conduct comprehensive system diagnostic. Prioritize largest gap, then address secondary misalignments sequentially. Engage stakeholders across all governance levels.";
     }
 
     function updateAll() {
@@ -420,7 +302,7 @@ The HydroFric tool is designed to help you prioritize. Use the dominant gap as y
             optionsContainer.appendChild(div);
         }
         const qualityDiv = document.createElement('div'); qualityDiv.className = 'data-quality';
-        qualityDiv.innerHTML = `<label>📊 Data Quality Confidence:</label><select id="quality-${varName}"><option value="1" ${quality[varName]===1?'selected':''}>1 – Low (anecdotal, single source)</option><option value="2" ${quality[varName]===2?'selected':''}>2 – Moderate (grey literature, small sample)</option><option value="3" ${quality[varName]===3?'selected':''}>3 – High (peer-reviewed, official stats)</option></select>`;
+        qualityDiv.innerHTML = `<label>📊 Data Quality Confidence:</label><select id="quality-${varName}"><option value="1" ${quality[varName]===1?'selected':''}>1 – Low (anecdotal)</option><option value="2" ${quality[varName]===2?'selected':''}>2 – Moderate (grey literature)</option><option value="3" ${quality[varName]===3?'selected':''}>3 – High (peer-reviewed)</option></select>`;
         qualityDiv.querySelector('select').addEventListener('change', (e) => { quality[varName]=parseInt(e.target.value); updateAll(); });
         optionsContainer.appendChild(qualityDiv);
     }
