@@ -10,80 +10,119 @@
         body {
             font-family: 'Segoe UI', 'Calibri', 'Arial', sans-serif;
             background: #F0F4F8;
-            padding: 24px 20px;
             color: #1A2A3A;
         }
 
-        .container { max-width: 1400px; margin: 0 auto; }
-
-        .header {
+        /* Hero Section with Background Image */
+        .hero {
+            background: linear-gradient(rgba(10, 92, 110, 0.75), rgba(10, 92, 110, 0.85)), 
+                        url('https://images.unsplash.com/photo-1544829099-d8c6d2b6b8e9?q=80&w=2070&auto=format');
+            background-size: cover;
+            background-position: center 30%;
+            padding: 60px 20px;
             text-align: center;
-            margin-bottom: 20px;
+            color: white;
         }
-        .header h1 {
-            font-size: 1.8rem;
-            color: #0A5C6E;
+        .hero h1 {
+            font-size: 2.5rem;
             letter-spacing: -0.5px;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
-        .header h1 span { font-weight: 400; color: #2C7DA0; }
-        .powered-by {
-            font-size: 0.8rem;
-            color: #5A6E7C;
-            letter-spacing: 0.5px;
-            margin-top: 4px;
+        .hero h1 span { font-weight: 400; color: #E9C46A; }
+        .hero .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-style: normal;
         }
-        .tagline {
-            color: #2C7DA0;
-            font-size: 1rem;
-            font-weight: 500;
-            margin-top: 8px;
+        .hero .powered-by {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .hero .cta {
+            margin-top: 25px;
+        }
+        .hero .cta a {
+            display: inline-block;
+            background: #E76F51;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .hero .cta a:hover {
+            background: #D62828;
+            transform: translateY(-2px);
         }
 
-        .friction-scale-compact {
-            background: #F8FAFC;
-            border-radius: 30px;
-            padding: 8px 16px;
-            margin: 16px 0 10px 0;
+        /* Navigation Bar */
+        .nav-bar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 12px 24px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 16px;
-            font-size: 0.7rem;
-            font-weight: 500;
-        }
-        .scale-item {
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 6px;
+            flex-wrap: wrap;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .scale-color {
-            width: 20px;
-            height: 10px;
-            border-radius: 5px;
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0A5C6E;
         }
-        .scale-color.vlow { background: #2A9D8F; }
-        .scale-color.low { background: #52B788; }
-        .scale-color.mod { background: #E9C46A; }
-        .scale-color.high { background: #E76F51; }
-        .scale-color.crit { background: #D62828; }
-
-        .reset-btn {
-            background: #E9ECEF;
-            border: none;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            cursor: pointer;
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1A2A3A;
             font-weight: 500;
-            transition: all 0.2s ease;
-            margin-bottom: 20px;
+            transition: color 0.2s;
         }
-        .reset-btn:hover { background: #DCE5EC; }
+        .nav-links a:hover {
+            color: #2C7DA0;
+        }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-        .card { background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); overflow: hidden; }
+        /* Tool Section */
+        .tool-section {
+            background: white;
+            border-radius: 24px;
+            margin: 40px 0;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .tool-section h2 {
+            font-size: 1.5rem;
+            color: #0A5C6E;
+            margin-bottom: 10px;
+        }
+        .tool-section h2:before {
+            content: "💧";
+            margin-right: 10px;
+        }
+        .tool-description {
+            color: #5A6E7C;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* Grid for cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px; }
+
+        .card { background: #F8FAFC; border-radius: 16px; overflow: hidden; border: 1px solid #E9ECEF; }
         .card-header { padding: 14px 18px; font-weight: 600; font-size: 1rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid; }
         .card-header.p { border-bottom-color: #2C7DA0; background: #F5FAFF; }
         .card-header.i { border-bottom-color: #E9C46A; background: #FFFCF5; }
@@ -107,11 +146,25 @@
         .data-quality label { font-size: 0.7rem; font-weight: 500; color: #5A6E7C; }
         .data-quality select { padding: 4px 8px; font-size: 0.75rem; border-radius: 6px; border: 1px solid #DCE5EC; background: white; cursor: pointer; }
 
-        .results { background: white; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); padding: 24px; margin-bottom: 24px; }
+        .reset-btn {
+            background: #E9ECEF;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            margin-bottom: 20px;
+        }
+        .reset-btn:hover { background: #DCE5EC; }
+
+        /* Results */
+        .results { background: #F8FAFC; border-radius: 20px; padding: 24px; margin-top: 20px; }
         .results h3 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: #0A5C6E; border-left: 4px solid #2C7DA0; padding-left: 12px; }
 
-        .score-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; justify-content: space-between; }
-        .score-card { background: #F8FAFC; border-radius: 12px; padding: 10px 16px; text-align: center; flex: 1; min-width: 100px; }
+        .score-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; justify-content: space-between; }
+        .score-card { background: white; border-radius: 12px; padding: 10px 16px; text-align: center; flex: 1; min-width: 100px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .score-card .label { font-size: 0.7rem; text-transform: uppercase; color: #5A6E7C; letter-spacing: 0.5px; font-weight: 500; }
         .score-card .value { font-size: 1.6rem; font-weight: 700; font-family: 'Consolas', monospace; color: #1A2A3A; }
 
@@ -122,69 +175,242 @@
         .level-high { background: #F8D7DA; color: #721C24; }
         .level-critical { background: #F5C6CB; color: #721C24; font-weight: 700; }
 
+        .friction-scale-compact {
+            background: white;
+            border-radius: 30px;
+            padding: 10px 16px;
+            margin: 16px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        .scale-item { display: flex; align-items: center; gap: 6px; }
+        .scale-color { width: 20px; height: 10px; border-radius: 5px; }
+        .scale-color.vlow { background: #2A9D8F; }
+        .scale-color.low { background: #52B788; }
+        .scale-color.mod { background: #E9C46A; }
+        .scale-color.high { background: #E76F51; }
+        .scale-color.crit { background: #D62828; }
+
         .narrative-row { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
-        .narrative-box { flex: 1; background: #F8FAFC; border-radius: 12px; padding: 18px; border-left: 4px solid #2C7DA0; }
+        .narrative-box { flex: 1; background: white; border-radius: 12px; padding: 18px; border-left: 4px solid #2C7DA0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .narrative-box h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #2C7DA0; margin-bottom: 12px; }
         .narrative-box p { font-size: 0.85rem; line-height: 1.5; margin-bottom: 8px; }
         .gap-breakdown { font-size: 0.7rem; color: #6C7E8F; font-family: monospace; margin-top: 12px; padding-top: 8px; border-top: 1px dashed #DCE5EC; text-align: center; }
 
-        .footer { text-align: center; font-size: 0.7rem; color: #6C7E8F; margin-top: 30px; padding-top: 20px; border-top: 1px solid #DCE5EC; }
+        /* About Section */
+        .about-section {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .about-section h2 {
+            font-size: 1.5rem;
+            color: #0A5C6E;
+            margin-bottom: 20px;
+        }
+        .about-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .about-text {
+            flex: 2;
+            line-height: 1.6;
+            color: #2A3A4A;
+        }
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        .about-stats {
+            flex: 1;
+            background: #F0F4F8;
+            border-radius: 16px;
+            padding: 20px;
+        }
+        .about-stats h3 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #0A5C6E;
+        }
+        .stat-item {
+            margin-bottom: 15px;
+        }
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2C7DA0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #0A5C6E;
+            color: white;
+            border-radius: 24px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .contact-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .contact-section p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        .contact-email {
+            display: inline-block;
+            background: #E9C46A;
+            color: #1A2A3A;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .contact-email:hover {
+            background: #E76F51;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #6C7E8F;
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 1px solid #DCE5EC;
+        }
 
         @media (max-width: 700px) {
+            .hero h1 { font-size: 1.6rem; }
+            .hero .tagline { font-size: 0.9rem; }
+            .nav-bar { flex-direction: column; text-align: center; }
             .grid { grid-template-columns: 1fr; }
             .score-grid { flex-direction: column; }
             .narrative-row { flex-direction: column; }
-            .friction-scale-compact { flex-direction: column; align-items: center; gap: 8px; }
+            .about-grid { flex-direction: column; }
         }
     </style>
 </head>
 <body>
+
+<!-- Navigation Bar -->
+<div class="nav-bar">
+    <div class="nav-logo">💧 HydroFric</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#tool">Tool</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<!-- Hero Section with Background Image -->
+<div class="hero">
+    <h1>💧 HydroFric <span>| Water Governance Friction Diagnostic Tool</span></h1>
+    <div class="tagline">Integrating Policy Intent with Point-of-Use Experience</div>
+    <div class="powered-by">Powered by: Socio-Technical Friction (STF) Framework</div>
+    <div class="cta">
+        <a href="#tool">Start Diagnosis →</a>
+    </div>
+</div>
+
 <div class="container">
-    <div class="header">
-        <h1>💧 HydroFric <span>| Water Governance Friction Diagnostic Tool</span></h1>
-        <div class="powered-by">Powered by: Socio-Technical Friction (STF) Framework</div>
-        <div class="tagline">Integrating Policy Intent with Point-of-Use Experience</div>
+    <!-- Tool Section -->
+    <div id="tool" class="tool-section">
+        <h2>Friction Diagnostic Tool</h2>
+        <div class="tool-description">
+            Rate each domain from 1 (Very Poor) to 5 (Excellent). The tool calculates friction and recommends priority interventions.
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+            <button class="reset-btn" id="resetBtn">⟳ Reset All Scores</button>
+        </div>
+
+        <div class="grid" id="cardsContainer"></div>
+
+        <div class="results">
+            <h3>🔍 Friction Diagnosis</h3>
+            <div class="score-grid">
+                <div class="score-card"><div class="label">Raw Friction Score</div><div class="value" id="rawScore">—</div></div>
+                <div class="score-card"><div class="label">Adjusted Score*</div><div class="value" id="adjScore">—</div></div>
+                <div class="score-card"><div class="label">Friction Level</div><div class="value" id="level">—</div></div>
+                <div class="score-card"><div class="label">Dominant Gap</div><div class="value" id="dominant">—</div></div>
+            </div>
+
+            <div class="friction-scale-compact">
+                <div class="scale-item"><div class="scale-color vlow"></div><span>Very Low (0-2)</span></div>
+                <div class="scale-item"><div class="scale-color low"></div><span>Low (3-8)</span></div>
+                <div class="scale-item"><div class="scale-color mod"></div><span>Moderate (9-20)</span></div>
+                <div class="scale-item"><div class="scale-color high"></div><span>High (21-36)</span></div>
+                <div class="scale-item"><div class="scale-color crit"></div><span>Critical (>36)</span></div>
+            </div>
+
+            <div class="narrative-row">
+                <div class="narrative-box" id="analysisBox">
+                    <h4>📊 System Friction Analysis</h4>
+                    <p>Select scores to begin analysis.</p>
+                </div>
+                <div class="narrative-box" id="interventionBox">
+                    <h4>🎯 Priority Intervention</h4>
+                    <p>Select scores to begin analysis.</p>
+                </div>
+            </div>
+            <div class="gap-breakdown" id="gapBreakdown">✓ Gap contributions: —</div>
+            <div style="font-size: 0.65rem; color: #6C7E8F; margin-top: 16px;">*Adjusted score accounts for data quality weights (3=High, 2=Moderate, 1=Low)</div>
+        </div>
     </div>
 
-    <div style="display: flex; justify-content: flex-end;">
-        <button class="reset-btn" id="resetBtn">⟳ Reset All Scores</button>
+    <!-- About Section -->
+    <div id="about" class="about-section">
+        <h2>About HydroFric</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>HydroFric is a diagnostic tool designed to measure <strong>institutional friction</strong> in water governance systems. It is based on the Socio-Technical Friction (STF) Framework, developed through a systematic review of over 130 studies across five Southern African countries: Botswana, Namibia, South Africa, Zambia, and Zimbabwe.</p>
+                <p>The tool quantifies the gap between <strong>Policy Intent (P)</strong>, <strong>Institutional Capacity (I)</strong>, <strong>Execution Reality (E)</strong>, and <strong>Household Experience (H)</strong> using the equation: <strong>F = (P-I)² + (I-E)² + (E-H)² + (P-H)²</strong>.</p>
+                <p>HydroFric is free, open source, and designed for policymakers, utility managers, researchers, and community advocates.</p>
+            </div>
+            <div class="about-stats">
+                <h3>📊 By the Numbers</h3>
+                <div class="stat-item">
+                    <div class="stat-number">130+</div>
+                    <div>Studies Reviewed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div>Countries Analyzed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div>Governance Domains</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$0</div>
+                    <div>Free to Use</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="grid" id="cardsContainer"></div>
-
-    <div class="results">
-        <h3>🔍 Friction Diagnosis</h3>
-        <div class="score-grid">
-            <div class="score-card"><div class="label">Raw Friction Score</div><div class="value" id="rawScore">—</div></div>
-            <div class="score-card"><div class="label">Adjusted Score*</div><div class="value" id="adjScore">—</div></div>
-            <div class="score-card"><div class="label">Friction Level</div><div class="value" id="level">—</div></div>
-            <div class="score-card"><div class="label">Dominant Gap</div><div class="value" id="dominant">—</div></div>
-        </div>
-
-        <div class="friction-scale-compact">
-            <div class="scale-item"><div class="scale-color vlow"></div><span>Very Low (0-2)</span></div>
-            <div class="scale-item"><div class="scale-color low"></div><span>Low (3-8)</span></div>
-            <div class="scale-item"><div class="scale-color mod"></div><span>Moderate (9-20)</span></div>
-            <div class="scale-item"><div class="scale-color high"></div><span>High (21-36)</span></div>
-            <div class="scale-item"><div class="scale-color crit"></div><span>Critical (>36)</span></div>
-        </div>
-
-        <div class="narrative-row">
-            <div class="narrative-box" id="analysisBox">
-                <h4>📊 System Friction Analysis</h4>
-                <p>Select scores to begin analysis.</p>
-            </div>
-            <div class="narrative-box" id="interventionBox">
-                <h4>🎯 Priority Intervention</h4>
-                <p>Select scores to begin analysis.</p>
-            </div>
-        </div>
-        <div class="gap-breakdown" id="gapBreakdown">✓ Gap contributions: —</div>
-        <div style="font-size: 0.65rem; color: #6C7E8F; margin-top: 16px;">*Adjusted score accounts for data quality weights (3=High, 2=Moderate, 1=Low)</div>
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+        <h2>📬 Get in Touch</h2>
+        <p>Have questions, feedback, or want to collaborate? Reach out to the HydroFric team.</p>
+        <a href="mailto:jgmusuku@gmail.com" class="contact-email">✉️ jgmusuku@gmail.com</a>
+        <p style="margin-top: 20px; font-size: 0.8rem;">You can also open an issue on <a href="https://github.com/HydroFric/water-governance-friction" style="color: #E9C46A;">GitHub</a></p>
     </div>
 
     <div class="footer">
-        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v3.4
+        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v4.0<br>
+        <a href="https://hydrofric.github.io/water-governance-friction/" style="color: #2C7DA0;">https://hydrofric.github.io/water-governance-friction/</a>
     </div>
 </div>
 
@@ -224,7 +450,6 @@
         return { level: "CRITICAL", class: "level-critical" };
     }
 
-    // Professional, concise analysis (40-60 words)
     function getSystemAnalysis(P, I, E, H, dominant) {
         if (P===1 && I===1 && E===1 && H===1) {
             return "System-wide failure across all governance domains. No functional policy framework, institutional capacity, service delivery, or household access. Requires foundational rebuilding starting with basic infrastructure and institutional establishment.";
@@ -242,7 +467,6 @@
         return gapMap[dominant] || `Multiple gaps detected. Primary friction between ${dominant}. Systematic assessment needed across all governance levels.`;
     }
 
-    // Professional, concise interventions (40-60 words)
     function getPriorityIntervention(dominant, P, I, E, H) {
         if (P===1 && I===1 && E===1 && H===1) {
             return "Establish basic governance framework: (1) Develop minimal policy standards, (2) Allocate emergency institutional capacity, (3) Deploy interim service delivery mechanisms, (4) Conduct baseline household assessment.";
