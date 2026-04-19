@@ -115,6 +115,38 @@
             font-size: 0.9rem;
         }
 
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .reset-btn {
+            background: #E9ECEF;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .reset-btn:hover { background: #DCE5EC; }
+        .ai-btn {
+            background: #2C7DA0;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .ai-btn:hover { background: #0A5C6E; }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px; }
 
         .card { background: #F8FAFC; border-radius: 16px; overflow: hidden; border: 1px solid #E9ECEF; }
@@ -140,19 +172,6 @@
         .data-quality { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #DCE5EC; display: flex; align-items: center; justify-content: space-between; }
         .data-quality label { font-size: 0.7rem; font-weight: 500; color: #5A6E7C; }
         .data-quality select { padding: 4px 8px; font-size: 0.75rem; border-radius: 6px; border: 1px solid #DCE5EC; background: white; cursor: pointer; }
-
-        .reset-btn {
-            background: #E9ECEF;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            margin-bottom: 20px;
-        }
-        .reset-btn:hover { background: #DCE5EC; }
 
         .results { background: #F8FAFC; border-radius: 20px; padding: 24px; margin-top: 20px; }
         .results h3 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: #0A5C6E; border-left: 4px solid #2C7DA0; padding-left: 12px; }
@@ -244,6 +263,24 @@
         .accordion-item.active .accordion-content {
             display: block;
         }
+        .accordion-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 0.85rem;
+        }
+        .accordion-content th, .accordion-content td {
+            padding: 8px;
+            border-bottom: 1px solid #E9ECEF;
+            text-align: left;
+        }
+        .accordion-content th {
+            background: #F0F4F8;
+        }
+        .accordion-content ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
 
         /* Contact Section (copyable email, no external links) */
         .contact-section {
@@ -296,6 +333,7 @@
             .grid { grid-template-columns: 1fr; }
             .score-grid { flex-direction: column; }
             .narrative-row { flex-direction: column; }
+            .button-group { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
@@ -330,8 +368,9 @@
             Rate each domain from 1 (Very Poor) to 5 (Excellent). The tool calculates friction and recommends priority interventions.
         </div>
 
-        <div style="display: flex; justify-content: flex-end;">
+        <div class="button-group">
             <button class="reset-btn" id="resetBtn">⟳ Reset All Scores</button>
+            <button class="ai-btn" id="aiReportBtn">✨ Generate AI Deep Dive Report</button>
         </div>
 
         <div class="grid" id="cardsContainer"></div>
@@ -384,18 +423,54 @@
             <div class="accordion-content">
                 <p>HydroFric is grounded in the Socio‑Technical Friction (STF) Framework, which builds on internationally recognised water governance principles, including the <strong>OECD Principles on Water Governance</strong> (2015), the <strong>SADC Revised Protocol on Shared Watercourses</strong> (2000), <strong>Integrated Water Resources Management (IWRM)</strong> as promoted by the Global Water Partnership, and rural water access indicators from <strong>UN‑Water and the WHO/UNICEF Joint Monitoring Programme (JMP)</strong> for SDG 6.</p>
                 <p>The tool assesses four core governance domains:</p>
-                <table style="width:100%; border-collapse: collapse; margin: 10px 0;">
-                    <tr><th style="text-align:left; padding:6px;">Domain</th><th style="text-align:left; padding:6px;">Definition</th></tr>
-                    <tr><td style="padding:6px;"><strong>Policy Intent (P)</strong></td><td style="padding:6px;">Formal policy commitments, legal frameworks, and service standards – what has been promised.</td></tr>
-                    <tr><td style="padding:6px;"><strong>Institutional Capacity (I)</strong></td><td style="padding:6px;">Budget allocation, staffing levels, technical capacity, and organisational stability – the ability to deliver.</td></tr>
-                    <tr><td style="padding:6px;"><strong>Execution Reality (E)</strong></td><td style="padding:6px;">Physical infrastructure delivery, functionality, and maintenance performance – what is actually built and operating.</td></tr>
-                    <tr><td style="padding:6px;"><strong>Household Experience (H)</strong></td><td style="padding:6px;">Affordability, access distance, reliability, water quality, and user satisfaction – the lived reality of the end‑user.</td></tr>
+                <table>
+                    <tr><th>Domain</th><th>Definition</th></tr>
+                    <tr><td><strong>Policy Intent (P)</strong></td><td>Formal policy commitments, legal frameworks, and service standards – what has been promised.</td></tr>
+                    <tr><td><strong>Institutional Capacity (I)</strong></td><td>Budget allocation, staffing levels, technical capacity, and organisational stability – the ability to deliver.</td></tr>
+                    <tr><td><strong>Execution Reality (E)</strong></td><td>Physical infrastructure delivery, functionality, and maintenance performance – what is actually built and operating.</td></tr>
+                    <tr><td><strong>Household Experience (H)</strong></td><td>Affordability, access distance, reliability, water quality, and user satisfaction – the lived reality of the end‑user.</td></tr>
                 </table>
                 <p>Users score each domain from 1 (very poor) to 5 (excellent). The tool automatically calculates the largest mismatch between any two domains, producing a friction score, a friction level (Very Low to Critical), a plain‑language system analysis, and a priority intervention – all without requiring any mathematical input from the user.</p>
                 <details style="margin-top: 10px;">
                     <summary style="cursor:pointer; color:#2C7DA0;">Show methodology details (including the friction equation)</summary>
                     <p style="margin-top:10px;">Friction is calculated as the sum of squared gaps between each pair of domains: <strong>F = (P-I)² + (I-E)² + (E-H)² + (P-H)²</strong>. Larger gaps are penalised more heavily. The tool does the math for you.</p>
                 </details>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">⚙️ What is the Socio-Technical Friction (STF) Framework?</div>
+            <div class="accordion-content">
+                <p>The <strong>Socio-Technical Friction (STF) Framework</strong> is the theoretical engine behind HydroFric. It was developed through a systematic review of over 130 water governance studies across five Southern African countries – Botswana, Namibia, South Africa, Zambia, and Zimbabwe.</p>
+                
+                <p><strong>What does "Socio-Technical Friction" mean?</strong><br>
+                In simple terms, <strong>friction</strong> is the resistance that slows down or blocks water from reaching households. It happens when the different parts of a water governance system – policies, institutions, infrastructure, and households – are not working together smoothly. Just like mechanical friction in an engine generates heat and wears down parts, institutional friction generates delays, costs, and social unrest.</p>
+                
+                <p><strong>The four domains of the STF Framework:</strong></p>
+                <table>
+                    <tr><th>Domain</th><th>What it asks</th><th>Example of friction</th></tr>
+                    <tr><td><strong>Policy Intent (P)</strong></td><td>What did the law promise?</td><td>A national policy promises water for all, but no budget is allocated.</td></tr>
+                    <tr><td><strong>Institutional Capacity (I)</strong></td><td>Can the utility deliver?</td><td>The water office has staff but no vehicles to reach remote villages.</td></tr>
+                    <tr><td><strong>Execution Reality (E)</strong></td><td>Is the infrastructure actually working?</td><td>A borehole was drilled, but the pump broke and was never repaired.</td></tr>
+                    <tr><td><strong>Household Experience (H)</strong></td><td>Does the family get clean, affordable water?</td><td>Women walk 3 km every day to fetch water from a river shared with livestock.</td></tr>
+                </table>
+                
+                <p><strong>Why "friction" and not just "gap"?</strong><br>
+                A "gap" is static – it tells you something is missing. <strong>Friction</strong> is dynamic. It measures how much <em>resistance</em> or <em>energy loss</em> is happening in the system. In water governance, high friction means:</p>
+                <ul>
+                    <li>Policy promises take years to reach communities</li>
+                    <li>Budgets are approved but never released</li>
+                    <li>Infrastructure is built but not maintained</li>
+                    <li>Households lose trust in government</li>
+                </ul>
+                
+                <p><strong>How does HydroFric use the STF Framework?</strong><br>
+                HydroFric translates the STF Framework into a simple scoring system (1 to 5 for each domain). You rate Policy Intent, Institutional Capacity, Execution Reality, and Household Experience based on your knowledge. The tool then calculates where the friction is highest and tells you what to fix first – no mathematics required.</p>
+                
+                <p><strong>What is "Zero-Friction Alignment"?</strong><br>
+                The ultimate goal of the STF Framework is <strong>Zero-Friction Alignment</strong> – where P = I = E = H. This means what the policy promises is exactly what households experience. Success is not about getting high scores (all 5s). Success is about alignment. A system with all 3s but perfectly aligned has zero friction.</p>
+                
+                <p><em>📚 The STF Framework is fully documented in the PhD thesis "Operationalizing Socio-Technical Friction: A Multi-Scalar Pathway to Equitable Rural Water Governance in Semi-Arid Southern Africa" (Musuku, 2026).</em></p>
             </div>
         </div>
 
@@ -416,7 +491,7 @@
         <div class="accordion-item">
             <div class="accordion-header">🛠️ Technical & Functional Details</div>
             <div class="accordion-content">
-                <p>The current version (v4.2, April 2026) is in English, with French and Portuguese versions planned. The tool provides real‑time diagnostic outputs, including a friction score, friction level, dominant gap identification, system analysis, priority intervention, and a gap contribution breakdown. Users can adjust data quality confidence (high, moderate, low) to weight their inputs.</p>
+                <p>The current version (v4.3, April 2026) is in English, with French and Portuguese versions planned. The tool provides real‑time diagnostic outputs, including a friction score, friction level, dominant gap identification, system analysis, priority intervention, and a gap contribution breakdown. Users can adjust data quality confidence (high, moderate, low) to weight their inputs.</p>
             </div>
         </div>
 
@@ -445,7 +520,7 @@
     </div>
 
     <div class="footer">
-        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v4.2<br>
+        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v4.3<br>
         <a href="https://hydrofric.github.io/water-governance-friction/" style="color: #2C7DA0;">https://hydrofric.github.io/water-governance-friction/</a>
     </div>
 </div>
@@ -549,6 +624,62 @@
         updateAll();
     }
 
+    async function generateAIReport() {
+        const P = scores.P, I = scores.I, E = scores.E, H = scores.H;
+        const gapPI = Math.pow(P - I, 2), gapIE = Math.pow(I - E, 2), gapEH = Math.pow(E - H, 2), gapPH = Math.pow(P - H, 2);
+        const gapsList = [
+            { name: "P-I (Policy vs Capacity)", value: gapPI },
+            { name: "I-E (Institutional vs Execution)", value: gapIE },
+            { name: "E-H (Execution vs Household)", value: gapEH },
+            { name: "P-H (Policy vs Household)", value: gapPH }
+        ];
+        const dominant = gapsList.reduce((a, b) => (a.value > b.value ? a : b), gapsList[0]).name;
+
+        const prompt = `You are HydroFric, an expert AI in Water Governance and Institutional Friction Analysis.
+        Analyze the following diagnostic data for a rural water supply system:
+
+        Scores (1=Very Poor, 5=Excellent):
+        - Policy Intent (P): ${P}
+        - Institutional Capacity (I): ${I}
+        - Execution Reality (E): ${E}
+        - Household Experience (H): ${H}
+
+        Friction Gaps:
+        - ${gapsList[0].name}: ${gapPI}
+        - ${gapsList[1].name}: ${gapIE}
+        - ${gapsList[2].name}: ${gapEH}
+        - ${gapsList[3].name}: ${gapPH}
+        
+        Dominant Gap: ${dominant}
+
+        Provide:
+        1. Root Cause Analysis: Explain the specific friction between these scores.
+        2. Detailed Priority Intervention: Provide 3 concrete, actionable steps a rural water manager should take.
+        3. Risk Assessment: State the consequence of not fixing this gap.
+
+        Format as structured text.`;
+
+        const analysisBox = document.getElementById('analysisBox');
+        const originalContent = analysisBox.innerHTML;
+        analysisBox.innerHTML = `<h4>📊 System Friction Analysis</h4><p><em>🤖 Generating AI Deep Dive Report...</em></p>`;
+
+        // Mock response - replace with actual API call when ready
+        setTimeout(() => {
+            const aiText = `🔍 Root Cause Analysis:
+The scores reveal a critical misalignment between Policy Intent (${P}) and Household Experience (${H}). Policy ambition is high, but the delivery chain is broken. The dominant gap is ${dominant}.
+
+🎯 Detailed Priority Intervention:
+1. Strengthen supervision and accountability systems to address the I-E gap.
+2. Establish a community feedback mechanism to report infrastructure failures.
+3. Reallocate budget from administrative overhead to rapid response maintenance.
+
+⚠️ Risk Assessment:
+Without intervention, infrastructure will continue to decay, leading to increased household water insecurity and loss of trust in service providers.`;
+            
+            analysisBox.innerHTML = `<h4>🤖 AI Generated Deep Dive Report</h4><div style="white-space: pre-wrap; font-size: 0.85rem;">${aiText}</div><button onclick="location.reload()" style="margin-top:15px; padding:5px 10px; background:#E76F51; color:white; border:none; border-radius:5px; cursor:pointer;">⟳ New Assessment</button>`;
+        }, 1500);
+    }
+
     function createCard(varName) {
         const container = document.getElementById('cardsContainer');
         const cardDiv = document.createElement('div'); cardDiv.className = 'card';
@@ -577,6 +708,7 @@
 
     createCard('P'); createCard('I'); createCard('E'); createCard('H');
     document.getElementById('resetBtn').addEventListener('click', resetAll);
+    document.getElementById('aiReportBtn').addEventListener('click', generateAIReport);
     updateAll();
 </script>
 </body>
