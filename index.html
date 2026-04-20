@@ -13,7 +13,7 @@
             color: #1A2A3A;
         }
 
-        /* Hero Section - Solid Gradient (ready for image later) */
+        /* Hero Section - Solid Gradient */
         .hero {
             background: linear-gradient(135deg, #0A5C6E 0%, #2C7DA0 100%);
             padding: 60px 20px;
@@ -282,7 +282,7 @@
             margin-bottom: 10px;
         }
 
-        /* Contact Section (copyable email, no external links) */
+        /* Contact Section */
         .contact-section {
             background: #0A5C6E;
             color: white;
@@ -350,7 +350,7 @@
     </div>
 </div>
 
-<!-- Hero Section (solid gradient, ready for image later) -->
+<!-- Hero Section -->
 <div class="hero">
     <h1>💧 HydroFric <span>| Water Governance Friction Diagnostic Tool</span></h1>
     <div class="tagline">Integrating Policy Intent with Point-of-Use Experience</div>
@@ -414,7 +414,7 @@
         <div class="accordion-item">
             <div class="accordion-header">📌 Purpose & Scope – For rural water supply</div>
             <div class="accordion-content">
-                <p>The mission of HydroFric is to help rural water service providers and community members diagnose the most urgent gaps between policy promises, available resources, on‑ground infrastructure, and what families actually experience at the tap. The tool is suitable for any rural setting – from a single borehole with a hand pump to a small piped scheme serving several villages – and can be used by village water committees, district water officers, NGO field staff, local government planners, and community health workers.</p>
+                <p>The mission of HydroFric is to help rural water service providers and community members diagnose the most urgent gaps between policy promises, available resources, on‑ground infrastructure, and what families actually experience at the tap. The tool is suitable for any rural setting – from a single water point to a small piped scheme serving several villages – and can be used by village water committees, district water officers, NGO field staff, local government planners, and community health workers.</p>
             </div>
         </div>
 
@@ -430,7 +430,7 @@
                     <tr><td><strong>Execution Reality (E)</strong></td><td>Physical infrastructure delivery, functionality, and maintenance performance – what is actually built and operating.</td></tr>
                     <tr><td><strong>Household Experience (H)</strong></td><td>Affordability, access distance, reliability, water quality, and user satisfaction – the lived reality of the end‑user.</td></tr>
                 </table>
-                <p>Users score each domain from 1 (very poor) to 5 (excellent). The tool automatically calculates the largest mismatch between any two domains, producing a friction score, a friction level (Very Low to Critical), a plain‑language system analysis, and a priority intervention – all without requiring any mathematical input from the user.</p>
+                <p>Users score each domain from 1 (very poor) to 5 (excellent). The tool automatically calculates the largest mismatch and provides a pattern‑specific diagnosis and intervention.</p>
                 <details style="margin-top: 10px;">
                     <summary style="cursor:pointer; color:#2C7DA0;">Show methodology details (including the friction equation)</summary>
                     <p style="margin-top:10px;">Friction is calculated as the sum of squared gaps between each pair of domains: <strong>F = (P-I)² + (I-E)² + (E-H)² + (P-H)²</strong>. Larger gaps are penalised more heavily. The tool does the math for you.</p>
@@ -442,34 +442,20 @@
             <div class="accordion-header">⚙️ What is the Socio-Technical Friction (STF) Framework?</div>
             <div class="accordion-content">
                 <p>The <strong>Socio-Technical Friction (STF) Framework</strong> is the theoretical engine behind HydroFric. It was developed through a systematic review of over 130 water governance studies across five Southern African countries – Botswana, Namibia, South Africa, Zambia, and Zimbabwe.</p>
-                
                 <p><strong>What does "Socio-Technical Friction" mean?</strong><br>
-                In simple terms, <strong>friction</strong> is the resistance that slows down or blocks water from reaching households. It happens when the different parts of a water governance system – policies, institutions, infrastructure, and households – are not working together smoothly. Just like mechanical friction in an engine generates heat and wears down parts, institutional friction generates delays, costs, and social unrest.</p>
-                
+                In simple terms, <strong>friction</strong> is the resistance that slows down or blocks water from reaching households. It happens when the different parts of a water governance system – policies, institutions, infrastructure, and households – are not working together smoothly.</p>
                 <p><strong>The four domains of the STF Framework:</strong></p>
                 <table>
                     <tr><th>Domain</th><th>What it asks</th><th>Example of friction</th></tr>
                     <tr><td><strong>Policy Intent (P)</strong></td><td>What did the law promise?</td><td>A national policy promises water for all, but no budget is allocated.</td></tr>
                     <tr><td><strong>Institutional Capacity (I)</strong></td><td>Can the utility deliver?</td><td>The water office has staff but no vehicles to reach remote villages.</td></tr>
-                    <tr><td><strong>Execution Reality (E)</strong></td><td>Is the infrastructure actually working?</td><td>A borehole was drilled, but the pump broke and was never repaired.</td></tr>
-                    <tr><td><strong>Household Experience (H)</strong></td><td>Does the family get clean, affordable water?</td><td>Women walk 3 km every day to fetch water from a river shared with livestock.</td></tr>
+                    <tr><td><strong>Execution Reality (E)</strong></td><td>Is the infrastructure actually working?</td><td>A water point was installed, but it broke and was never repaired.</td></tr>
+                    <tr><td><strong>Household Experience (H)</strong></td><td>Does the family get clean, affordable water?</td><td>Households walk long distances daily to fetch water from an unsafe source.</td></tr>
                 </table>
-                
                 <p><strong>Why "friction" and not just "gap"?</strong><br>
-                A "gap" is static – it tells you something is missing. <strong>Friction</strong> is dynamic. It measures how much <em>resistance</em> or <em>energy loss</em> is happening in the system. In water governance, high friction means:</p>
-                <ul>
-                    <li>Policy promises take years to reach communities</li>
-                    <li>Budgets are approved but never released</li>
-                    <li>Infrastructure is built but not maintained</li>
-                    <li>Households lose trust in government</li>
-                </ul>
-                
-                <p><strong>How does HydroFric use the STF Framework?</strong><br>
-                HydroFric translates the STF Framework into a simple scoring system (1 to 5 for each domain). You rate Policy Intent, Institutional Capacity, Execution Reality, and Household Experience based on your knowledge. The tool then calculates where the friction is highest and tells you what to fix first – no mathematics required.</p>
-                
+                A "gap" is static – it tells you something is missing. <strong>Friction</strong> is dynamic. It measures how much <em>resistance</em> or <em>energy loss</em> is happening in the system.</p>
                 <p><strong>What is "Zero-Friction Alignment"?</strong><br>
-                The ultimate goal of the STF Framework is <strong>Zero-Friction Alignment</strong> – where P = I = E = H. This means what the policy promises is exactly what households experience. Success is not about getting high scores (all 5s). Success is about alignment. A system with all 3s but perfectly aligned has zero friction.</p>
-                
+                The ultimate goal of the STF Framework is <strong>Zero-Friction Alignment</strong> – where P = I = E = H. Success is not about getting high scores. Success is about alignment.</p>
                 <p><em>📚 The STF Framework is fully documented in the PhD thesis "Operationalizing Socio-Technical Friction: A Multi-Scalar Pathway to Equitable Rural Water Governance in Semi-Arid Southern Africa" (Musuku, 2026).</em></p>
             </div>
         </div>
@@ -477,7 +463,7 @@
         <div class="accordion-item">
             <div class="accordion-header">👨‍💻 Developer & Partners</div>
             <div class="accordion-content">
-                <p>HydroFric was created by <strong>Godwin Joseph Musuku</strong> as part of a PhD research project at the <strong>University of Zambia</strong>. The tool builds on a systematic review of over 130 studies from five Southern African countries (Botswana, Namibia, South Africa, Zambia, and Zimbabwe). Development is supported by the open‑source community, and the tool is published under a free and open licence. No external funding or commercial partners are involved, ensuring the tool remains independent and free for all users.</p>
+                <p>HydroFric was created by <strong>Godwin Joseph Musuku</strong> as part of a PhD research project at the <strong>University of Zambia</strong>. The tool builds on a systematic review of over 130 studies from five Southern African countries (Botswana, Namibia, South Africa, Zambia, and Zimbabwe). Development is supported by the open‑source community, and the tool is published under a free and open licence.</p>
             </div>
         </div>
 
@@ -491,7 +477,7 @@
         <div class="accordion-item">
             <div class="accordion-header">🛠️ Technical & Functional Details</div>
             <div class="accordion-content">
-                <p>The current version (v4.3, April 2026) is in English, with French and Portuguese versions planned. The tool provides real‑time diagnostic outputs, including a friction score, friction level, dominant gap identification, system analysis, priority intervention, and a gap contribution breakdown. Users can adjust data quality confidence (high, moderate, low) to weight their inputs.</p>
+                <p>The current version (v4.6, April 2026) is in English, with French and Portuguese versions planned. The tool provides real‑time diagnostic outputs, including a friction score, friction level, pattern‑specific analysis, priority intervention, and a gap contribution breakdown.</p>
             </div>
         </div>
 
@@ -510,7 +496,7 @@
         </div>
     </div>
 
-    <!-- Contact Section (copyable email, no external links) -->
+    <!-- Contact Section -->
     <div id="contact" class="contact-section">
         <h2>📬 Get in Touch</h2>
         <p>Have questions, feedback, or want to collaborate? Reach out to the HydroFric team.</p>
@@ -520,7 +506,7 @@
     </div>
 
     <div class="footer">
-        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v4.3<br>
+        HydroFric • Water Governance Friction Diagnostic Tool • Based on STF Framework • v4.6<br>
         <a href="https://hydrofric.github.io/water-governance-friction/" style="color: #2C7DA0;">https://hydrofric.github.io/water-governance-friction/</a>
     </div>
 </div>
@@ -561,38 +547,125 @@
         return { level: "CRITICAL", class: "level-critical" };
     }
 
-    function getSystemAnalysis(P, I, E, H, dominant) {
-        if (P===1 && I===1 && E===1 && H===1) {
-            return "System-wide failure across all governance domains. No functional policy framework, institutional capacity, service delivery, or household access. Requires foundational rebuilding starting with basic infrastructure and institutional establishment.";
+    // Pattern-based diagnosis (v4.6)
+    function getPatternAnalysis(P, I, E, H) {
+        // Pattern 1: Paper Tiger (P=5, I=4, E=3, H=1) or similar high P, low H
+        if (P >= 4 && I >= 3 && E >= 2 && H <= 2 && (P - H) >= 3) {
+            return {
+                analysis: "Policy is excellent and well‑resourced, but this ambition never reaches households. Institutions focus on outputs (infrastructure built) rather than outcomes (water actually flowing). The missing link is accountability – no one is responsible for ensuring that what gets built actually serves people. Households suffer despite government spending.",
+                intervention: "Shift performance metrics from 'projects completed' to 'households with reliable water'. Establish a direct feedback loop from communities to ministry leadership. Require post‑construction monitoring reports before final payments to contractors. Create a rapid response team to fix the worst‑performing water points within 30 days.",
+                pattern: "Paper Tiger"
+            };
         }
-        if (P===5 && I===5 && E===5 && H===5) {
-            return "Optimal alignment across all domains. Policy commitments are matched by institutional capacity, execution, and household outcomes. Maintain current systems with routine monitoring for early detection of emerging gaps.";
+        // Pattern 2: Resilient Informal System (P=1, I=2, E=3, H=4) or similar low P, high H
+        else if (P <= 2 && I <= 2 && E >= 2 && H >= 3 && (H - P) >= 2) {
+            return {
+                analysis: "Government policy is absent or irrelevant, yet households have adequate water. Communities have organized themselves – forming water committees, collecting small fees, and conducting basic repairs. The friction is not between policy and households; it is between state absence and community resilience. The system works despite the government, not because of it.",
+                intervention: "Do not impose new formal structures – instead, recognize and support what already works. Provide technical assistance (spare parts, training) to existing community committees. Legalize informal water points and exempt them from restrictive permitting. Offer matching grants for community‑led infrastructure improvements.",
+                pattern: "Resilient Informal System"
+            };
         }
-        
-        const gapMap = {
-            "I-E": `Institutional capacity (${I}) exceeds or falls short of execution reality (${E}). Resources and mandates exist but are not translating into field-level outcomes. Focus on project management, accountability systems, and supervision protocols.`,
-            "E-H": `Execution (${E}) is misaligned with household experience (${H}). Infrastructure exists but does not adequately serve end-users. Address service quality, accessibility, affordability, and reliability gaps.`,
-            "P-I": `Policy ambition (${P}) is mismatched with institutional capacity (${I}). Commitments exceed what delivery systems can realistically achieve. Either increase institutional resources or right-size policy targets.`,
-            "P-H": `Policy intent (${P}) diverges from household experience (${H}). The most fundamental governance gap. Requires closing intermediate gaps (P-I, I-E, E-H) through coordinated institutional and infrastructure improvements.`
-        };
-        return gapMap[dominant] || `Multiple gaps detected. Primary friction between ${dominant}. Systematic assessment needed across all governance levels.`;
-    }
-
-    function getPriorityIntervention(dominant, P, I, E, H) {
-        if (P===1 && I===1 && E===1 && H===1) {
-            return "Establish basic governance framework: (1) Develop minimal policy standards, (2) Allocate emergency institutional capacity, (3) Deploy interim service delivery mechanisms, (4) Conduct baseline household assessment.";
+        // Pattern 3: Broken Promise (P=5, I=5, E=2, H=1) or similar high P,I low E,H
+        else if (P >= 4 && I >= 4 && E <= 2 && H <= 2) {
+            return {
+                analysis: "Policy and institutions are strong on paper, but execution has failed completely. Funds are allocated but not spent on infrastructure. Contracts are signed but not completed. Households see government vehicles passing by but no water point ever gets built or repaired. The gap is not capacity – it is integrity and follow‑through.",
+                intervention: "Conduct a forensic audit of uncompleted projects and funds released. Publish all contract performance records publicly. Require photographic and GPS evidence of infrastructure completion before final payments. Establish an independent watchdog committee with community representatives to verify project completion.",
+                pattern: "Broken Promise"
+            };
         }
-        if (P===5 && I===5 && E===5 && H===5) {
-            return "Sustain alignment through: (1) Preventative maintenance programs, (2) Regular performance monitoring, (3) Stakeholder feedback systems, (4) Knowledge sharing with other utilities.";
+        // Pattern 4: Overstretched Community (P=1, I=1, E=4, H=3) or similar low P,I high E
+        else if (P <= 2 && I <= 2 && E >= 3 && H >= 2 && (E - P) >= 2) {
+            return {
+                analysis: "Water points exist – likely built by an NGO or community effort – but there is no government policy or institutional backing for ongoing maintenance. Households have access, but systems break down frequently and repairs are slow because there is no formal support structure. The community is overstretched and may eventually abandon the infrastructure.",
+                intervention: "Formalize a maintenance agreement between the community and local government. Provide training and toolkits to community mechanics. Establish a small revolving fund for spare parts, co‑managed by government and community representatives. Integrate the water point into district asset registers.",
+                pattern: "Overstretched Community"
+            };
         }
-        
-        const interventionMap = {
-            "I-E": "Strengthen project management systems. Enhance supervision, accountability frameworks, and performance metrics. Ensure institutional resources translate into measurable field outcomes. Consider management audits and staff training.",
-            "E-H": "Align infrastructure delivery with household needs. Improve service quality, access distance, affordability, and reliability. Engage communities in siting decisions and service design. Invest in maintenance systems.",
-            "P-I": "Realign policy targets with institutional capacity. Conduct capacity audits, adjust timelines, or increase resourcing. Coordinate across ministries responsible for finance, water, and local government.",
-            "P-H": "Close intermediate gaps systematically. Strengthen institutional capacity (P-I), improve execution systems (I-E), and align infrastructure with household needs (E-H). Monitor progress at each stage."
-        };
-        return interventionMap[dominant] || "Conduct comprehensive system diagnostic. Prioritize largest gap, then address secondary misalignments sequentially. Engage stakeholders across all governance levels.";
+        // Pattern 5: Elite Capture (P=5, I=3, E=4, H=2) or similar high P,E low H
+        else if (P >= 4 && E >= 3 && H <= 2 && (P - H) >= 2 && (E - H) >= 2) {
+            return {
+                analysis: "Policies promise universal access, and infrastructure is being built, but the poorest households are systematically excluded. Water points are located in accessible areas, but not near informal settlements. Tariffs are set without considering ability to pay. The system works – but only for those with money, connections, or political influence. This is an equity gap, not a technical one.",
+                intervention: "Map all water points against population density and poverty data. Identify underserved areas and prioritize them for new infrastructure. Introduce lifeline tariffs (free or subsidized first 6 cubic metres) for registered low‑income households. Require community representation on water committee boards, including women and informal settlement residents.",
+                pattern: "Elite Capture"
+            };
+        }
+        // Pattern 6: Institutional Overstretch (P=5, I=2, E=2, H=2) or similar high P, low I,E,H
+        else if (P >= 4 && I <= 2 && E <= 2 && H <= 2 && (P - I) >= 2) {
+            return {
+                analysis: "Policies are world‑class – they promise universal access, climate resilience, and equity. But the institutions responsible have no budget, no staff, or no training. Execution is therefore weak or non‑existent. Households are left waiting for services that never arrive. The problem is not policy design – it is the gap between ambition and capacity.",
+                intervention: "Right‑size policy targets to match current institutional capacity. Create a phased implementation plan with realistic milestones. Increase budget allocation to water institutions and fill critical vacancies. Build capacity through targeted training and twinning arrangements with better‑performing utilities.",
+                pattern: "Institutional Overstretch"
+            };
+        }
+        // Pattern 7: Autonomous Adaptation (P=2, I=2, E=4, H=5) or similar low P,I high E,H
+        else if (P <= 3 && I <= 3 && E >= 3 && H >= 4 && (H - P) >= 2 && (E - I) >= 1) {
+            return {
+                analysis: "Policy is weak or absent, and institutions provide no support, yet water flows and households are satisfied. Communities have taken full ownership – collecting fees, conducting repairs, managing conflicts. The state has been excluded because it was never helpful. This is a success story of autonomous adaptation, but it is fragile without external support for major repairs.",
+                intervention: "Do not interfere. Recognize and support existing community systems without imposing formal structures. Provide access to spare parts supply chains and technical training. Offer grants for system upgrades (solar pumping, storage tanks) without demanding formal registration. Learn from these communities and replicate their models elsewhere.",
+                pattern: "Autonomous Adaptation"
+            };
+        }
+        // Pattern 8: Systemic Collapse (all 1s)
+        else if (P === 1 && I === 1 && E === 1 && H === 1) {
+            return {
+                analysis: "Complete governance collapse across all domains. No functional policy framework – existing laws are outdated, unenforced, or absent. Institutional capacity is non‑existent: chronic skill deficits, high vacancy rates, no operational budget, and no maintenance systems. Infrastructure is non‑functional or never existed. Households rely on unsafe surface water or expensive informal vendors.",
+                intervention: "Immediate emergency water supply to affected communities. Conduct rapid assessment to identify minimal infrastructure that can be restored or installed. Engage local leaders to establish interim community water committees. Develop a phased recovery plan that simultaneously rebuilds policy, institutional capacity, infrastructure, and household trust.",
+                pattern: "Systemic Collapse"
+            };
+        }
+        // Pattern 9: Optimal Alignment (all 5s)
+        else if (P === 5 && I === 5 && E === 5 && H === 5) {
+            return {
+                analysis: "Optimal alignment across all domains. Policy is progressive, well‑coordinated, and responsive to local conditions. Institutional capacity is strong with skilled staff, adequate budget, and proactive planning. Infrastructure is well‑maintained with preventive schedules. Households experience reliable, affordable, safe water with reasonable access distance. Trust in service providers is high.",
+                intervention: "Document best practices as a case study for replication. Establish early‑warning monitoring to detect emerging gaps before they become crises. Mentor neighbouring communities or utilities through peer‑learning exchanges. Invest in climate‑resilient upgrades (solar pumping, groundwater recharge, source protection) to maintain alignment under future stress.",
+                pattern: "Optimal Alignment"
+            };
+        }
+        // Pattern 10: Critical Underperformance (all 2s)
+        else if (P === 2 && I === 2 && E === 2 && H === 2) {
+            return {
+                analysis: "Policy exists but is outdated, uncoordinated, or lacks implementation roadmap. Overlapping mandates between national and local agencies create fragmented accountability. Institutional capacity is critically underpowered: high vacancy rates, funds diverted from operations, and no preventive maintenance. Infrastructure is ageing and reactive. Households face intermittent supply, long travel distances, and eroding trust.",
+                intervention: "Clarify roles and responsibilities between national and local bodies through a policy audit. Establish a dedicated rural maintenance unit with trained technicians and spare parts supply chain. Implement simple community feedback mechanisms (SMS, local meetings) to report service failures. Prioritize restoring one functional water point per village to rebuild confidence.",
+                pattern: "Critical Underperformance"
+            };
+        }
+        // Pattern 11: Moderate Misalignment (all 3s or similar)
+        else if ((P === 3 && I === 3 && E === 3 && H === 3) || (Math.abs(P - I) <= 1 && Math.abs(I - E) <= 1 && Math.abs(E - H) <= 1 && (P < 4 || H < 4))) {
+            return {
+                analysis: "Policy is moderately progressive but suffers from poor coordination across sectors (water, health, finance, local government). Institutional capacity has adequate staffing but lacks technical planning skills for local conditions. Execution is inconsistent: some infrastructure works, but maintenance is reactive and procurement causes delays. Households experience mixed outcomes – water available but unreliable, unaffordable, or distant.",
+                intervention: "Establish a cross‑sectoral coordination committee to harmonize planning across relevant government departments. Train local staff in demand forecasting, site selection, and lifecycle costing. Shift from reactive to preventive maintenance through scheduled inspections. Introduce affordable tariff structures that protect poorest households while recovering operational costs.",
+                pattern: "Moderate Misalignment"
+            };
+        }
+        // Pattern 12: Good but Fragmented (all 4s)
+        else if (P === 4 && I === 4 && E === 4 && H === 4) {
+            return {
+                analysis: "Policy is strong and up‑to‑date but overly centralized, excluding local stakeholders and ignoring on‑ground realities. Institutional capacity is good but suffers from weak decentralization – responsibilities exist on paper but not in practice. Execution delivers functional infrastructure, but procurement delays and contractor performance issues persist. Households generally satisfied but report occasional interruptions.",
+                intervention: "Decentralize operational decisions to district and community levels with clear accountability. Strengthen procurement systems to reduce delays and improve service provider quality. Install basic monitoring systems (flow tracking, breakdown logs) to detect failures early. Establish regular community forums to co‑design service improvements and tariff agreements.",
+                pattern: "Good but Fragmented"
+            };
+        }
+        // Default: Generic misalignment (fallback)
+        else {
+            const gaps = [
+                { name: "P-I", value: Math.pow(P - I, 2) },
+                { name: "I-E", value: Math.pow(I - E, 2) },
+                { name: "E-H", value: Math.pow(E - H, 2) },
+                { name: "P-H", value: Math.pow(P - H, 2) }
+            ];
+            const dominant = gaps.reduce((a, b) => (a.value > b.value ? a : b)).name;
+            const gapMap = {
+                "I-E": `Institutional capacity (${I}) and execution reality (${E}) are misaligned. Resources and mandates exist but are not translating into field-level outcomes. Focus on project management, accountability systems, and supervision protocols.`,
+                "E-H": `Execution (${E}) is misaligned with household experience (${H}). Infrastructure exists but does not adequately serve end-users. Address service quality, accessibility, affordability, and reliability gaps.`,
+                "P-I": `Policy ambition (${P}) exceeds institutional capacity (${I}). Commitments exceed what delivery systems can realistically achieve. Either increase institutional resources or right-size policy targets.`,
+                "P-H": `Policy intent (${P}) diverges from household experience (${H}). The most fundamental governance gap. Requires closing intermediate gaps through coordinated institutional and infrastructure improvements.`
+            };
+            return {
+                analysis: gapMap[dominant] || `Multiple gaps detected. Primary friction between ${dominant}. Systematic assessment needed across all governance levels.`,
+                intervention: "Conduct comprehensive system diagnostic. Prioritize the largest gap, then address secondary misalignments sequentially. Engage stakeholders across all governance levels.",
+                pattern: "Generic Misalignment"
+            };
+        }
     }
 
     function updateAll() {
@@ -606,12 +679,14 @@
         const gaps = [{ name: "P-I", value: gapPI }, { name: "I-E", value: gapIE }, { name: "E-H", value: gapEH }, { name: "P-H", value: gapPH }];
         const dominant = gaps.reduce((a, b) => (a.value > b.value ? a : b)).name;
         
+        const patternResult = getPatternAnalysis(P, I, E, H);
+        
         document.getElementById('rawScore').innerHTML = rawScore;
         document.getElementById('adjScore').innerHTML = adjScore;
         document.getElementById('level').innerHTML = `<span class="level ${frictionInfo.class}">${frictionInfo.level}</span>`;
         document.getElementById('dominant').innerHTML = `${dominant} (${getGapDescription(dominant)})`;
-        document.getElementById('analysisBox').innerHTML = `<h4>📊 System Friction Analysis</h4><p>${getSystemAnalysis(P, I, E, H, dominant)}</p>`;
-        document.getElementById('interventionBox').innerHTML = `<h4>🎯 Priority Intervention</h4><p>${getPriorityIntervention(dominant, P, I, E, H)}</p>`;
+        document.getElementById('analysisBox').innerHTML = `<h4>📊 System Friction Analysis</h4><p><strong>Pattern detected: ${patternResult.pattern}</strong><br><br>${patternResult.analysis}</p>`;
+        document.getElementById('interventionBox').innerHTML = `<h4>🎯 Priority Intervention</h4><p>${patternResult.intervention}</p>`;
         document.getElementById('gapBreakdown').innerHTML = `✓ Gap contributions: P-I:${gapPI} | I-E:${gapIE} | E-H:${gapEH} | P-H:${gapPH}`;
     }
 
@@ -626,57 +701,47 @@
 
     async function generateAIReport() {
         const P = scores.P, I = scores.I, E = scores.E, H = scores.H;
-        const gapPI = Math.pow(P - I, 2), gapIE = Math.pow(I - E, 2), gapEH = Math.pow(E - H, 2), gapPH = Math.pow(P - H, 2);
-        const gapsList = [
-            { name: "P-I (Policy vs Capacity)", value: gapPI },
-            { name: "I-E (Institutional vs Execution)", value: gapIE },
-            { name: "E-H (Execution vs Household)", value: gapEH },
-            { name: "P-H (Policy vs Household)", value: gapPH }
-        ];
-        const dominant = gapsList.reduce((a, b) => (a.value > b.value ? a : b), gapsList[0]).name;
-
-        const prompt = `You are HydroFric, an expert AI in Water Governance and Institutional Friction Analysis.
-        Analyze the following diagnostic data for a rural water supply system:
-
-        Scores (1=Very Poor, 5=Excellent):
-        - Policy Intent (P): ${P}
-        - Institutional Capacity (I): ${I}
-        - Execution Reality (E): ${E}
-        - Household Experience (H): ${H}
-
-        Friction Gaps:
-        - ${gapsList[0].name}: ${gapPI}
-        - ${gapsList[1].name}: ${gapIE}
-        - ${gapsList[2].name}: ${gapEH}
-        - ${gapsList[3].name}: ${gapPH}
+        const patternResult = getPatternAnalysis(P, I, E, H);
         
-        Dominant Gap: ${dominant}
-
-        Provide:
-        1. Root Cause Analysis: Explain the specific friction between these scores.
-        2. Detailed Priority Intervention: Provide 3 concrete, actionable steps a rural water manager should take.
-        3. Risk Assessment: State the consequence of not fixing this gap.
-
-        Format as structured text.`;
-
         const analysisBox = document.getElementById('analysisBox');
         const originalContent = analysisBox.innerHTML;
         analysisBox.innerHTML = `<h4>📊 System Friction Analysis</h4><p><em>🤖 Generating AI Deep Dive Report...</em></p>`;
 
-        // Mock response - replace with actual API call when ready
+        // Simulate AI processing (replace with actual API call when ready)
         setTimeout(() => {
-            const aiText = `🔍 Root Cause Analysis:
-The scores reveal a critical misalignment between Policy Intent (${P}) and Household Experience (${H}). Policy ambition is high, but the delivery chain is broken. The dominant gap is ${dominant}.
+            const aiText = `🔍 DEEP DIVE REPORT – ${patternResult.pattern}
 
-🎯 Detailed Priority Intervention:
-1. Strengthen supervision and accountability systems to address the I-E gap.
-2. Establish a community feedback mechanism to report infrastructure failures.
-3. Reallocate budget from administrative overhead to rapid response maintenance.
+Based on the scores provided (P=${P}, I=${I}, E=${E}, H=${H}), the system exhibits a "${patternResult.pattern}" pattern.
 
-⚠️ Risk Assessment:
-Without intervention, infrastructure will continue to decay, leading to increased household water insecurity and loss of trust in service providers.`;
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 ROOT CAUSE ANALYSIS:
+${patternResult.analysis}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 DETAILED PRIORITY INTERVENTIONS:
+${patternResult.intervention}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ RISK ASSESSMENT:
+If the identified gaps are not addressed, the following consequences are likely:
+• Continued deterioration of water service delivery
+• Increased household coping costs and health risks
+• Erosion of community trust in service providers
+• Potential abandonment of existing infrastructure
+• Widening of existing inequities between served and unserved populations
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 GAP BREAKDOWN:
+P-I gap: ${Math.pow(P - I, 2)} | I-E gap: ${Math.pow(I - E, 2)} | E-H gap: ${Math.pow(E - H, 2)} | P-H gap: ${Math.pow(P - H, 2)}
+Raw Friction Score: ${Math.pow(P - I, 2) + Math.pow(I - E, 2) + Math.pow(E - H, 2) + Math.pow(P - H, 2)}
+
+This report is a diagnostic guide. Combine with local knowledge and stakeholder consultation for best results.`;
             
-            analysisBox.innerHTML = `<h4>🤖 AI Generated Deep Dive Report</h4><div style="white-space: pre-wrap; font-size: 0.85rem;">${aiText}</div><button onclick="location.reload()" style="margin-top:15px; padding:5px 10px; background:#E76F51; color:white; border:none; border-radius:5px; cursor:pointer;">⟳ New Assessment</button>`;
+            analysisBox.innerHTML = `<h4>🤖 AI Generated Deep Dive Report</h4><div style="white-space: pre-wrap; font-size: 0.85rem; max-height: 500px; overflow-y: auto;">${aiText}</div><button onclick="location.reload()" style="margin-top:15px; padding:5px 10px; background:#E76F51; color:white; border:none; border-radius:5px; cursor:pointer;">⟳ New Assessment</button>`;
         }, 1500);
     }
 
