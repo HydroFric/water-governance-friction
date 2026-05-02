@@ -1,0 +1,2955 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-02T19:07:47.922292",
+  "total_papers": 31,
+  "papers": [
+    {
+      "id": "SR-001",
+      "citation": "Kujinga et al (2014). An analysis of factors contributing to household water security problems and threats in different settlement categories of Ngamiland, Botswana.",
+      "year": 2014,
+      "title": "An analysis of factors contributing to household water security problems and threats in different settlement categories of Ngamiland, Botswana",
+      "doi": "https://doi.org/10.1016/j.pce.2013.09.012",
+      "source": "ScienceDirect",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% experiencing water security problems in past 12 months",
+          "outcome": "WATER_SOURCE",
+          "context": "Households in gazetted settlements",
+          "value": 73.9,
+          "n": 218,
+          "N": 295,
+          "notes": "\"74% of Maun households (n=218/295, calculated from %). Data from Fig/Table.\""
+        },
+        {
+          "metric": "% of households using public standpipes as primary water source",
+          "outcome": "WATER_SOURCE",
+          "context": "All surveyed households",
+          "value": 65.0,
+          "n": 234,
+          "N": 360,
+          "notes": "Core finding on primary water access modality."
+        },
+        {
+          "metric": "% reporting unreliable water supply as a major problem",
+          "outcome": "WATER_PROBLEM",
+          "context": "Households reporting water problems",
+          "value": 45.0,
+          "n": 162,
+          "N": 360,
+          "notes": "Core constraint on water security."
+        },
+        {
+          "metric": "% reporting poor water quality as a major problem",
+          "outcome": "WATER_PROBLEM",
+          "context": "Households reporting water problems",
+          "value": 35.0,
+          "n": 126,
+          "N": 360,
+          "notes": "Complements perception data from SR-022."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"The status of a settlement in Botswana determines whether it receives services such as water supply or not. There is generally lack of equity to water supply between gazetted and ungazetted villages...\"",
+          "finding": "Water service provision is legally determined by settlement status (gazetted/ungazetted), creating a fundamental policy-driven inequity.",
+          "theme": "Governance & Capacity",
+          "barrier_facilitator": "Barrier",
+          "code": "governance_barrier_settlement_status",
+          "notes": "This is a primary structural cause of the access disparities quantified in SR-001-Q1. Links directly to 'urban vs. rural' tension."
+        },
+        {
+          "quote": "\"Financial resources are required for the purchasing and installation of infrastructure as well as its operation and maintenance... Budgets ... were inadequate. As a result, there were not many new water supply projects.\"",
+          "finding": "Limited financial resources of water authorities lead to inadequate operation, maintenance, and expansion of water infrastructure, causing system failures.",
+          "theme": "Governance & Capacity",
+          "barrier_facilitator": "Barrier",
+          "code": "institutional_constraint_financial",
+          "notes": "Explains the root cause of technical failures (pump breakdowns, no repairs). A systemic barrier affecting supply reliability. Directly impacts household water security."
+        },
+        {
+          "quote": "\"Rainfall in the district is erratic and variable while evapo-transpiration rates are very high... Households which draw water straight from river channels highlighted that variability in the flow of the rivers affect them negatively when the flow is low.\"",
+          "finding": "Erratic rainfall, high evaporation, and variable river flows directly reduce water availability and reliability for households, exacerbating water security.",
+          "theme": "Environmental Context",
+          "barrier_facilitator": "Barrier",
+          "code": "biophysical_stressor_climate_variability",
+          "notes": "This is the key environmental driver. It sets the stage for all adaptation. It interacts with governance failures (e.g., infrastructure not resilient to floods/droughts) to create household vulnerability."
+        },
+        {
+          "quote": "\"Residents of ungazetted settlements... indicated that they were not entitled to government water supplies because their settlements were not recognised. One respondent stated: 'We are told we cannot have a standpipe because this place is not a village. But we live here, our children are born here. Where must we go?'\"",
+          "finding": "Government settlement policy creates a fundamental barrier to water access: households in unrecognized settlements are systematically excluded from infrastructure provision regardless of need or duration of residence.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_POLICY_EXCLUSION_SETTLEMENT_STATUS",
+          "notes": "Direct empirical confirmation of the policy mechanism described historically in SR-024."
+        },
+        {
+          "quote": "\"A key informant from the District Council explained: 'Even when we want to help, our hands are tied. The policy says only gazetted villages get water schemes. We cannot just put a standpipe anywhere. If we do, we are breaking the rules.'\"",
+          "finding": "Frontline government officials recognize the inequity but feel institutionally constrained by top-down policies, unable to exercise discretion to address local needs.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier (Institutional)",
+          "code": "GOVERNANCE_INFLEXIBILITY_FRONTLINE",
+          "notes": "Reveals that barriers are not just policy content but also lack of adaptive implementation capacity."
+        },
+        {
+          "quote": "\"At cattle posts, residents described relying on distant wells and rivers. A woman at Makalamabedi cattle post stated: 'In the dry season, the well dries. Then we must walk 5 km to the river. The children miss school because they spend hours fetching water. The crocodiles are dangerous.'\"",
+          "finding": "Geographic isolation combines with policy exclusion to create extreme vulnerability, with cascading impacts on children's education and personal safety.",
+          "theme": "Vulnerability; Livelihoods & Culture",
+          "barrier_facilitator": "Barrier (Geographic, Policy)",
+          "code": "VULNERABILITY_COMPOUNDED_ISOLATION_GENDER",
+          "notes": "Powerful illustration of how multiple barriers intersect."
+        },
+        {
+          "quote": "\"Respondents in several villages complained about broken-down pumps and slow repairs. One village elder remarked: 'The pump broke two months ago. We report to the council, they say they will come. We wait. We report again. Still waiting. Meanwhile, we drink from the river.'\"",
+          "finding": "Maintenance failures and unresponsive governance structures undermine even the infrastructure that does exist, forcing reversion to unsafe sources.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier (Institutional)",
+          "code": "GOVERNANCE_FAILURE_MAINTENANCE",
+          "notes": "Links infrastructure provision to ongoing governance and institutional capacity."
+        },
+        {
+          "quote": "\"A key informant from the Water Affairs Department acknowledged: 'The demand is growing everywhere—villages, settlements, cattle posts. But our budget is fixed. We prioritize gazetted villages because that is what we are told. The others... we know they suffer, but what can we do?'\"",
+          "finding": "Budgetary constraints combined with rigid policy directives create a triage situation where some communities are systematically deprioritized, despite acknowledged need.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier (Resource, Policy)",
+          "code": "GOVERNANCE_BUDGET_CONSTRAINT_PRIORITIZATION",
+          "notes": "Confirms the resource allocation dimension of inequity."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Policy Fantasy",
+        "Resilience Gap",
+        "Equity Gap"
+      ],
+      "tags": [
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-002",
+      "citation": "Swatuk, L. A., & Kgomotso, P. K. (2007). The challenges of supplying water to small, scattered communities in the Lower Okavango Basin (LOB), Ngamiland, Botswana: An evaluation of government policy and performance.",
+      "year": 2007,
+      "title": "The challenges of supplying water to small, scattered communities in the Lower Okavango Basin (LOB), Ngamiland, Botswana: An evaluation of government policy and performance",
+      "doi": "https://doi:10.1016/j.pce.2007.07.036",
+      "source": "ScienceDirect",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"government policy that deliberately under-serves remote areas in order to encourage resettlement\"",
+          "finding": "National water policy intentionally limits service provision to remote, ungazetted settlements as a strategy to encourage population consolidation.",
+          "theme": "Governance & Equity",
+          "barrier_facilitator": "Barrier",
+          "code": "policy_barrier_resettlement_agenda",
+          "notes": "This is a critical political insight. It shows inequity is not an oversight but a deliberate tool of spatial policy. Directly links to the settlement_status code from SR-001."
+        }
+      ],
+      "friction_patterns": [
+        "Policy Fantasy"
+      ],
+      "tags": [
+        "governance",
+        "equity",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-003",
+      "citation": "Silo, N., & Serome (2018). Resilience and Coping Strategies against Socio-ecological Risks: A Case of Livelihoods in a Botswana Rural Community.",
+      "year": 2018,
+      "title": "Resilience and Coping Strategies against Socio-ecological Risks: A Case of Livelihoods in a Botswana Rural Community",
+      "doi": " http://journals.brandonu.ca/jrcd",
+      "source": "JRCD",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"In spite of the CBNRM activities... he is one of the community members who are unemployed in the CBNRM projects as the jobs are limited... He now mainly makes his income as a blacksmith... as a way of augmenting his income.\"",
+          "finding": "When formal community-based natural resource management (CBNRM) programs fail to provide livelihood opportunities, individuals turn to self-organized, skill-based livelihood diversification (e.g., blacksmithing) as an adaptive strategy.",
+          "theme": "Adaptation Agency & Livelihoods",
+          "barrier_facilitator": "facilitator",
+          "code": "adaptation_strategy_livelihood_diversification institutional_failure_cbnrm",
+          "notes": "Highlights bottom-up, autonomous adaptation. Shows adaptation driven by necessity due to lack of formal support. The institutional_failure_cbnrm code links this case directly back to the governance gaps identified in SR-001 and SR-002."
+        },
+        {
+          "quote": "\"He says he was inspired in this trade and taught by his late father...\" and/or \"Blacksmithing as a form of indigenous knowledge has immense value... he draws on memories from the knowledge his father passed on...\"",
+          "finding": "Indigenous knowledge and skills, passed down intergenerationally, form a critical foundation for developing self-reliant livelihood adaptation strategies in the face of external shocks and institutional neglect.",
+          "theme": "Knowledge & Capacity",
+          "barrier_facilitator": "Facilitator",
+          "code": "resource_indigenous_knowledge process_intergenerational_learning",
+          "notes": "Highlights an often-overlooked asset. Contrasts with top-down, external interventions. Shows adaptation rooted in cultural continuity. This knowledge is a form of adaptive capacity stored within the community."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse"
+      ],
+      "tags": [
+        "facilitator"
+      ]
+    },
+    {
+      "id": "SR-004",
+      "citation": "Motsholapheko, M.R., Kgathi, D.L., Vanderpost, C. (2011). Rural livelihoods and household adaptation to extreme flooding in the Okavango Delta, Botswana.",
+      "year": 2011,
+      "title": "Rural livelihoods and household adaptation to extreme flooding in the Okavango Delta, Botswana",
+      "doi": "doi:10.1016/j.pce.2011.08.004",
+      "source": "SciVerse ScienceDirect",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"Households coped with the impacts of extreme flooding through labour switching to other livelihood activities, temporary relocation to less affected areas and use of canoes for either early harvesting or for rescuing their livestock...\"",
+          "finding": "In response to extreme flooding, households employed hazard-specific coping strategies including labour switching, temporary relocation, and the use of canoes for early harvest or evacuation, with the latter strategy dependent on existing cultural knowledge of water navigation.",
+          "theme": "Hazard-Specific Adaptation",
+          "barrier_facilitator": "Facilitator",
+          "code": "coping_strategy_flood_labour_switch, coping_strategy_flood_relocation, coping_strategy_flood_canoe_use",
+          "notes": "Highlights context-dependent adaptation. These are short-to-medium term coping strategies. The effectiveness of \"canoe use\" is tied to cultural capital and historical exposure to water, showing adaptation is path-dependent. Contrasts with longer-term adaptive strategies like livelihood diversification mentioned elsewhere in the paper."
+        },
+        {
+          "quote": "\"Household access to financial, physical, human and social capital was generally low... The low access to financial capital may be related to: (1) the subsistence nature of livelihoods..., (2) limited markets..., (3) general absence of credit and insurance markets...\"",
+          "finding": "Household access to financial, social, and human capital was generally low, forming a key constraint on their capacity to adapt to and recover from extreme flooding.",
+          "theme": "Adaptive Capacity",
+          "barrier_facilitator": "Barrier",
+          "code": "constraint_capital_financial, constraint_capital_social",
+          "notes": "Systemic constraint. Explains why some households cannot undertake more advanced adaptations. Directly links to financial governance failures in SR-001 and SR-002."
+        }
+      ],
+      "friction_patterns": [],
+      "tags": [
+        "facilitator",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-005",
+      "citation": "Schlamovitz, J. L., & Becker, P. (2020). Differentiated vulnerabilities and capacities for adaptation to water shortage in Gaborone, Botswana.",
+      "year": 2020,
+      "title": "Differentiated vulnerabilities and capacities for adaptation to water shortage in Gaborone, Botswana",
+      "doi": "https://doi.org/10.1080/07900627.2020.1756752",
+      "source": "Taylor & Francis",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"A key insight is that vulnerability and adaptive capacity are not equally distributed between, or within conventional social categories. Instead, the effects of water shortage are influenced by the intersection and interplay of several underlying factors.\"",
+          "finding": "Vulnerability to water shortage and capacity to adapt are not determined by simple socio-economic categories but by the intersection of multiple factors (e.g., income, tenure, gender, citizenship status), leading to differentiated experiences even within neighbourhoods.",
+          "theme": "Equity & Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "vulnerability_intersectionality",
+          "notes": "Critical conceptual framework. Explains why generic policies fail. Links urban and rural contexts through the lens of differentiated vulnerability."
+        },
+        {
+          "quote": "\"long term the viability of Botswana as a country is problematic... I have a strong feeling that Botswana is gonna be one of the places where we become climate refugees... part of my long-term planning is to make sure that if we had to emigrate, my family would have the resources to do so.\"",
+          "finding": "For some households, particularly those with higher socio-economic status, long-term adaptation planning includes the serious consideration of international migration, viewed as a last-resort strategy against perceived national-level water insecurity.",
+          "theme": "Long-Term Adaptation & Mobility",
+          "barrier_facilitator": "Facilitator",
+          "code": "adaptation_strategy_migration_last_resort",
+          "notes": "Highlights extreme risk perception. This is adaptation at the national/system failure level. Contrasts with local coping strategies (QL1). Introduces class dimension: only those with resources can plan this."
+        },
+        {
+          "quote": "\"Water Utilities insists that the water is clean, but the Ministry of Health has gone on the radio... to warn us to boil water.\" and \"my kids... they nearly died from that... that is this borne disease from the drinking water.\"",
+          "finding": "Water shortages and poor quality create direct health risks, particularly for children. Contradictory messages from authorities (water utility vs. health ministry) erode public trust, complicating household risk management.",
+          "theme": "Impacts & Governance",
+          "barrier_facilitator": "Barrier ",
+          "code": "impact_health_water_quality, governance_failure_trust_erosion",
+          "notes": "Critical link: Shows water insecurity is not just about quantity, but quality and trust. The institutional conflict creates an information barrier that heightens vulnerability. Directly connects to your governance tensions."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Equity Gap"
+      ],
+      "tags": [
+        "vulnerability",
+        "equity",
+        "barrier",
+        "facilitator",
+        "governance",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-006",
+      "citation": "Tshabatau, M. (2021). Women and water scarcity in Botswana: Challenges and strategies in Kweneng District - The case study of Gakuto Village .",
+      "year": 2021,
+      "title": "Women and water scarcity in Botswana: Challenges and strategies in Kweneng District - The case study of Gakuto Village ",
+      "doi": "Monicah Tshabatau, Master Thesis Department of Earth Sciences, Uppsala University, Villavägen 16, SE- 752 36 Uppsala,",
+      "source": "Uppsala University",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% reporting INSUFFICIENT access to water supply",
+          "outcome": "ACCESS",
+          "context": "Women in Gakuto village",
+          "value": 82.6,
+          "n": 19,
+          "N": 23,
+          "notes": "Direct n & N from thesis Table 4. Measures perceived adequacy."
+        },
+        {
+          "metric": "% reusing water at household level as a coping strategy",
+          "outcome": "ADAPT_BEHAVIOUR",
+          "context": "Women in Gakuto village",
+          "value": 95.7,
+          "n": 22,
+          "N": 23,
+          "notes": "Direct n & N from thesis Table 5. Most common strategy."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"it is her responsibility to cook for the family, wash their clothing and bath children, therefore, the water crisis adds more burden and stress to her than the husband.\"",
+          "finding": "Water scarcity intensifies the existing gendered division of domestic labour, placing a disproportionate physical and psychological burden on women for water collection and household water management.",
+          "theme": "Gender & Equity",
+          "barrier_facilitator": "Barrier",
+          "code": "vulnerability_gendered_burden",
+          "notes": "Core equity issue. Explains why vulnerability is gendered. Connects to time poverty and mental health impacts."
+        },
+        {
+          "quote": "\"villagers experiencing water crisis access water from private borehole owners... villagers used to access water from public standpipes which are no longer in use.\" & \"Respondents residing in the Eastern side... are connected to the WUC water line.\"",
+          "finding": "A stark spatial inequity exists within Gakuto village, where households in the western side lack formal water connections and rely on costly, unregulated private boreholes, while those in the eastern side have access to the municipal supply.",
+          "theme": "Equity & Access",
+          "barrier_facilitator": "Barrier",
+          "code": "equity_spatial_village, governance_failure_service_parity",
+          "notes": "Micro-level governance failure. Shows inequity is not just rural-urban, but intra-village. Directly explains quantitative access gap (SR-006-Q1). The shift from public standpipes to private suppliers commodifies access."
+        },
+        {
+          "quote": "\"Water Utilities Corporation, which is the main water supplier, has not reached its mandate.\" and \"Water scarcity is a key to disruption of livelihoods especially among women in rural areas.\"",
+          "finding": "The failure of the national water utility (WUC) to fulfill its service mandate is a primary driver of water scarcity at the village level, which in turn directly disrupts the core livelihoods and domestic life of women.",
+          "theme": "Governance & Impacts",
+          "barrier_facilitator": "Barrier",
+          "code": "governance_failure_service_delivery, impact_livelihood_disruption",
+          "notes": "Direct causal claim. Links macro-level institutional failure directly to micro-level household impact. This is the paper's central thesis."
+        },
+        {
+          "quote": "\"Women have prioritised several adaptation and coping strategies at household level... This alone however does not solve the problems of water shortage and sanitation at household level.\"",
+          "finding": "Despite employing a range of autonomous coping and adaptation strategies (e.g., storage, reuse, purchase), households—particularly women—find these measures",
+          "theme": "Adaptation Efficacy",
+          "barrier_facilitator": "Barrier",
+          "code": "adaptation_limit_autonomous",
+          "notes": "Crucial synthesis point. Supports author's  review's focus on governance and policy by showing the ceiling of household-level action. Household adaptation is necessary but not sufficient."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Last-Mile Failure",
+        "Equity Gap"
+      ],
+      "tags": [
+        "gender",
+        "equity",
+        "barrier",
+        "equity",
+        "barrier",
+        "governance",
+        "barrier",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-007",
+      "citation": "Makwatse et al (2022). Gender and Equity Considerations for Building Climate Resilience: Lessons from Rural and Periurban Botswana.",
+      "year": 2022,
+      "title": "Gender and Equity Considerations for Building Climate Resilience: Lessons from Rural and Periurban Botswana",
+      "doi": "https://doi.org/10.3390/su141710599",
+      "source": "MDPI",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of women confident in getting government help for water access",
+          "outcome": "INSTITUTION_TRUST",
+          "context": "Women survey participants (both sites)",
+          "value": 38.3,
+          "n": 36,
+          "N": 94,
+          "notes": "Proportion (38%) from text. N (women) calculated from total N=141 and reported gender % (66.7%)."
+        },
+        {
+          "metric": "% of households able to find support from organizations",
+          "outcome": "SOCIAL_CAPITAL",
+          "context": "Households in Xhumaga (rural)",
+          "value": 87.1,
+          "n": 74,
+          "N": 85,
+          "notes": "Proportion (87%) from text. Xhumaga sub-sample N = 85 (from Methods). n calculated."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"men were more concerned with the economic effects of climate impacts, such as reduced income from agriculture, while women were more likely to be concerned with barriers to accessing water, and the implications of this on well-being.\"",
+          "finding": "Formal water governance institutions are perceived as alien and ineffective by rural communities because they fail to incorporate local customary rules and knowledge.",
+          "theme": "Gender & Vulnerability",
+          "barrier_facilitator": "Barrier (Differing perceptions can lead to misaligned household and policy responses)",
+          "code": "perception_gendered_economic_vs_domestic",
+          "notes": "Fundamental for gender-responsive policy. Shows why \"one-size-fits-all\" adaptation programs fail. Explains divergent priorities within households."
+        },
+        {
+          "quote": "\"Women were generally unwilling to approach government institutions for support in resolving their challenges in access to water, while this hesitancy was not shared by men.\"",
+          "finding": "Women show significantly lower trust and willingness to engage with formal government institutions for resolving water issues, relying more on informal social networks, whereas men are more institutionally oriented.",
+          "theme": "Governance & Equity",
+          "barrier_facilitator": "Barrier (A critical barrier to women accessing formal support and resources)",
+          "code": "institutional_access_gendered_trust_gap",
+          "notes": "Directly explains the quantitative trust gap (SR-007-Q1). Highlights a systemic inclusion failure in formal adaptation channels. Suggests policy outreach must be gender-specific."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Equity Gap"
+      ],
+      "tags": [
+        "gender",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "equity",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-008",
+      "citation": "Manga Motho et al. (2021). Influence of household demographic and socio-economic factors on water demand in Ngamiland District, Botswana.",
+      "year": 2021,
+      "title": "Influence of household demographic and socio-economic factors on water demand in Ngamiland District, Botswana",
+      "doi": "https://doi.org/10.1080/23570008.2022.2048581",
+      "source": "Taylor & Francis",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of households that are female-headed, Prevalence of female-headed households (a key socio-demographic factor associated with higher water demand)",
+          "outcome": "VULNERABILITY / ADAPTIVE_CAPACITY",
+          "context": "Surveyed household heads",
+          "value": 75.7,
+          "n": 376,
+          "N": 497,
+          "notes": "CRUCIAL FOR MIXED-METHODS INTEGRATION. This proportion (75.7%) quantifies a major vulnerability profile. The paper statistically links this factor to higher domestic water demand (χ²=14.961, p<.05), indicating gendered adaptation challenges. Sets stage for qualitative synthesis to explain why (e.g., gendered roles, domestic burdens)."
+        }
+      ],
+      "qual_findings": [],
+      "friction_patterns": [],
+      "tags": []
+    },
+    {
+      "id": "SR-009",
+      "citation": "Reniko Gondo & Oluwatoyin D. Kolawo (2020). Institutional factors engendering dissonance between customary and statutory institutions in water access in the Okavango Delta, Botswana.",
+      "year": 2020,
+      "title": "Institutional factors engendering dissonance between customary and statutory institutions in water access in the Okavango Delta, Botswana",
+      "doi": "https://doi.org/10.1007/s10708-020-10299-w",
+      "source": "Springer",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of households using improved source (standpipes) as main water source",
+          "outcome": "ACCESS_SOURCE",
+          "context": "Household heads (survey)",
+          "value": 84.8,
+          "n": 386,
+          "N": 455,
+          "notes": "Primary source data. Indicates reliance on (often unreliable) public infrastructure."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"A key informant said that statutory institutions are unknown to the villagers, and the enforcement in the rural areas was ineffective because local rules were not captured in the statutory institutions.\"",
+          "finding": "Cultural taboos and myths (e.g., restrictions on fetching water at night or during menstruation) physically restrict access to certain water sources and impose time-bound constraints, particularly on women.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "governance_barrier_statutory_alienation",
+          "notes": "Explains low compliance and trust in formal systems. Creates a vacuum filled by (sometimes restrictive) customary institutions."
+        },
+        {
+          "quote": "\"one key informant said '[i]t is very dangerous to fetch water from the river in the evening and women on their monthly periods are not allowed to go to any river to fetch water'.\"",
+          "finding": "Cultural taboos and myths (e.g., restrictions on fetching water at night or during menstruation) physically restrict access to certain water sources and impose time-bound constraints, particularly on women.",
+          "theme": "Socio-Cultural Norms",
+          "barrier_facilitator": "Barrier",
+          "code": "cultural_barrier_taboos_gendered",
+          "notes": "A direct, culturally rooted barrier to physical access. Compounds water scarcity, especially for women. Highlights non-physical dimensions of access."
+        },
+        {
+          "quote": "\"the majority (71.9%) of the HHs agreed with the assertion that '[w]ater is God-given and people must get it free of charge'...\"",
+          "finding": "There is a dominant worldview that water is a social or divine good that should be free, which creates significant resistance to cost-recovery policies and market-based adaptation strategies.",
+          "theme": "Perceptions & Values",
+          "barrier_facilitator": "Barrier",
+          "code": "perception_water_social_good",
+          "notes": "Explains potential community resistance to pricing/tariff systems. Conflicts directly with statutory \"economic good\" model (Water Act). Critical for policy design."
+        }
+      ],
+      "friction_patterns": [
+        "Equity Gap"
+      ],
+      "tags": [
+        "governance",
+        "barrier",
+        "barrier",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-011",
+      "citation": "Krasposy Kujinga, Cornelis Vanderpost, Gagoitseope Mmopelwa, and Wellington R.L. Masamba (2018). Household Water Insecurity in Different Settlement Categories of Ngamilanf, Botswana.",
+      "year": 2018,
+      "title": "Household Water Insecurity in Different Settlement Categories of Ngamilanf, Botswana",
+      "doi": "https://doi.org/10.1007/978-3-319-64024-2_9",
+      "source": "International Political Economy Series (eBook)",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of ungazetted settlement households not receiving any water supply services",
+          "outcome": "POLICY_EXCLUSION",
+          "context": "Households in ungazetted settlements (Gucha, Samedupi, Xobe)",
+          "value": 98.3,
+          "n": 59,
+          "N": 60,
+          "notes": "98% exclusion. Quantifies the stark policy-driven inequity. Uses sub-sample N."
+        }
+      ],
+      "qual_findings": [],
+      "friction_patterns": [],
+      "tags": []
+    },
+    {
+      "id": "SR-013",
+      "citation": "Phophi Moiseraela & Kutlwano Mulale (2025). Local perceptions, experiences and responses to climate variability and change in the desertification hotspot of Boteti, Botswana.",
+      "year": 2025,
+      "title": "Local perceptions, experiences and responses to climate variability and change in the desertification hotspot of Boteti, Botswana",
+      "doi": "https://doi.org/10.1080/03736245.2025.2534986",
+      "source": "Taylor & Francis",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of households perceiving a noticeable increase in temperatures",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households",
+          "value": 95.3,
+          "n": 161,
+          "N": 169,
+          "notes": "Strong perception of warming. Aligns with meteorological data."
+        },
+        {
+          "metric": "% of households identifying declining agricultural productivity as a significant impact of climate variability",
+          "outcome": "CLIMATE_IMPACT",
+          "context": "Surveyed households",
+          "value": 34.9,
+          "n": 59,
+          "N": 169,
+          "notes": "Quantifies a primary climate impact on livelihoods."
+        },
+        {
+          "metric": "% of households relying on government welfare programs (Ipelegeng, pensions, etc.) as a key livelihood strategy",
+          "outcome": "ADAPTATION_PRACTICE",
+          "context": "Surveyed households",
+          "value": 50.3,
+          "n": 85,
+          "N": 169,
+          "notes": "Critical adaptation/coping strategy. Over 50% reliance on social safety nets."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"All (100%) household respondents... reported changes in climatic conditions over the past 24 years, with notable decreases in rainfall predictability and overall precipitation levels, alongside increased occurrences of drought.\"",
+          "finding": "There is a universal, experience-based consensus among households about long-term climatic changes, specifically increasing rainfall unpredictability, decreasing precipitation, and more frequent droughts.",
+          "theme": "Perceptions & Local Knowledge",
+          "barrier_facilitator": null,
+          "code": "perception_universal_rainfall_change",
+          "notes": "Foundational perception that motivates adaptation. Validates local knowledge against scientific data."
+        },
+        {
+          "quote": "\"Despite clear evidence of climate change... there has been no significant shift observed in livelihood activities. This finding underscores the prevalent over-reliance of households on nature-based livelihoods... primarily due to limited alternative options.\"",
+          "finding": "Despite clear climate impacts, households exhibit \"locked-in\" vulnerability, persisting with nature-based livelihoods due to a severe lack of alternative economic options, highlighting structural constraints to adaptation.",
+          "theme": "Vulnerability & Adaptive Capacity",
+          "barrier_facilitator": "Barrier",
+          "code": "constraint_locked_in_livelihoods",
+          "notes": "Explains the paradox between high climate awareness and limited livelihood transformation. A key systemic barrier."
+        },
+        {
+          "quote": "\"Logistic regression analysis showed that households employing multiple strategies – particularly those diversifying livelihoods, altering planting dates, adopting crop diversification, or shifting to non-farm activities – were significantly more likely to understand climate variability.\"",
+          "finding": "Active engagement in adaptation practices (like diversification and changing planting dates) enhances households' concrete understanding of climate variability, suggesting that adaptation action and climate literacy are mutually reinforcing.",
+          "theme": "Adaptation Process & Learning",
+          "barrier_facilitator": "Facilitator",
+          "code": "adaptation_action_enhances_knowledge",
+          "notes": "Crucial for policy: promoting hands-on adaptation strategies may itself be an effective awareness-raising tool. Links practice to cognition."
+        }
+      ],
+      "friction_patterns": [],
+      "tags": [
+        "vulnerability",
+        "barrier",
+        "facilitator"
+      ]
+    },
+    {
+      "id": "SR-014",
+      "citation": "Nitya Rao et al. (2019). Gendered vulnerabilities to climate change:\ninsights from the semi-arid regions of Africa and\nAsia.",
+      "year": 2019,
+      "title": "Gendered vulnerabilities to climate change:\ninsights from the semi-arid regions of Africa and\nAsia",
+      "doi": "https://doi.org/10.1080/17565529.2017.1372266",
+      "source": "Taylor & Francis",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"Men seemed particularly distressed by this: ‘We rear livestock for both consumption and income. We can’t sleep if we lose our livestock. We have no income for school fees, hence school dropouts...’ This inability to provide led to a host of risky behaviours including drug and alcohol abuse, truancy, criminal activities and family breakdown.\"",
+          "finding": "Climate-induced livestock loss causes profound psychological distress and identity crisis for men, linked to their role as providers. This can trigger negative coping behaviors (substance abuse, crime) and household breakdown, representing a critical, gendered psychosocial impact of climate vulnerability.",
+          "theme": "Gender & Vulnerability",
+          "barrier_facilitator": "Highlights non-material, psychological dimensions of climate impacts, often overlooked. Explains potential source of social tension.",
+          "code": "psychosocial_impact_male_provider_distress",
+          "notes": null
+        },
+        {
+          "quote": "\"Modern farming methods based on drought-resistant crop varieties and groundwater irrigation have been proposed as a solution... however, such farming is expensive and usually done for commercial purposes by men who have the means... The policy response here was both gender and class-blind, providing technical solutions, without reference to the people or groups it was addressing.\"",
+          "finding": "Promoted \"modern\" agricultural adaptations (drought-resistant crops, irrigation) are often inaccessible to the most vulnerable—particularly women subsistence farmers—due to high costs and embedded gender/class biases in policy design, which favors male commercial farmers.",
+          "theme": "Governance & Policy",
+          "barrier_facilitator": "A clear critique of maladaptation. Explains why top-down technical solutions often fail. Directly relevant to your policy implications.",
+          "code": "policy_barrier_technological_bias",
+          "notes": null
+        },
+        {
+          "quote": "\"The Botswana saying ‘Ke nyorilwe-Ke kopa sego sa metsi’... is a good example that a woman/wife’s critical role includes making sure water... is available for household use.\"",
+          "finding": "Cultural norms and symbols explicitly assign women the primary responsibility for household water provision, cementing this gendered role and its associated burdens, especially during scarcity.",
+          "theme": "Socio-Cultural Norms",
+          "barrier_facilitator": "Provides cultural depth to the quantitative findings on female-headed households and water demand (e.g., from SR-008).",
+          "code": "cultural_norm_water_womens_role",
+          "notes": null
+        }
+      ],
+      "friction_patterns": [
+        "Policy Fantasy"
+      ],
+      "tags": [
+        "gender",
+        "vulnerability",
+        "governance"
+      ]
+    },
+    {
+      "id": "SR-015",
+      "citation": "Donald L Kgathi, Barbara N Ngwenya & Julie Wilk (2007). Shocks and rural livelihoods in the OkavangoShocks and rural livelihoods in the Okavango\nShocks and rural livelihoods in the Okavango Delta, Botswana.",
+      "year": 2007,
+      "title": "Shocks and rural livelihoods in the OkavangoShocks and rural livelihoods in the Okavango\nShocks and rural livelihoods in the Okavango Delta, Botswana",
+      "doi": "https://doi.org/10.1080/03768350701327186",
+      "source": "Taylor & Francis",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"Focus group discussions clearly revealed that the drying up of the river channels in Shorobe was a disaster with more dramatic impacts than the 1996 eradication of cattle... because the desiccation of the river channels has affected everyone and there has not been subsequent compensation for the losses.\"",
+          "finding": "Communities perceive the loss of communal water resources (river desiccation) as a more profound and widespread disaster than the loss of private assets (cattle), due to its universal impact and the lack of compensation, highlighting water as a foundational communal good.",
+          "theme": "Vulnerability & Experience",
+          "barrier_facilitator": "Barrier",
+          "code": "perception_river_loss_as_collective_disaster",
+          "notes": "Contrasts idiosyncratic vs. covariate shocks. Emphasizes the unique severity of water source loss."
+        },
+        {
+          "quote": "\"The way the cash compensation for the killing of cattle was used made a number of households... more vulnerable to poverty... The cash was in most cases spent rather than invested.\"",
+          "finding": "Post-shock cash compensation, when not structured or guided, can lead to consumption spending rather than re-investment, potentially increasing long-term vulnerability instead of building resilience—a form of policy-induced maladaptation.",
+          "theme": "Governance & Policy",
+          "barrier_facilitator": "Barrier",
+          "code": "policy_maladaptation_cash_compensation",
+          "notes": "Critical insight for social protection design. Shows how well-intentioned responses can backfire."
+        },
+        {
+          "quote": "\"Informal interviews revealed that those who remained in the localities when others out-migrated... were mainly the poor households, as they could not afford the costs of relocation. On the other hand, those who out-migrated... were mainly the economically active.\"",
+          "finding": "Adaptation through migration is not equally accessible; it is stratified by wealth. The poor are often trapped in degrading environments because they lack the resources to move, while the economically active leave, potentially draining communities of human capital.",
+          "theme": "Adaptation & Mobility",
+          "barrier_facilitator": "Barrier for the poor/ facilitator for the less poor",
+          "code": "migration_stratified_by_poverty",
+          "notes": "Highlights an adaptation paradox: a key strategy (migration) can exacerbate in-situ inequality and vulnerability."
+        }
+      ],
+      "friction_patterns": [
+        "Policy Fantasy"
+      ],
+      "tags": [
+        "vulnerability",
+        "barrier",
+        "governance",
+        "barrier",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-016",
+      "citation": "B.N. Ngwenya, O.T. Thakadu, L. Magole, M.J. Chimbari (2016). Memories of environmental change and local adaptations among molapo farming communities in the Okavango Delta, Botswana—A gender perspective..",
+      "year": 2016,
+      "title": "Memories of environmental change and local adaptations among molapo farming communities in the Okavango Delta, Botswana—A gender perspective.",
+      "doi": "https://doi.org/10.1016/j.actatropica.2016.11.029",
+      "source": "Elsevier",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "Men's narratives were dominated by memories of crisis events (droughts, floods, livestock disease, culling). These were linked to severe food insecurity and loss of livelihood assets.",
+          "finding": "Male community members' historical knowledge is centrally structured around acute environmental and epidemiological shocks that directly threatened productive assets (livestock, crops) and community survival.",
+          "theme": "Local Knowledge & Memory",
+          "barrier_facilitator": null,
+          "code": "memory_gendered_male_crisis_assets",
+          "notes": "Explains a foundational, risk-oriented worldview. May influence male prioritization of certain adaptation strategies (e.g., asset protection)."
+        },
+        {
+          "quote": "Women's narratives (especially in Xobe) emphasized abundance of aquatic foods (tswii), reeds, and cultural spaces in the past, contrasting with current scarcity. Their memories centered on provisioning and socio-cultural life.",
+          "finding": "Women's historical knowledge focuses on the provisioning capacity of the environment for food, materials, and cultural reproduction, highlighting a keen perception of ecological loss and degradation over time.",
+          "theme": "Local Knowledge & Memory",
+          "barrier_facilitator": null,
+          "code": "memory_gendered_female_provisioning_loss",
+          "notes": "Highlights a gendered perception of environmental change centered on depletion of resources for daily sustenance and social life."
+        },
+        {
+          "quote": "\"Molapo farming system in response to flood variability is in and of itself an adaptation strategy... farmers distinguish three types of molapo fields (kama, moxhexum, madiba) used during high, moderate, and low flows.\"",
+          "finding": "The traditional molapo farming system is a sophisticated, pre-existing adaptation framework. Farmers possess detailed local ecological knowledge to actively manipulate planting locations based on precise observations of flood levels, embodying a dynamic, embedded adaptation practice.",
+          "theme": "Indigenous Adaptation",
+          "barrier_facilitator": "Facilitator",
+          "code": "adaptation_embedded_molapo_system",
+          "notes": "A prime example of autonomous, locally-evolved adaptation. Contrasts with external, technical interventions."
+        },
+        {
+          "quote": "\"Livelihood diversification is another adaptation strategy... communities depend on agricultural resources and switch opportunistically to forest and aquatic food resources... to minimise impacts of climatic variability.\"",
+          "finding": "A core adaptation strategy is the flexible, opportunistic switching between different natural resource-based livelihood streams (farming, fishing, foraging) in direct response to climatic signals like floods or drought.",
+          "theme": "Adaptation Strategies",
+          "barrier_facilitator": "Facilitator",
+          "code": "adaptation_livelihood_diversification_switching",
+          "notes": "Illustrates \"natural capital switching.\" A key qualitative finding explaining how households buffer risk, complementing quantitative data on diversification."
+        }
+      ],
+      "friction_patterns": [
+        "Equity Gap"
+      ],
+      "tags": [
+        "facilitator",
+        "facilitator"
+      ]
+    },
+    {
+      "id": "SR-018",
+      "citation": "Kujinga et al. (2014). Short and Long Term Strategies for Household Water Insecurity in Ngamiland, Botswana.",
+      "year": 2014,
+      "title": "Short and Long Term Strategies for Household Water Insecurity in Ngamiland, Botswana",
+      "doi": "http://dx.doi.org/10.5539/jsd.v7n3p96",
+      "source": "Canadian Center of Science and Education",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of households experiencing extreme water shortages (Jun 2011-Jun 2012)",
+          "outcome": "WATER_INSECURITY",
+          "context": "Surveyed households",
+          "value": 74.0,
+          "n": 410,
+          "N": 554,
+          "notes": "Primary indicator of widespread water insecurity."
+        },
+        {
+          "metric": "% of households practicing traditional rainwater harvesting",
+          "outcome": "COPING_STRATEGY",
+          "context": "Surveyed households",
+          "value": 63.0,
+          "n": 349,
+          "N": 554,
+          "notes": "Most common coping strategy. Note: 1% practice \"improved\" harvesting (adaptation)."
+        },
+        {
+          "metric": "% of households in Maun fetching untreated water during shortages",
+          "outcome": "COPING_STRATEGY",
+          "context": "Households in Maun",
+          "value": 34.9,
+          "n": 103,
+          "N": 295,
+          "notes": "Highlights reliance on unsafe sources despite formal supply. Major health risk."
+        },
+        {
+          "metric": "% of households drilling private boreholes/well points",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Higher-income households (≥BWP10,000/month)",
+          "value": 90.9,
+          "n": 10,
+          "N": 11,
+          "notes": "High-cost, long-term adaptation. Note: This is a small, wealthy sub-sample. Proportion is ~2% of total N. Use n=11, N=11 for continuity correction."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"Due to the prevailing water shortages, a bulk water supply and buying market emerged around 2000 in Maun and Matlapana... The average charges are approximately BWP80/m3... Water abstracted from the river is said to be of poor quality... It is also very expensive...\"",
+          "finding": "Water scarcity has commodified a basic need, creating a private, often exploitative market where the wealthy pay high prices for untreated, poor-quality water, exacerbating inequity.",
+          "theme": "Vulnerability & Livelihoods",
+          "barrier_facilitator": "Barrier (for the poor)",
+          "code": "coping_marketization_water_inequity",
+          "notes": "Illustrates maladaptive coping: a response that creates new vulnerabilities (financial strain, health risks) and deepens inequality."
+        },
+        {
+          "quote": "\"During times of water shortages, all households (100%) across the different settlement categories ranked water uses, starting with the most important use as follows: cooking (100%), drinking (100%), bathing (98%)... In Somelo, household members can go for 5 or more days without taking proper baths.\"",
+          "finding": "Households engage in severe water rationing and hierarchical prioritization of uses, sacrificing hygiene and other essential activities to preserve water for immediate survival (cooking/drinking), indicating profound water stress.",
+          "theme": "Vulnerability & Experience",
+          "barrier_facilitator": "N/A (Impact)",
+          "code": "coping_rationing_hygiene_sacrifice",
+          "notes": "Quantifies the lived experience of water insecurity. Shows adaptation is not just about new sources, but about painful consumption trade-offs."
+        },
+        {
+          "quote": "\"Adaptation strategies are mostly implemented by households earning at least BWP10,000 per month... Major costs involved are the initial investment (e.g. BWP8,000) and running costs especially electricity...\"",
+          "finding": "True, long-term adaptation (e.g., private boreholes) is stratified by wealth. It requires significant capital and operating costs, making it inaccessible to the majority, thereby turning climate resilience into a privilege of the affluent.",
+          "theme": "Governance & Equity",
+          "barrier_facilitator": "Barrier (Structural)",
+          "code": "adaptation_stratified_by_wealth",
+          "notes": "Critical for your discussion on equity. Distinguishes between universal coping and exclusive adaptation. Explains why poverty is the ultimate barrier to climate resilience."
+        }
+      ],
+      "friction_patterns": [
+        "Equity Gap"
+      ],
+      "tags": [
+        "vulnerability",
+        "barrier",
+        "vulnerability",
+        "governance",
+        "equity",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-019",
+      "citation": "Kolawole et al. (2016). Climate Variability and Rural Livelihoods: How Households Perceive and Adapt to Climatic Shocks in the Okavango Delta, Botswana.",
+      "year": 2016,
+      "title": "Climate Variability and Rural Livelihoods: How Households Perceive and Adapt to Climatic Shocks in the Okavango Delta, Botswana",
+      "doi": "DOI: 10.1175/WCAS-D-15-0019.1",
+      "source": "American Meteorological Society",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "A farmer in Tsau: \"we just come empty handed from our fields.\" Another: \"I got 2 bags of millet in 2009; 1.5 bags in 2010; and nothing at all in 2011.\"",
+          "finding": "Farmers provide stark, quantified narratives of agricultural collapse over consecutive years, moving from low yields to total harvest failure, encapsulating the progressive and devastating impact of climate variability.",
+          "theme": "Vulnerability & Experience",
+          "barrier_facilitator": null,
+          "code": "experience_agricultural_collapse_narrative",
+          "notes": "Powerful, firsthand accounts that give human meaning to the quantitative loss data (Q1, Q3). Critical for conveying severity."
+        },
+        {
+          "quote": "Households use natural indicators (trees, galaxies, clouds, animal behavior) to predict weather. \"Ethnometeorologists\" discuss forecasts with community. Local knowledge is highly trusted (94%).",
+          "finding": "Indigenous knowledge systems for weather forecasting are sophisticated, observational, and socially embedded. They involve dedicated knowledge holders (ethnometeorologists) and community deliberation, representing a key autonomous adaptation institution.",
+          "theme": "Indigenous Adaptation",
+          "barrier_facilitator": "Facilitator",
+          "code": "adaptation_institution_indigenous_forecasting",
+          "notes": "A core qualitative theme. Shows adaptation is not just physical actions but also cognitive and social processes of risk assessment."
+        },
+        {
+          "quote": "A village elder in Ngarange: \"We trust the knowledge of our people. However, there seems to be a meeting point... We welcome a situation where community people and weather scientists will have the opportunity to work together...\"",
+          "finding": "Community members express openness to hybrid knowledge systems. They value their indigenous knowledge but see a potential synergistic \"meeting point\" with scientific forecasting, indicating a pathway for more collaborative and effective adaptation support.",
+          "theme": "Local Knowledge & Perception",
+          "barrier_facilitator": "Facilitator (for policy)",
+          "code": "perception_hybrid_knowledge_synergy",
+          "notes": "A crucial finding for policy. Rejects a simplistic local vs. scientific binary and points to co-production of knowledge as the desired community-based approach."
+        }
+      ],
+      "friction_patterns": [],
+      "tags": [
+        "vulnerability",
+        "facilitator",
+        "facilitator"
+      ]
+    },
+    {
+      "id": "SR-020",
+      "citation": "Dominic Mazvimavi  & Gagoitseope Mmopelwa (2006). Access to water in gazetted and ungazetted rural settlements in Ngamiland, Botswana.",
+      "year": 2006,
+      "title": "Access to water in gazetted and ungazetted rural settlements in Ngamiland, Botswana",
+      "doi": "doi:10.1016/j.pce.2006.08.036",
+      "source": "ScienceDirect",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of households using untreated river water as primary source (when flowing)",
+          "outcome": "WATER_SOURCE",
+          "context": "settlements",
+          "value": 88.8,
+          "n": 71,
+          "N": 80,
+          "notes": "Core indicator of water insecurity and policy exclusion."
+        }
+      ],
+      "qual_findings": [],
+      "friction_patterns": [],
+      "tags": []
+    },
+    {
+      "id": "SR-021",
+      "citation": "Itumeleng Oageng & Gagoitseope Power Mmopelwa (2014). Water consumption patterns in a rural setting in Ngamiland district, Botswana: the case of Boro village.",
+      "year": 2014,
+      "title": "Water consumption patterns in a rural setting in Ngamiland district, Botswana: the case of Boro village",
+      "doi": "https://doi.org/10.2166/washdev.2014.065",
+      "source": "Journal of Water, Sanitation and Hygiene for Development",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% of households using the river as their primary water source",
+          "outcome": "WATER_SOURCE",
+          "context": "Surveyed households",
+          "value": 98.3,
+          "n": 59,
+          "N": 60,
+          "notes": "Near-universal reliance on untreated surface water."
+        },
+        {
+          "metric": "% of households where the main water collector is a woman",
+          "outcome": "GENDERED_LABOUR",
+          "context": "Household water collectors",
+          "value": 75.0,
+          "n": 45,
+          "N": 60,
+          "notes": "Quantifies the gendered burden of water fetching."
+        },
+        {
+          "metric": "% of rural population with a private water connection",
+          "outcome": "WATER_SERVICE_ACCESS",
+          "context": "National Statistics",
+          "value": 7.5,
+          "n": 61,
+          "N": 808,
+          "notes": "Context from Table 1. Highlights the service gap the WTP study addresses. National data point."
+        },
+        {
+          "metric": "% of rural population served by a public standpipe",
+          "outcome": "WATER_SERVICE_ACCESS",
+          "context": "National Statistics",
+          "value": 68.2,
+          "n": 551,
+          "N": 808,
+          "notes": "Context from Table 1. Shows majority rely on communal improved sources."
+        },
+        {
+          "metric": "Mean dependency ratio (children/adults) for female-headed households",
+          "outcome": "HUMAN_CAPITAL",
+          "context": "Surveyed households in Habu village",
+          "value": 44.1,
+          "n": 64,
+          "N": 145,
+          "notes": "Critical vulnerability indicator. Significantly higher than for male-headed HHs (0.97)."
+        }
+      ],
+      "qual_findings": [],
+      "friction_patterns": [],
+      "tags": []
+    },
+    {
+      "id": "SR-024",
+      "citation": "Mark Nyandoro (2024). Water in Botswana: Selective Distribution of a Finite Commodity among Indigenes (San), African villages and non-Indigenous White Minority Communities, 1880s-2020.",
+      "year": 2024,
+      "title": "Water in Botswana: Selective Distribution of a Finite Commodity among Indigenes (San), African villages and non-Indigenous White Minority Communities, 1880s-2020",
+      "doi": "https://journals.co.za/loi/dyke ",
+      "source": "Sabinet/ The Dyke",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"the Protectorate government neglected supplying water to the African villages, but concentrated on water delivery to the few white enclaves...\"",
+          "finding": "Historical water infrastructure investment during the colonial period was systematically directed toward non-indigenous minority settlements, neglecting development for African majority villages.",
+          "theme": "Historical Context; Governance & Institutions",
+          "barrier_facilitator": "Barrier (Structural, Historical)",
+          "code": "HISTORICAL_BIAS_INFRASTRUCTURE",
+          "notes": "Establishes the historical root of unequal infrastructure distribution."
+        },
+        {
+          "quote": "\"water development on a national scale failed because available funds were often deployed for the advancement and supply of water to the few white-owned mines and ranches.\"",
+          "finding": "Even within limited colonial budgets, funding priorities explicitly favored economic enterprises (mining, ranching) owned by a racial minority over basic water service provision for the broader population.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier (Structural, Economic)",
+          "code": "GOVERNANCE_PRIORITIZATION_ECONOMIC_ELITE",
+          "notes": "Highlights how governance and economic priorities create systemic access barriers."
+        },
+        {
+          "quote": "\"the policy of the Government is that the San should move from their traditional settlements... to locations where the government felt that they would have better... access, to services including water.\"",
+          "finding": "Post-colonial government policy has linked the provision of water services for San communities to their relocation from ancestral lands, making access conditional on abandoning traditional livelihoods and territories.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier (Political, Cultural)",
+          "code": "POLICY_CONDITIONAL_ACCESS; CONFLICT_LAND_RIGHTS",
+          "notes": "A key finding: access to an adaptive resource (water) is politicized and used as a tool for social engineering."
+        },
+        {
+          "quote": "\"We are hunter-gatherers yet we get arrested. We cannot damage the wildlife... If you say don’t hunt, it means don’t eat.\" / \"Government... erroneously assumed that the San were... ‘primitive’... whose lifestyle was greatly reducing or endangering wildlife...\"",
+          "finding": "San communities articulate their adaptation strategy as based on sustainable hunting-gathering, which is inseparably linked to their land and water access. The state's \"modernization\" paradigm frames this livelihood as incompatible with conservation, leading to criminalization and resource denial.",
+          "theme": "(Potential) Relocation",
+          "barrier_facilitator": "Barrier (Institutional, Cultural)",
+          "code": "LIVELIHOOD_CONFLICT_STATE_PARADIGM; CULTURAL_IDENTITY_RESISTANCE",
+          "notes": "Crucial for understanding maladaptation: external \"solutions\" (relocation) disrupt highly adapted traditional systems."
+        },
+        {
+          "quote": "\"people have been dumped in economically absolutely unviable situations without forethought, and without follow-up support. The lack of imagination displayed... is breathtaking.\"",
+          "finding": "Relocation programs intended to provide service access have resulted in maladaptive outcomes—increased poverty, social dysfunction, and loss of autonomy—due to a lack of participatory planning and post-relocation support.",
+          "theme": null,
+          "barrier_facilitator": null,
+          "code": "MALADAPTATION_RELOCATION; GOVERNANCE_FAILURE_PARTICIPATION",
+          "notes": null
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Policy Fantasy"
+      ],
+      "tags": [
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-025",
+      "citation": "Lin Cassidy & Grenville D. Barnes (2012). Understanding Household Connectivity and Resilience in Marginal Rural Communities through Social Network Analysis in the Village of Habu, Botswana.",
+      "year": 2012,
+      "title": "Understanding Household Connectivity and Resilience in Marginal Rural Communities through Social Network Analysis in the Village of Habu, Botswana",
+      "doi": "http://dx.doi.org/10.5751/ES-04963-170411",
+      "source": "Lin Cassidy & Grenville D. Barnes ",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"[Focus groups] identified major events or shocks... The three primary shocks identified were livestock disease, crop damage, and human disease and death.\"",
+          "finding": "The community-defined vulnerabilities that trigger adaptive social responses are health, agricultural, and livestock shocks, directly linking climate/economic variability to household crisis.",
+          "theme": "Local Knowledge & Vulnerability",
+          "barrier_facilitator": null,
+          "code": "SHOCK_DEFINITION_COMMUNITY",
+          "notes": "Grounds the quantitative network analysis in locally relevant risks."
+        },
+        {
+          "quote": "\"Herero households attend [kgotla] meetings significantly less frequently than Tswana households... reinforcing the commonly held view that Herero people are politically marginalized.\"",
+          "finding": "Ethnic identity correlates with differential access to formal community governance structures, potentially creating an adaptive disadvantage for Herero pastoralist households.",
+          "theme": "Governance & Institutions; Social Capital",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_ETHNIC_MARGINALIZATION_FORMAL_NETWORKS",
+          "notes": "Explains variation in formal social capital; connects to historical patterns (see SR-024)."
+        },
+        {
+          "quote": "Describe high-connectivity HHs (e.g., headman) with diverse, resilient livelihoods vs. low-connectivity HHs (e.g., recent immigrant, elderly) with limited capital and strategies.",
+          "finding": "Households with high informal network centrality (many exchange ties) actively leverage these for labor, food, money, and information during shocks, constituting a direct adaptation strategy. Low-connected households are isolated and vulnerable.",
+          "theme": "Adaptation Strategies; Social Capital",
+          "barrier_facilitator": "Facilitator (high connectivity); Barrier (low connectivity)",
+          "code": "ADAPTATION_STRATEGY_SOCIAL_EXCHANGE; VULNERABILITY_SOCIAL_ISOLATION",
+          "notes": "Qualitative evidence of the causal mechanism behind the quantitative correlation (Q5)."
+        }
+      ],
+      "friction_patterns": [
+        "Equity Gap"
+      ],
+      "tags": [
+        "vulnerability",
+        "governance",
+        "barrier",
+        "barrier",
+        "facilitator"
+      ]
+    },
+    {
+      "id": "SR-026",
+      "citation": "ScienceDirect (2006). Access to water and related resources in Ngamiland, Botswana: Toward a more critical perspective and sustainable approach.",
+      "year": 2006,
+      "title": "Access to water and related resources in Ngamiland, Botswana: Toward a more critical perspective and sustainable approach",
+      "doi": "doi:10.1016/j.pce.2006.07.004",
+      "source": "Phemo Kgomotso & Larry Swatuk",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"In all the smaller settlements and cattleposts there are no standpipes and kids are exposed to crocodiles when they fetch water from the river.\"",
+          "finding": "Lack of basic water infrastructure in remote areas forces households into dangerous situations, directly increasing physical vulnerability, particularly for children.",
+          "theme": null,
+          "barrier_facilitator": "Barrier",
+          "code": "Governance & Institutions; Vulnerability",
+          "notes": "Links lack of service delivery directly to hazard exposure."
+        },
+        {
+          "quote": "\"DWA’s practice is to deter use through the confiscation of buckets... Residents did not understand that as an ungazetted settlement they were not entitled to this water.\"",
+          "finding": "Official water governance enforces access restrictions through punitive measures against ungazetted settlements, creating confusion and conflict rather than sustainable solutions.",
+          "theme": null,
+          "barrier_facilitator": "Barrier",
+          "code": "Governance & Institutions; Conflict",
+          "notes": "Illustrates how rigid policy application exacerbates vulnerability and erodes trust."
+        },
+        {
+          "quote": "\"People’s abilities to farm, raise livestock, fish and collect veld products were being restricted by government policies that favour large mammal preservation.\"",
+          "finding": "Core livelihood adaptation strategies (farming, fishing, gathering) are systematically constrained by conservation-centric policies, creating direct resource competition between communities and wildlife.",
+          "theme": "Livelihoods & Culture; Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "CONFLICT_LIVELIHOOD_CONSERVATION_POLICY",
+          "notes": "A central tension: state-level environmental priorities directly undermine household-level adaptive capacity."
+        },
+        {
+          "quote": "\"‘Participation’ includes not only consultation but implementation as well. However, many people felt that government devises and implements policies and plans ‘without listening to communities’.\"",
+          "finding": "Communities perceive formal participatory processes (kgotla meetings) as tokenistic, with no real influence on decisions or project implementation, leading to disenfranchisement.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_PARTICIPATION_TOKENISTIC",
+          "notes": "down governance structures noted in other papers (e.g., SR-024)."
+        },
+        {
+          "quote": "\"Slow and/or no responses to applications... Corruption and lack of accountability... Lack of respect for traditional leaders and traditional knowledge systems.\"",
+          "finding": "A suite of institutional failures—bureaucratic inertia, corruption, and dismissal of local knowledge—actively impedes communities' ability to solve problems and adapt.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_INSTITUTIONAL_FAILURE_COMPOUNDED",
+          "notes": "Provides a comprehensive list of systemic governance barriers reported across all study villages."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Policy Fantasy",
+        "Equity Gap"
+      ],
+      "tags": [
+        "barrier",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-027",
+      "citation": "Elsevier (2008). Household Willingness to Pay for Reliability of Water Supply and Quality in Chobe Suburb of Maun.",
+      "year": 2008,
+      "title": "Household Willingness to Pay for Reliability of Water Supply and Quality in Chobe Suburb of Maun",
+      "doi": "DOI: Not available in search results (Botswana Notes and Records, Vol. 39, pp. 97-107)",
+      "source": "Mmopelwa, G., Kgathi, D. L., Masamba, W. R. L., & Thukuza, A.  ",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% reporting water supply as unreliable and unpredictable",
+          "outcome": "WATER_RELIABILITY",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 89.1,
+          "n": 82,
+          "N": 92,
+          "notes": "Core finding on service reliability."
+        },
+        {
+          "metric": "% experiencing water shortages all year round",
+          "outcome": "WATER_SHORTAGE",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 73.9,
+          "n": 68,
+          "N": 92,
+          "notes": "Chronic, not seasonal, problem."
+        },
+        {
+          "metric": "% experiencing irregular supply only during certain seasons",
+          "outcome": "WATER_SHORTAGE",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 18.5,
+          "n": 17,
+          "N": 92,
+          "notes": "Seasonal variation for minority."
+        },
+        {
+          "metric": "% storing water in containers",
+          "outcome": "COPING_STRATEGY",
+          "context": "Households adopting coping strategies",
+          "value": 53.3,
+          "n": 49,
+          "N": 92,
+          "notes": "Most common coping strategy."
+        },
+        {
+          "metric": "% supporting a fund to improve water supply reliability",
+          "outcome": "WATER_WTP_RELIABILITY_SUPPORT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 83.7,
+          "n": 77,
+          "N": 92,
+          "notes": "Willingness to contribute."
+        },
+        {
+          "metric": "% opposing fund (water as entitlement)",
+          "outcome": "WATER_WTP_RELIABILITY_OPPOSE",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 16.3,
+          "n": 15,
+          "N": 92,
+          "notes": "Important political economy finding."
+        },
+        {
+          "metric": "Mean maximum WTP for improved reliability (per month)",
+          "outcome": "WATER_WTP_RELIABILITY_AMOUNT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 83.7,
+          "n": 77,
+          "N": 92,
+          "notes": "Coefficient of variation = 45%."
+        },
+        {
+          "metric": "% perceiving water quality as poor",
+          "outcome": "WATER_QUALITY_PERCEPTION",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 94.6,
+          "n": 87,
+          "N": 92,
+          "notes": "Near-universal dissatisfaction."
+        },
+        {
+          "metric": "% reporting unusual taste",
+          "outcome": "WATER_QUALITY_COMPLAINT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 57.6,
+          "n": 53,
+          "N": 92,
+          "notes": "One of multiple complaints."
+        },
+        {
+          "metric": "% reporting discolouration",
+          "outcome": "WATER_QUALITY_COMPLAINT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 65.2,
+          "n": 60,
+          "N": 92,
+          "notes": "Aesthetic quality issue."
+        },
+        {
+          "metric": "% reporting residual sediments",
+          "outcome": "WATER_QUALITY_COMPLAINT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 43.5,
+          "n": 40,
+          "N": 92,
+          "notes": "Visible particulates."
+        },
+        {
+          "metric": "% reporting staining of bathtubs",
+          "outcome": "WATER_QUALITY_COMPLAINT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 19.6,
+          "n": 18,
+          "N": 92,
+          "notes": "ron/manganese staining."
+        },
+        {
+          "metric": "% using strategies to improve water quality (filtering/boiling/buying)",
+          "outcome": "COPING_STRATEGY_QUALITY",
+          "context": "Households adopting coping strategies",
+          "value": 70.7,
+          "n": 65,
+          "N": 92,
+          "notes": "Major avoidance behavior."
+        },
+        {
+          "metric": "Mean monthly household expenditure on coping strategies",
+          "outcome": "WATER_AVOIDANCE_COST",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 77.2,
+          "n": 71,
+          "N": 92,
+          "notes": "Quantifies hidden costs of poor service."
+        },
+        {
+          "metric": "% confirming need for improved water quality",
+          "outcome": "WATER_WTP_QUALITY_SUPPORT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 78.3,
+          "n": 72,
+          "N": 92,
+          "notes": "Recognition of health risks."
+        },
+        {
+          "metric": "Mean maximum WTP for improved water quality (per month)",
+          "outcome": "WATER_WTP_QUALITY_AMOUNT",
+          "context": "Households in Chobe Ward, Maun",
+          "value": 59.8,
+          "n": 55,
+          "N": 92,
+          "notes": "Coefficient of variation = 44%. Less than WTP for reliability."
+        },
+        {
+          "metric": "% of samples exceeding Botswana maximum allowed turbidity (10 NTU)",
+          "outcome": "WATER_QUALITY_TURBIDITY",
+          "context": "Water samples",
+          "value": 40.0,
+          "n": 4,
+          "N": 10,
+          "notes": "Objective quality measure. Range: 1.9-114 NTU (ideal: 0.2)."
+        },
+        {
+          "metric": "% of samples with high conductivity approaching/exceeding ideal range",
+          "outcome": "WATER_QUALITY_CONDUCTIVITY",
+          "context": "Water samples",
+          "value": 50.0,
+          "n": 5,
+          "N": 10,
+          "notes": "Range: 270-2510 μS/cm (ideal: <700, max: 3100)."
+        },
+        {
+          "metric": "% of samples exceeding Botswana maximum allowed iron (2.0 mg/L)",
+          "outcome": "WATER_QUALITY_IRON",
+          "context": "Water samples",
+          "value": 10.0,
+          "n": 1,
+          "N": 10,
+          "notes": "Acid-extractable iron exceeded standard."
+        },
+        {
+          "metric": "% of samples exceeding Botswana maximum allowed manganese (0.5 mg/L)",
+          "outcome": "WATER_QUALITY_MANGANESE",
+          "context": "Water samples",
+          "value": 10.0,
+          "n": 1,
+          "N": 10,
+          "notes": "Acid-extractable manganese far exceeded standard."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"Coping strategies for households include water storage in tanks. The majority of households have henceforth embarked on coping strategies such as buying bottled water.\"",
+          "finding": "Faced with unreliable and poor-quality water supply, households employ autonomous coping strategies including storage infrastructure investment and purchasing bottled water, incurring significant monthly costs (mean P71/month).",
+          "theme": "Adaptation Strategies",
+          "barrier_facilitator": "Facilitator (household initiative)",
+          "code": "ADAPTATION_COPING_STORAGE; ADAPTATION_COPING_BOTTLED_WATER",
+          "notes": "Demonstrates that households are already paying significant amounts out-of-pocket to cope with poor service."
+        }
+      ],
+      "friction_patterns": [],
+      "tags": [
+        "facilitator"
+      ]
+    },
+    {
+      "id": "SR-028",
+      "citation": "Elsevier (2013). Coping with droughts and floods: A Case study of Kanyemba, Mbire District, Zimbabwe.",
+      "year": 2013,
+      "title": "Coping with droughts and floods: A Case study of Kanyemba, Mbire District, Zimbabwe",
+      "doi": "http://dx.doi.org/10.1016/j.pce.2013.09.019",
+      "source": "G. Bola, C. Mabiza , J. Goldin, K. Kujinga, I. Nhapi, H. Makurira, D. Mashauri",
+      "country": "Zimbabwe",
+      "quant_findings": [
+        {
+          "metric": "% perceiving decreased average rainfall over years",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Kanyemba",
+          "value": 99.3,
+          "n": 143,
+          "N": 144,
+          "notes": "Universal perception of rainfall decline."
+        },
+        {
+          "metric": "% perceiving increased dry-spell frequency",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Kanyemba",
+          "value": 99.3,
+          "n": 143,
+          "N": 144,
+          "notes": "Universal perception of dry-spell increase."
+        },
+        {
+          "metric": "% perceiving increased flood frequency over last two decades",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Kanyemba",
+          "value": 95.8,
+          "n": 138,
+          "N": 144,
+          "notes": "Vast majority perceive increased flooding."
+        },
+        {
+          "metric": "% attributing floods to backflow from Cahora Bassa dam",
+          "outcome": "FLOOD_CAUSE",
+          "context": "Surveyed households in Kanyemba",
+          "value": 91.7,
+          "n": 132,
+          "N": 144,
+          "notes": "Dam operations exacerbate flooding."
+        },
+        {
+          "metric": "% attributing floods to heavy local rain",
+          "outcome": "FLOOD_CAUSE",
+          "context": "Surveyed households in Kanyemba",
+          "value": 75.7,
+          "n": 109,
+          "N": 144,
+          "notes": "Combined causes: local rain + dam backflow."
+        },
+        {
+          "metric": "% practicing vegetable farming and crop production in floodplain",
+          "outcome": "COPING_STRATEGY",
+          "context": "Surveyed households in Kanyemba",
+          "value": 68.1,
+          "n": 98,
+          "N": 144,
+          "notes": "Primary coping strategy - uses fertile, moist floodplain soils."
+        },
+        {
+          "metric": "% taking on local wage labor jobs",
+          "outcome": "COPING_STRATEGY",
+          "context": "Households adopting coping strategies",
+          "value": 54.2,
+          "n": 78,
+          "N": 144,
+          "notes": "Diversification into off-farm income."
+        },
+        {
+          "metric": "% practicing late planting",
+          "outcome": "COPING_STRATEGY",
+          "context": "Households adopting coping strategies",
+          "value": 31.2,
+          "n": 45,
+          "N": 144,
+          "notes": "Response to delayed/uncertain rains."
+        }
+      ],
+      "qual_findings": [],
+      "friction_patterns": [],
+      "tags": []
+    },
+    {
+      "id": "SR-029",
+      "citation": "SOUTH AFRICAN GEOGRAPHICAL JOURNAL (2025). Local Perceptions, Experiences and Responses to Climate Variability and Change in the Desertification Hotspot of Boteti, Botswana.",
+      "year": 2025,
+      "title": "Local Perceptions, Experiences and Responses to Climate Variability and Change in the Desertification Hotspot of Boteti, Botswana",
+      "doi": "https://doi.org/10.1080/03736245.2025.2534986",
+      "source": "Moiseraela & Mulale ",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% perceiving changes in climatic conditions over past 24 years",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 99.4,
+          "n": 168,
+          "N": 169,
+          "notes": "Core finding - universal perception of climate change."
+        },
+        {
+          "metric": "% perceiving temperature increase",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 95.3,
+          "n": 161,
+          "N": 169,
+          "notes": "Aligns with DMS temperature data 1994-2024."
+        },
+        {
+          "metric": "% noting growing unpredictability in rainfall patterns",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 69.2,
+          "n": 117,
+          "N": 169,
+          "notes": "Core perception finding."
+        },
+        {
+          "metric": "% specifically noting delays in rainfall (shortened wet season)",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Of those noting unpredictability (n=117)",
+          "value": 57.3,
+          "n": 67,
+          "N": 117,
+          "notes": "Calculated: 57% of 69% = ~39% of total sample."
+        },
+        {
+          "metric": "% reporting decline in average rainfall",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 17.2,
+          "n": 29,
+          "N": 169,
+          "notes": "Calculated: 17% of 169."
+        },
+        {
+          "metric": "% noting increase in drought frequency",
+          "outcome": "CLIMATE_PERCEPTION",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 14.2,
+          "n": 24,
+          "N": 169,
+          "notes": "Calculated: 14% of 169."
+        },
+        {
+          "metric": "% attributing drought to climate variability/change",
+          "outcome": "CLIMATE_ATTRIBUTION",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 30.2,
+          "n": 51,
+          "N": 169,
+          "notes": "Direct attribution."
+        },
+        {
+          "metric": "% identifying declining agricultural productivity as significant impact",
+          "outcome": "CLIMATE_IMPACT",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 34.9,
+          "n": 59,
+          "N": 169,
+          "notes": "Primary livelihood impact."
+        },
+        {
+          "metric": "% practicing livelihood diversification",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed households in Mosu and Mmatshumo",
+          "value": 50.3,
+          "n": 85,
+          "N": 169,
+          "notes": "Significant predictor of climate understanding (OR=6.94)."
+        }
+      ],
+      "qual_findings": [],
+      "friction_patterns": [],
+      "tags": []
+    },
+    {
+      "id": "SR-030",
+      "citation": "Frontiers (2025). Adaptive Household Strategies for Sustaining Crop Production Under Conditions of Water Scarcity in Semi-Arid South Africa.",
+      "year": 2025,
+      "title": "Adaptive Household Strategies for Sustaining Crop Production Under Conditions of Water Scarcity in Semi-Arid South Africa",
+      "doi": "https://doi.org/10.3389/fsufs.2025.1682042",
+      "source": "Zhou et al.",
+      "country": "South Africa",
+      "quant_findings": [
+        {
+          "metric": "% of female-headed households",
+          "outcome": "HOUSEHOLD_DEMOGRAPHICS",
+          "context": "Surveyed households",
+          "value": 63.0,
+          "n": 121,
+          "N": 192,
+          "notes": "63.1% of 192. Core vulnerability indicator."
+        },
+        {
+          "metric": "% of female-headed households experiencing crop failure due to water scarcity",
+          "outcome": "VULNERABILITY_GENDER",
+          "context": "Female-headed households ",
+          "value": 52.9,
+          "n": 64,
+          "N": 121,
+          "notes": "53.3% of 121. Women disproportionately affected."
+        },
+        {
+          "metric": "% of male-headed households experiencing crop failure due to water scarcity",
+          "outcome": "VULNERABILITY_GENDER",
+          "context": "Male-headed households experiencing crop failure",
+          "value": 26.8,
+          "n": 19,
+          "N": 71,
+          "notes": "27.2% of 71. Comparison group."
+        },
+        {
+          "metric": "% practicing irrigation",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed households",
+          "value": 78.1,
+          "n": 150,
+          "N": 192,
+          "notes": "78% of 192. Widespread adoption."
+        },
+        {
+          "metric": "Households adopting water-saving practices",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Female-headed households",
+          "value": 58.9,
+          "n": 113,
+          "N": 192,
+          "notes": "59% (average of 59.3% female, 58.3% male)."
+        },
+        {
+          "metric": "Households using municipal water for irrigation",
+          "outcome": "WATER_SOURCE",
+          "context": "Surveyed households",
+          "value": 35.9,
+          "n": 69,
+          "N": 192,
+          "notes": "36% of 192. Primary source"
+        },
+        {
+          "metric": "Households using dam/river water for irrigation",
+          "outcome": "WATER_SOURCE",
+          "context": "Surveyed households",
+          "value": 30.2,
+          "n": 58,
+          "N": 192,
+          "notes": "30% of 192."
+        },
+        {
+          "metric": "Households using rainwater harvesting",
+          "outcome": "WATER_SOURCE",
+          "context": "Surveyed households",
+          "value": 22.9,
+          "n": 44,
+          "N": 192,
+          "notes": "23% of 192."
+        },
+        {
+          "metric": "Households using recycled water",
+          "outcome": "WATER_SOURCE",
+          "context": "Surveyed households",
+          "value": 10.9,
+          "n": 21,
+          "N": 192,
+          "notes": "11% of 192."
+        },
+        {
+          "metric": "Households identifying weather conditions as main challenge",
+          "outcome": "ADAPTATION_BARRIER",
+          "context": "Surveyed households",
+          "value": 38.0,
+          "n": 73,
+          "N": 192,
+          "notes": "38% of 192. Drought/heavy rains."
+        },
+        {
+          "metric": "Households identifying harvest/crop production challenges",
+          "outcome": "ADAPTATION_BARRIER",
+          "context": "Surveyed households",
+          "value": 24.0,
+          "n": 46,
+          "N": 192,
+          "notes": "24% of 192. Soil quality, crop selection."
+        },
+        {
+          "metric": "Households identifying knowledge/resource gaps",
+          "outcome": "ADAPTATION_BARRIER",
+          "context": "Surveyed households",
+          "value": 12.0,
+          "n": 23,
+          "N": 192,
+          "notes": "12% of 192. Lack of information."
+        },
+        {
+          "metric": "Households identifying water availability as barrier",
+          "outcome": "ADAPTATION_BARRIER",
+          "context": "Surveyed households",
+          "value": 9.9,
+          "n": 19,
+          "N": 192,
+          "notes": "10% of 192."
+        },
+        {
+          "metric": "Households aware of Climate-Smart Agriculture (CSA)",
+          "outcome": "AWARENESS",
+          "context": "Surveyed households",
+          "value": 30.2,
+          "n": 58,
+          "N": 192,
+          "notes": "\"Most\" unaware. Estimate from Figure 4A."
+        },
+        {
+          "metric": "Households practicing manuring",
+          "outcome": "INDIGENOUS_PRACTICE",
+          "context": "Surveyed households",
+          "value": 17.2,
+          "n": 33,
+          "N": 192,
+          "notes": "17.4% of unaware households practiced manuring (significant, p<0.1)."
+        },
+        {
+          "metric": "Households aged 51-65 years",
+          "outcome": "DEMOGRAPHICS",
+          "context": "Surveyed households",
+          "value": 45.3,
+          "n": 87,
+          "N": 192,
+          "notes": "45.1% of 192. Aging farming population."
+        },
+        {
+          "metric": "Households aged 66+ years",
+          "outcome": "DEMOGRAPHICS",
+          "context": "Surveyed households",
+          "value": 26.6,
+          "n": 51,
+          "N": 192,
+          "notes": "26.7% of 192."
+        },
+        {
+          "metric": "Households using gardens for subsistence",
+          "outcome": "GARDEN_USE",
+          "context": "Surveyed households",
+          "value": 64.1,
+          "n": 123,
+          "N": 192,
+          "notes": "64.1% of 192. Most vulnerable to water stress (p<0.05)."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"Small household gardens stand out as resilient spaces of food production, often more reliable and manageable than larger croplands exposed to climatic stress.\"",
+          "finding": "Gardens represent a critical adaptive space - smaller scale allows for more intensive management and protection from climate variability compared to rainfed croplands.",
+          "theme": "Adaptation Strategies",
+          "barrier_facilitator": "Facilitator",
+          "code": "ADAPTATION_SPACE_GARDENS",
+          "notes": "Important finding on scale and adaptation."
+        },
+        {
+          "quote": "\"A clear distinction was observed between indigenous practices such as manuring and rainwater harvesting, commonly applied at the household level, and formal Climate-Smart Agriculture strategies, of which awareness and adoption remained low.\"",
+          "finding": "There is a knowledge/practice gap: households rely on indigenous techniques they know, while formal \"expert\" strategies (CSA) have not penetrated to household level despite policy emphasis.",
+          "theme": "Local Knowledge; Governance & Institutions",
+          "barrier_facilitator": "Mixed",
+          "code": "KNOWLEDGE_INDIGENOUS_VS_FORMAL",
+          "notes": "Critical policy insight: formal adaptation programs may be missing the mark."
+        },
+        {
+          "quote": "\"The findings highlight compounded vulnerabilities among aging, female-led, low-income households.\"",
+          "finding": "Intersectionality in vulnerability: age, gender, and income combine to create particularly vulnerable households that face multiple, overlapping constraints to adaptation.",
+          "theme": "Vulnerability",
+          "barrier_facilitator": "Barrier (Multiple)",
+          "code": "VULNERABILITY_COMPOUNDED",
+          "notes": "Supports intersectional analysis framework."
+        },
+        {
+          "quote": "\"Education emerged as a significant factor (p < 0.05), with higher attainment associated with reduced vulnerability to water stress.\"",
+          "finding": "Education is a key adaptive asset - it enables better understanding of climate risks and access to information about adaptation options.",
+          "theme": "Human Capital",
+          "barrier_facilitator": "Facilitator",
+          "code": "ADAPTIVE_CAPACITY_EDUCATION",
+          "notes": "Quant finding with qual implications."
+        },
+        {
+          "quote": "\"Women more likely than men to experience crop failure due to water scarcity (53.3% vs. 27.2%).\"",
+          "finding": "Gender disparity in climate impacts is stark - women's crops fail at nearly double the rate of men's under same water scarcity conditions, suggesting gendered access to adaptive resources.",
+          "theme": "Vulnerability; Gender",
+          "barrier_facilitator": "Barrier (Gender)",
+          "code": "VULNERABILITY_GENDER_DISPARITY",
+          "notes": "Core gender finding for synthesis."
+        }
+      ],
+      "friction_patterns": [
+        "Equity Gap"
+      ],
+      "tags": [
+        "facilitator",
+        "governance",
+        "vulnerability",
+        "barrier",
+        "facilitator",
+        "gender",
+        "vulnerability",
+        "barrier"
+      ]
+    },
+    {
+      "id": "SR-031",
+      "citation": "Springer (2025). Household experiences and adaptation to drought impacts on rural livelihoods in Limpopo Province, South Africa.",
+      "year": 2025,
+      "title": "Household experiences and adaptation to drought impacts on rural livelihoods in Limpopo Province, South Africa",
+      "doi": "https://doi.org/10.1007/s43621-025-02428-7",
+      "source": "S Matimolane, S Strydom, H Chikoore, FI Mathivha",
+      "country": "South Africa",
+      "quant_findings": [
+        {
+          "metric": "% experiencing severe drought within last 5 years",
+          "outcome": "DROUGHT_EXPERIENCE",
+          "context": "Surveyed households",
+          "value": 89.1,
+          "n": 426,
+          "N": 478,
+          "notes": "89.1% of 478. Core impact finding."
+        },
+        {
+          "metric": "% reporting crop failure",
+          "outcome": "DROUGHT_IMPACT",
+          "context": "Surveyed households",
+          "value": 82.2,
+          "n": 393,
+          "N": 478,
+          "notes": "82.3% of 478."
+        },
+        {
+          "metric": "% reporting water scarcity",
+          "outcome": "DROUGHT_IMPACT",
+          "context": "Surveyed households",
+          "value": 71.5,
+          "n": 342,
+          "N": 478,
+          "notes": "71.6% of 478."
+        },
+        {
+          "metric": "% reporting livestock mortality",
+          "outcome": "DROUGHT_IMPACT",
+          "context": "Surveyed households",
+          "value": 49.6,
+          "n": 237,
+          "N": 478,
+          "notes": "49.5% of 478."
+        },
+        {
+          "metric": "% food insecure in Mopani District",
+          "outcome": "FOOD_SECURITY",
+          "context": "Households in Mopani District",
+          "value": 74.1,
+          "n": 177,
+          "N": 239,
+          "notes": "74% of estimated 239."
+        },
+        {
+          "metric": "% food insecure in Capricorn District",
+          "outcome": "FOOD_SECURITY",
+          "context": "Households in Capricorn District",
+          "value": 69.0,
+          "n": 165,
+          "N": 239,
+          "notes": "69% of estimated 239."
+        },
+        {
+          "metric": "% practicing rainwater harvesting",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed households",
+          "value": 64.0,
+          "n": 306,
+          "N": 478,
+          "notes": "64% of 478."
+        },
+        {
+          "metric": "% practicing crop diversification",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed households",
+          "value": 45.6,
+          "n": 218,
+          "N": 478,
+          "notes": "45.6% of 478."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"Key enablers of resilience included strong social networks, traditional and indigenous knowledge, and institutional support.\"",
+          "finding": "Resilience is not just about individual assets; it is embedded in social structures (networks), cultural capital (indigenous knowledge), and the enabling environment (institutions).",
+          "theme": "Social Capital; Local Knowledge; Governance & Institutions",
+          "barrier_facilitator": "Facilitator",
+          "code": "RESILIENCE_ENABLERS_SOCIO-CULTURAL",
+          "notes": "Triangulates findings from SR-025 (Cassidy & Barnes) on social networks."
+        },
+        {
+          "quote": "\"...limited agricultural extension services constrained adaptation capacity.\"",
+          "finding": "A key institutional barrier persists: even when households are willing to adapt, they lack access to technical advice and support from extension services.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_INSTITUTIONAL_EXTENSION",
+          "notes": "Directly links to governance failures identified in SR-026 and SR-027."
+        },
+        {
+          "quote": "\"Female-headed households experienced greater food shortages... and faced barriers to livestock destocking.\"",
+          "finding": "Gender inequality intersects with institutional barriers; women are not only more vulnerable to impacts but also face specific obstacles in implementing certain adaptation strategies (e.g., selling livestock).",
+          "theme": "Vulnerability; Gender",
+          "barrier_facilitator": "Barrier",
+          "code": "VULNERABILITY_GENDER_COMPOUNDED; BARRIER_GENDERED_ADAPTATION",
+          "notes": "Provides a concrete example of how a coping strategy is less available to women."
+        },
+        {
+          "quote": "\"The study advocates for gender-responsive, equity-oriented drought policies, strengthened extension systems, and the integration of local knowledge.\"",
+          "finding": "The policy recommendations directly address the barriers identified: they call for policies that recognize gendered vulnerability, fix institutional failures, and value indigenous knowledge.",
+          "theme": "Governance & Institutions; Policy",
+          "barrier_facilitator": "Facilitator (Potential)",
+          "code": "ADAPTATION_POLICY_RECOMMENDATIONS",
+          "notes": "Provides a clear policy pathway forward."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Policy Fantasy",
+        "Resilience Gap",
+        "Equity Gap"
+      ],
+      "tags": [
+        "governance",
+        "facilitator",
+        "governance",
+        "barrier",
+        "gender",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "facilitator"
+      ]
+    },
+    {
+      "id": "SR-032",
+      "citation": "HeinOnline (2014). Analysis of Gender and Other Social Dimensions of Household Water Insecurity in Ngamiland, Botswana.",
+      "year": 2014,
+      "title": "Analysis of Gender and Other Social Dimensions of Household Water Insecurity in Ngamiland, Botswana",
+      "doi": "Not available in search results - book chapter",
+      "source": "Kujinga et al. ",
+      "country": "Botswana",
+      "quant_findings": [
+        {
+          "metric": "% female-headed households",
+          "outcome": "HOUSEHOLD_DEMOGRAPHICS",
+          "context": "Surveyed households in 8 settlements",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "53% of 554. Core gender finding."
+        },
+        {
+          "metric": "% male-headed households",
+          "outcome": "HOUSEHOLD_DEMOGRAPHICS",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "47% of 554."
+        },
+        {
+          "metric": "Average household size",
+          "outcome": "HOUSEHOLD_SIZE",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Compared to district average of 4.4."
+        },
+        {
+          "metric": "Average daily consumption during water insecurity (L/day)",
+          "outcome": "WATER_CONSUMPTION",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "11.6 L/person/day."
+        },
+        {
+          "metric": "Average daily consumption when water readily available (L/day)",
+          "outcome": "WATER_CONSUMPTION",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "56 L/person/day."
+        },
+        {
+          "metric": "% facing serious water insecurity episodes (2005-2011)",
+          "outcome": "WATER_INSECURITY",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "60% of 554."
+        },
+        {
+          "metric": "% facing water shortages in 12 months preceding survey",
+          "outcome": "WATER_INSECURITY",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "74% of 554. Worsening situation."
+        },
+        {
+          "metric": "% with no water supply within previous 24 hours of survey",
+          "outcome": "WATER_INSECURITY",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "33% of 554."
+        },
+        {
+          "metric": "% with no water supply at time of survey",
+          "outcome": "WATER_INSECURITY",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "32% of 554."
+        },
+        {
+          "metric": "% in Matlapana with no water supply since 2009",
+          "outcome": "WATER_INSECURITY",
+          "context": "Households in Matlapana",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Entire village without supply for years."
+        },
+        {
+          "metric": "% in Somelo with no water supply since 2009",
+          "outcome": "WATER_INSECURITY",
+          "context": "Households in Somelo",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Entire village without supply for years."
+        },
+        {
+          "metric": "% reporting always lived in water insecurity (use untreated water)",
+          "outcome": "WATER_INSECURITY",
+          "context": "Households in Gucha (ungazetted)",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Ungazetted settlements permanently excluded."
+        },
+        {
+          "metric": "% reporting always lived in water insecurity (use untreated water)",
+          "outcome": "WATER_INSECURITY",
+          "context": "Households in Samedupi (ungazetted)",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Ungazetted settlements permanently excluded."
+        },
+        {
+          "metric": "% reporting always lived in water insecurity (use untreated water)",
+          "outcome": "WATER_INSECURITY",
+          "context": "Households in Xobe (ungazetted)",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Ungazetted settlements permanently excluded."
+        },
+        {
+          "metric": "% in Matlapana accessing untreated water during shortages",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed household accessing untreated water during shortages",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "96% of 99 = ~95 households."
+        },
+        {
+          "metric": "% in Ikoga accessing untreated water during shortages",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed household accessing untreated water during shortages",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "93% of 46 = ~43 households."
+        },
+        {
+          "metric": "% of water fetching done by women and girls (10+ years)",
+          "outcome": "WATER_FETCHING_RESPONSIBILITY",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Core gender finding."
+        },
+        {
+          "metric": "% of households where male members assist women in fetching water",
+          "outcome": "WATER_FETCHING_RESPONSIBILITY",
+          "context": "Surveyed household where men assist with water fetching",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Men assisting due to acute shortages."
+        },
+        {
+          "metric": "% of able-bodied men in Somelo who participate in fetching water",
+          "outcome": "WATER_FETCHING_RESPONSIBILITY",
+          "context": "Households in Somelo",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Acute crisis drives male participation."
+        },
+        {
+          "metric": "% owning donkey drawn carts",
+          "outcome": "ASSET_OWNERSHIP",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Key asset for water transport."
+        },
+        {
+          "metric": "% with access to donkey carts owned by others",
+          "outcome": "ASSET_ACCESS",
+          "context": "Surveyed household without donkey carts",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Social capital in water access."
+        },
+        {
+          "metric": "% using light vehicles during water shortages",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed household using vehicles for water transport",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "16% of 554 = ~89 households."
+        },
+        {
+          "metric": "% of vehicle-using households with income ≥BWP5000",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Households with monthly income ≥ BWP5000",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "80% of vehicle users have higher income."
+        },
+        {
+          "metric": "% practicing rainwater harvesting",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "63% of 554."
+        },
+        {
+          "metric": "% of rainwater harvesting done by women (traditional method)",
+          "outcome": "ADAPTATION_GENDER",
+          "context": "Households practicing rainwater harvesting",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Women lead in traditional methods."
+        },
+        {
+          "metric": "% of women who prefer traditional rainwater harvesting",
+          "outcome": "ADAPTATION_PREFERENCE",
+          "context": "Women practicing rainwater harvesting",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Preferred for simplicity and low cost."
+        },
+        {
+          "metric": "% practicing rainwater harvesting using proper equipment",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Households with proper rainwater harvesting systems",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Mostly government houses, schools, health centers."
+        },
+        {
+          "metric": "% viewing harvested rainwater quality as better than other sources",
+          "outcome": "WATER_QUALITY_PERCEPTION",
+          "context": "Households reporting water quality perception",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "89% of those harvesting."
+        },
+        {
+          "metric": "% where water availability determines bathing frequency",
+          "outcome": "HYGIENE_IMPACT",
+          "context": "Households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "72% of 554."
+        },
+        {
+          "metric": "% of women who feel more disadvantaged by water insecurity than men",
+          "outcome": "HYGIENE_GENDER",
+          "context": "Women",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "Universal sentiment among women."
+        },
+        {
+          "metric": "% experiencing interpersonal conflicts over water during shortages",
+          "outcome": "SOCIAL_CONFLICT",
+          "context": "Households",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "61% of 554."
+        },
+        {
+          "metric": "% accessing water from improved sources when available",
+          "outcome": "WATER_SOURCE",
+          "context": "Gazetted settlements",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": "88% of gazetted settlement households."
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"Women and girls (10 years and above) (96%) across all the different settlement categories, are responsible for ensuring household water availability. Participants at FGDs and informal interviews said that the majority of men see their main duty as that of taking care of livestock while women do other duties which include fetching water.\"",
+          "finding": "Core gender finding: Water fetching is overwhelmingly feminized labor, rooted in traditional gender roles that assign livestock to men and domestic tasks (including water) to women.",
+          "theme": "Gender; Livelihoods & Culture",
+          "barrier_facilitator": "Barrier (Gender inequality)",
+          "code": "GENDER_ROLE_FEMINIZED_LABOR",
+          "notes": "Foundational finding for gender analysis."
+        },
+        {
+          "quote": "\"Women from different settlement categories complain of head loading water containers as this results in pain around the neck and back. The situation is exacerbated when one is pregnant or carrying a child on the back. The majority of women at FGDs highlighted that they always feel physical pain associated with head loading of water but they do not have any option as they are expected to fetch water.\"",
+          "finding": "Water fetching causes chronic physical pain and injury, especially for pregnant women or those carrying children - a hidden health burden of water insecurity that falls almost exclusively on women.",
+          "theme": "Gender; Livelihoods & Culture",
+          "barrier_facilitator": "Barrier (Health)",
+          "code": "HEALTH_IMPACT_PHYSICAL_WATER_FETCHING",
+          "notes": "Documents physical toll of adaptation."
+        },
+        {
+          "quote": "\"One male household head in Gucha can transport 0.4 m³ of water on a single trip from a neighbouring village situated 5 km away. However, whenever the cart breaks down, the wife walks 4 km to a nearby stream to fetch water using a 20 L container with a child strapped on the back.\"",
+          "finding": "Male use of donkey carts reduces women's burden only when assets function; when they fail, women revert to head-loading with children - showing fragility of asset-based adaptation and persistent gendered fallback.",
+          "theme": "Health; Gender; Vulnerability",
+          "barrier_facilitator": "Mixed",
+          "code": "ADAPTATION_FRAGILITY_GENDERED_FALLBACK",
+          "notes": "Illustrates how adaptation gains can be lost when assets fail."
+        },
+        {
+          "quote": "\"The businesses of bulk water supply are all owned and run by men as well as the deliveries. Women interviewed said that they have never considered venturing into this business. Men are preferred to drive the trucks and operate the water pumps because they have the requisite driving licenses... and are seen as able to cope with the physical demands.\"",
+          "finding": "The commercial adaptation opportunity (bulk water market) is entirely male-dominated - women excluded by licensing requirements, gendered perceptions of physical capability, and social norm",
+          "theme": "Gender; Adaptation Strategies",
+          "barrier_facilitator": "Barrier (Gender, Economic)",
+          "code": "ADAPTATION_COMMERCIAL_GENDERED_EXCLUSION",
+          "notes": "Shows how adaptation creates new economic opportunities that exclude women."
+        },
+        {
+          "quote": "\"Water shortages in Somelo led to the sexual exploitation of women in 2011 and 2012. This was as a result of men from a mineral prospecting company based closer to the village that had water brought for them by a water tanker. Some women and girls from the village in dire need of water fell vulnerable to the men who lured them into sexual relationships in exchange of water.\"",
+          "finding": "Most disturbing finding: Extreme water insecurity creates conditions for sexual exploitation, with women and girls forced into transactional sex for water - the ultimate manifestation of gendered vulnerability.",
+          "theme": "Gender; Vulnerability; Ethics",
+          "barrier_facilitator": "Barrier (Catastrophic)",
+          "code": "VULNERABILITY_EXTREME_SEXUAL_EXPLOITATION",
+          "notes": "Critical ethical finding - must be handled sensitively in synthesis."
+        },
+        {
+          "quote": "\"In Somelo village, women and men usually wait for the water tanker to deliver freshwater from Maun which is off loaded in the village's 20 m³ tank... Pressure of the water from the functional public standpipe is usually low as one 20 L container can take up to 6 minutes to fill up. Each household could come to the public standpipe with up to 10 x 20 L containers resulting in people queuing for more than 3 hours and others failing to get the water as it get finished quickly.\"",
+          "finding": "Even when water is delivered, extreme inefficiency (6 minutes per 20L) and queuing (3+ hours) create enormous time burdens - a hidden cost of inadequate infrastructure.",
+          "theme": "Infrastructure; Vulnerability",
+          "barrier_facilitator": "Barrier (Infrastructure)",
+          "code": "ADAPTATION_TIME_BURDEN_INEFFICIENCY",
+          "notes": "Quantifies time poverty dimension."
+        },
+        {
+          "quote": "\"Health personnel in Somelo used to allow households to fetch water from a standpipe within the health post premises but this changed in May 2014 when households were denied access. Households were told that they were damaging the standpipe just like they destroyed their standpipes. The move angered the households who called for a meeting... They further threatened the health post personnel with expulsion from the village if they continued denying them access.\"",
+          "finding": "Institutional actors (health post) both provide and withdraw critical water access, creating tension and conflict. Communities resist, asserting their rights, but with limited success.",
+          "theme": "Governance & Institutions; Conflict",
+          "barrier_facilitator": "Mixed",
+          "code": "GOVERNANCE_INSTITUTIONAL_ARBITRARINESS; CONFLICT_COMMUNITY_RESISTANCE",
+          "notes": "Illustrates precarious nature of institutional support."
+        },
+        {
+          "quote": "\"Until January 2014, owners of this property paid a fixed monthly fee of BWP5.75 because the standpipe did not have a meter. In February 2014, WUC installed a meter... and this resulted in the household denying other households access to their standpipe fearing high water charges. As a result some of the households secretly fetch water at night when the owners are indoors or asleep.\"",
+          "finding": "Water metering, intended to improve cost recovery, can have perverse social effects - destroying informal sharing networks and driving households to clandestine water collection.",
+          "theme": "Governance & Institutions; Social Capital",
+          "barrier_facilitator": "Barrier (Policy)",
+          "code": "ADAPTATION_PERVerse_METERING",
+          "notes": "Critical policy insight: well-intentioned interventions can backfire."
+        },
+        {
+          "quote": "\"Some households in Maun which always have uninterrupted water supply... charge BWP5 for each 20 L container filled with water from their standpipes.\"",
+          "finding": "Water scarcity creates informal markets where those with access commodify water, selling to desperate neighbors - a form of micro-entrepreneurship that exploits vulnerability",
+          "theme": "Economic Strategies; Vulnerability",
+          "barrier_facilitator": "Mixed",
+          "code": "ADAPTATION_INFORMAL_WATER_MARKET",
+          "notes": "Documents emergence of water vending at household scale."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Equity Gap"
+      ],
+      "tags": [
+        "gender",
+        "barrier",
+        "gender",
+        "barrier",
+        "gender",
+        "vulnerability",
+        "gender",
+        "barrier",
+        "gender",
+        "vulnerability",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "governance",
+        "barrier",
+        "vulnerability"
+      ]
+    },
+    {
+      "id": "SR-033",
+      "citation": "Discover Sustainability (2025). Household experiences and adaptation to drought impacts on rural livelihoods in Limpopo Province, South Africa.",
+      "year": 2025,
+      "title": "Household experiences and adaptation to drought impacts on rural livelihoods in Limpopo Province, South Africa",
+      "doi": "DOI 10.1007/s43621-025-02428-7",
+      "source": "Selelo Matimolane, Sheldon Strydom, Hector Chikoore & Fhumulani I. Mathivha",
+      "country": "South Africa",
+      "quant_findings": [
+        {
+          "metric": "Total households surveyed",
+          "outcome": "SAMPLE_SIZE",
+          "context": "Surveyed households in Mopani and Capricorn Districts",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": null
+        },
+        {
+          "metric": "Households in Mopani District",
+          "outcome": "SAMPLE_DISTRIBUTION",
+          "context": "Households in Mopani District",
+          "value": null,
+          "n": null,
+          "N": null,
+          "notes": null
+        },
+        {
+          "metric": "Households in Capricorn District",
+          "outcome": "SAMPLE_DISTRIBUTION",
+          "context": "Households in Capricorn District",
+          "value": 50.0,
+          "n": 239,
+          "N": 478,
+          "notes": null
+        },
+        {
+          "metric": "Households experiencing severe drought within last 5 years",
+          "outcome": "DROUGHT_EXPERIENCE",
+          "context": "Surveyed households",
+          "value": 89.1,
+          "n": 426,
+          "N": 478,
+          "notes": null
+        },
+        {
+          "metric": "Households reporting crop failure",
+          "outcome": "DROUGHT_IMPACT",
+          "context": "Surveyed households",
+          "value": 82.2,
+          "n": 393,
+          "N": 478,
+          "notes": null
+        },
+        {
+          "metric": "Households reporting water scarcity",
+          "outcome": "DROUGHT_IMPACT",
+          "context": "Surveyed households",
+          "value": 71.5,
+          "n": 342,
+          "N": 478,
+          "notes": null
+        },
+        {
+          "metric": "Households reporting livestock mortality",
+          "outcome": "DROUGHT_IMPACT",
+          "context": "Surveyed households",
+          "value": 49.6,
+          "n": 237,
+          "N": 478,
+          "notes": null
+        },
+        {
+          "metric": "Households food insecure in Mopani District",
+          "outcome": "FOOD_SECURITY",
+          "context": "Households in Mopani District",
+          "value": 74.1,
+          "n": 177,
+          "N": 239,
+          "notes": null
+        },
+        {
+          "metric": "Households food insecure in Capricorn District",
+          "outcome": "FOOD_SECURITY",
+          "context": "Households in Capricorn District",
+          "value": 69.0,
+          "n": 165,
+          "N": 239,
+          "notes": null
+        },
+        {
+          "metric": "Households practicing rainwater harvesting",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed households",
+          "value": 64.0,
+          "n": 306,
+          "N": 478,
+          "notes": null
+        },
+        {
+          "metric": "Households practicing crop diversification",
+          "outcome": "ADAPTATION_STRATEGY",
+          "context": "Surveyed households",
+          "value": 45.6,
+          "n": 218,
+          "N": 478,
+          "notes": null
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"Key enablers of resilience included strong social networks, traditional and indigenous knowledge, and institutional support, though limited agricultural extension services constrained adaptation capacity.\"",
+          "finding": "Resilience is enabled by social capital, indigenous knowledge, and institutions—but extension services are failing, creating a critical gap.",
+          "theme": "Social Capital; Local Knowledge; Governance",
+          "barrier_facilitator": "Mixed",
+          "code": "RESILIENCE_ENABLERS_MULTIPLE; BARRIER_EXTENSION_FAILURE",
+          "notes": "Complements SR-025 (social networks) and SR-026 (governance)"
+        },
+        {
+          "quote": "\"Female-headed households experienced greater food shortages and faced barriers to livestock destocking.\"",
+          "finding": "Gender inequality intersects with adaptation: women face both greater impacts and specific barriers to implementing coping strategies.",
+          "theme": "Gender; Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "VULNERABILITY_GENDER_COMPOUNDED; BARRIER_GENDERED_ADAPTATION",
+          "notes": "Direct evidence for Paper 2"
+        },
+        {
+          "quote": "\"The study advocates for gender-responsive, equity-oriented drought policies, strengthened extension systems, and the integration of local knowledge to enhance resilience among vulnerable rural communities.\"",
+          "finding": "Policy recommendations directly address the barriers identified: gender-responsive policy, fixing extension, and valuing indigenous knowledge.",
+          "theme": "Governance; Policy",
+          "barrier_facilitator": "Facilitator (Potential)",
+          "code": "ADAPTATION_POLICY_RECOMMENDATIONS",
+          "notes": "Actionable policy pathway"
+        },
+        {
+          "quote": "\"Low-income households were more affected by drought impacts overall.\"",
+          "finding": "Poverty amplifies vulnerability to climate shocks—those with least resources suffer most.",
+          "theme": "Vulnerability; Economic",
+          "barrier_facilitator": "Barrier",
+          "code": "VULNERABILITY_POVERTY_AMPLIFIED",
+          "notes": "Complements SR-031 findings"
+        }
+      ],
+      "friction_patterns": [
+        "Policy Fantasy",
+        "Resilience Gap",
+        "Equity Gap"
+      ],
+      "tags": [
+        "governance",
+        "gender",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "facilitator",
+        "vulnerability",
+        "barrier"
+      ]
+    },
+    {
+      "id": "NAM-001",
+      "citation": "An Assessment of Water Accessibility in the Kuvukiland Informal Settlement of Tsumeb in Namibia",
+      "year": null,
+      "title": "An Assessment of Water Accessibility in the Kuvukiland Informal Settlement of Tsumeb in Namibia",
+      "doi": "http://dx.doi.org/10.5539/jsd.v9n5p10",
+      "source": "Enkono & Mosimane",
+      "country": "Namibia",
+      "quant_findings": [
+        {
+          "metric": "% collecting water daily",
+          "outcome": "WATER_ACCESS_FREQUENCY",
+          "context": "Households in Kuvukiland informal settlement",
+          "value": 36.0,
+          "n": 18,
+          "N": 50,
+          "notes": null
+        },
+        {
+          "metric": "% collecting water weekly",
+          "outcome": "WATER_ACCESS_FREQUENCY",
+          "context": "Households in Kuvukiland informal settlement",
+          "value": 56.0,
+          "n": 28,
+          "N": 50,
+          "notes": null
+        },
+        {
+          "metric": "% collecting water monthly",
+          "outcome": "WATER_ACCESS_FREQUENCY",
+          "context": "Households in Kuvukiland informal settlement",
+          "value": 8.0,
+          "n": 4,
+          "N": 50,
+          "notes": null
+        },
+        {
+          "metric": "% participating through public debate",
+          "outcome": "COMMUNITY_PARTICIPATION",
+          "context": "Households in Kuvukiland informal settlement",
+          "value": 36.0,
+          "n": 18,
+          "N": 50,
+          "notes": null
+        },
+        {
+          "metric": "% participating through organized committee meetings",
+          "outcome": "COMMUNITY_PARTICIPATION",
+          "context": "Households in Kuvukiland informal settlement",
+          "value": 64.0,
+          "n": 32,
+          "N": 50,
+          "notes": null
+        }
+      ],
+      "qual_findings": [
+        {
+          "quote": "\"We supply water to Kuvukiland informal settlement through a bulk water supply, which works like a pre-paid system\" (Interviewee 5).",
+          "finding": "Prepaid water system is the formal mechanism, but it fails in practice.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_PREPAID_FAILURE",
+          "notes": "Complements SR-032 findings on metering destroying social networks"
+        },
+        {
+          "quote": "\"We as the community dig the trenches ourselves; what the municipality does is supply the water pipes and erect the standpipes for us. However, the standpipes are not reliable because they do not work in line with the card system; they overcharge us\" (Interviewee 3).",
+          "finding": "Community provides labor (sweat equity), but infrastructure fails and overcharges—double burden.",
+          "theme": "Adaptation Strategies; Governance",
+          "barrier_facilitator": "Barrier",
+          "code": "ADAPTATION_SWEAT_EQUITY; GOVERNANCE_INFRASTRUCTURE_FAILURE",
+          "notes": "Parallels Botswana ungazetted settlements' self-provision"
+        },
+        {
+          "quote": "\"During rainy seasons, residents harvest water from the roof of their iron zinc houses\" (Interviewee 3).",
+          "finding": "Rainwater harvesting as autonomous adaptation—identical to Botswana RWH practices.",
+          "theme": "Adaptation Strategies",
+          "barrier_facilitator": "Facilitator",
+          "code": "ADAPTATION_RAINWATER_HARVESTING",
+          "notes": "Directly comparable to SR-018, SR-031, SR-032"
+        },
+        {
+          "quote": "\"Sometimes when the water situation reaches a critical point, they send sprinkler trucks filled with water, which is always brownish in colour. Water supply is very poor here and the municipality does not really look after the water in Kuvukiland\" (Interviewee 3).",
+          "finding": "Emergency water is poor quality; institutional neglect is explicit.",
+          "theme": "Governance; Health",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_NEGLECT; WATER_QUALITY_POOR",
+          "notes": "Aligns with SR-027 (quality complaints) and SR-026 (institutional failure)"
+        },
+        {
+          "quote": "\"Water is rarely available here; we sleep standing in queues at the water collection points. Most of the time we collect water from public toilets in Soweto\" (Interviewee 3).",
+          "finding": "Extreme coping: queuing overnight; resorting to public toilets as water source—sanitation infrastructure repurposed for water.",
+          "theme": "Vulnerability; Adaptation",
+          "barrier_facilitator": "Barrier",
+          "code": "ADAPTATION_EXTREME_QUEUING; ADAPTATION_UNSAFE_SOURCES",
+          "notes": "Extreme manifestation of alt_source reliance"
+        },
+        {
+          "quote": "\"The standpipes are far from our houses, they are not spread out into the community, we want them to extend the standpipes, because the distance is too much for us\" (Interviewee 6).",
+          "finding": "Distance as primary barrier—echoes SR-001-Q11 (distance problem).",
+          "theme": "Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_DISTANCE",
+          "notes": "Complements SR-020 (donkey carts) and SR-001"
+        },
+        {
+          "quote": "\"Soweto location is very far for us and sometimes we just go without water, because we cannot afford to travel the long distance every day, especially for us women\" (Interviewee 5).",
+          "finding": "Gendered burden: women bear the cost of distance; sometimes give up entirely.",
+          "theme": "Gender; Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "GENDER_BURDEN_DISTANCE; VULNERABILITY_WATERLESS_DAYS",
+          "notes": "Direct parallel to SR-006, SR-032 (gendered fetching burden)"
+        },
+        {
+          "quote": "\"Our kids get infected by the water they bring by trucks, and they usually suffer from diarrhoea\" (Interviewee 3).",
+          "finding": "Health impact of poor-quality emergency water—children most affected.",
+          "theme": "Health; Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "HEALTH_DIARRHEA_CHILDREN",
+          "notes": "Complements SR-010 (diarrhea prevalence)"
+        },
+        {
+          "quote": "\"Buying the pre-paid [water] is a huge challenge; we cannot afford the N$180.00 paid for the card\" (Interviewee 7).",
+          "finding": "Economic barrier: upfront cost of prepaid system excludes the poor.",
+          "theme": "Economic; Governance",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_AFFORDABILITY_PREPAID",
+          "notes": "Parallels SR-009 (92% overburdened) and SR-023 (willing but unable)"
+        },
+        {
+          "quote": "\"Even if we, the community leaders, attend meetings on behalf of the community to air our views, people only listen but they do nothing about it\" (Interviewee 5).",
+          "finding": "Tokenistic participation—echoes SR-026 (governance failures) and SR-007 (low institutional trust).",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_TOKENISTIC_PARTICIPATION",
+          "notes": "Direct parallel to SR-026's findings on participatory governance"
+        },
+        {
+          "quote": "\"When it comes to the issue of water, decisions with regard to water are very poor and they are less integrated, because we hardly see our views visible in the planning process. We need a co-ordinated effort; one that fits all parties\" (Interviewee 3).",
+          "finding": "Institutional failure: planning excludes community; call for integration.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_PLANNING_EXCLUSION",
+          "notes": "Aligns with Paper 2 (institutional friction)"
+        },
+        {
+          "quote": "\"We have challenges of water supply to Kuvukiland because the town is not formalised, so we are not supposed to supply water to the informal settlement. We also work in accordance with the Local Authority Act and, according to the Act, we are supposed to supply water to every residence\" (Interviewee 2).",
+          "finding": "Policy contradiction: informal settlement status vs. universal service obligation. Central friction point.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_POLICY_CONTRADICTION",
+          "notes": "Core finding: directly parallels Botswana's gazetted/ungazetted policy exclusion"
+        }
+      ],
+      "friction_patterns": [
+        "Policy Fantasy",
+        "Equity Gap"
+      ],
+      "tags": [
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "facilitator",
+        "governance",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "gender",
+        "vulnerability",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier"
+      ]
+    },
+    {
+      "id": "NAM-002",
+      "citation": "Center for African Studies, University of Florida (2022). Challenges Facing Community Management of Rural Water Supply: The Case of Ohangwena Region, Namibia.",
+      "year": 2022,
+      "title": "Challenges Facing Community Management of Rural Water Supply: The Case of Ohangwena Region, Namibia",
+      "doi": "https://asq.africa.ufl.edu/files/V21i1a2.pdf",
+      "source": "Nespect Salom & Prudence Khumalo",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"At least half of the existing water points in rural areas in Namibia are faulty and dysfunctional, however, and the majority of people are still struggling to access clean water.\"",
+          "finding": "Despite policy commitment to community management, infrastructure failure is rampant—undermining the entire model.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_INFRASTRUCTURE_FAILURE",
+          "notes": "Aligns with SR-027 (broken standpipes) and SR-026 (institutional failure)"
+        },
+        {
+          "quote": "\"Rural water supply in most developing countries have been shaped by mismanagement. The resultant effect of this mismanagement is increased poverty, tremendous human health costs, as well as gender and other social inequalities.\"",
+          "finding": "Links water mismanagement directly to poverty, health, and inequality—framing water as a social justice issue, not just a technical one.",
+          "theme": "Governance; Health; Inequality",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_MISMANAGEMENT_IMPACTS",
+          "notes": "Provides framing for your thesis's normative argument"
+        },
+        {
+          "quote": "\"Over 50 percent of Namibians live in rural areas, and many live far from available water sources.\"",
+          "finding": "Geographic distance remains a fundamental barrier despite policy reforms.",
+          "theme": "Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_GEOGRAPHIC_DISTANCE",
+          "notes": "Complements SR-001-Q11 (distance) and SR-020 (donkey carts)"
+        },
+        {
+          "quote": "\"Water supply in rural areas is faced by several challenges, such as poor economic conditions, location of settlements in environmentally fragile areas, management models dominated by diverse cultural values, and associated cost recovery challenges.\"",
+          "finding": "Multidimensional barriers: economic, environmental, cultural, financial—all interact.",
+          "theme": "Vulnerability; Governance",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_MULTIDIMENSIONAL",
+          "notes": "Supports STF framework's multi-level approach"
+        },
+        {
+          "quote": "\"Scattered settlements bring about challenges for infrastructure provision. Oftentimes, the condition of infrastructure systems becomes poor due to technical, financial and managerial limitations. As a result, the rural population depends on local water sources (wells, hand pumps, river), which are frequently contaminated.\"",
+          "finding": "Settlement pattern (scattered vs. concentrated) directly affects infrastructure viability. Direct parallel to Botswana's gazetted/ungazetted distinction.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_SETTLEMENT_PATTERN",
+          "notes": "Key comparative finding—parallels Botswana settlement policy debate"
+        },
+        {
+          "quote": "\"The community management model in post-independence Namibia came into prominence in 1998. The literature links it to the Decentralization Enabling Act of 2000 and National Water Policy 1998.\"",
+          "finding": "Policy timeline establishes when community management became official doctrine.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Context",
+          "code": "GOVERNANCE_POLICY_TIMELINE",
+          "notes": "Useful for historical framing"
+        },
+        {
+          "quote": "\"The sustainability of the community management model depends on technical, managerial and financial aspects to ensure the long-term sustainability and functionality, as well as the participation of users.\"",
+          "finding": "Identifies three pillars for success—technical, managerial, financial—plus participation.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Facilitator (if present)",
+          "code": "GOVERNANCE_SUCCESS_PILLARS",
+          "notes": "Directly comparable to Paper 1's CSFs"
+        },
+        {
+          "quote": "\"Community management empowers and prepares the community members to undertake a leading role in planning, construction, financing, and managing water supply systems necessary for water sustainability after the implementing agency/government has left the community.\"",
+          "finding": "Theory of community management: empowerment leads to sustainability",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Facilitator",
+          "code": "GOVERNANCE_THEORY_EMPOWERMENT",
+          "notes": "The ideal against which reality is measured"
+        },
+        {
+          "quote": "\"This management model has some limitations, including: lack of institutional support, inadequate financial resources, weak tariff schemes, maintenance issues or difficulty in obtaining spare parts, and lack of support from external entities.\"",
+          "finding": "Explicit list of barriers to community management success.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_BARRIERS_LIST",
+          "notes": "Directly comparable to Paper 1's systemic challenges"
+        },
+        {
+          "quote": "\"Governance, leadership attributes of the committee members, training and capacity building, level of community involvement, coordination and support are critical success factors for effective management of rural water supplies.\"",
+          "finding": "CSFs identified: governance, leadership, training, participation, coordination.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Mixed",
+          "code": "GOVERNANCE_CSFS_IDENTIFIED",
+          "notes": "Parallels Paper 1's CSF findings—strengthens cross-country comparison"
+        }
+      ],
+      "friction_patterns": [
+        "Policy Fantasy"
+      ],
+      "tags": [
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "governance",
+        "facilitator",
+        "governance",
+        "facilitator",
+        "governance",
+        "barrier",
+        "governance"
+      ]
+    },
+    {
+      "id": "NAM-003",
+      "citation": "African Journal of Environmental Sciences & Renewable Energy (2025). Evaluating the Effectiveness of Sustainable Water Management Practices in Promoting Community Health in Kavango East Region of Namibia.",
+      "year": 2025,
+      "title": "Evaluating the Effectiveness of Sustainable Water Management Practices in Promoting Community Health in Kavango East Region of Namibia",
+      "doi": "DOI: https://doi.org/10.62154/ajesre.2025.018.010742",
+      "source": "Natalia N. I. Shikangala",
+      "country": null,
+      "quant_findings": [],
+      "qual_findings": [
+        {
+          "quote": "\"The Namibian Integrated Rural Water Supply and Sanitation Policy of 2008 aims to ensure that at least 80% of rural households have access to potable water within 20 minutes of their homes, unfortunately currently, only 42% of rural communities in Namibia have this access.\"",
+          "finding": "A stark policy implementation gap: national target (80%) vs. current reality (42%) for rural water access. This quantified gap is a form of institutional friction.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_POLICY_IMPLEMENTATION_GAP",
+          "notes": "Provides a powerful national statistic (42%) to frame the problem."
+        },
+        {
+          "quote": "\"Waterborne diseases account for 30% of all outpatient visits in rural health facilities.\"",
+          "finding": "Health systems are overwhelmed by preventable waterborne illness—direct link between water insecurity and public health burden.",
+          "theme": "Health; Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "HEALTH_WATERBORNE_BURDEN",
+          "notes": "Quantifiable health impact (30%)—can be used in intro or discussion."
+        },
+        {
+          "quote": "\"Coping with the consequences of this polluted water while living in a persistently water-scarce environment imposes what Shikangala and Haimbili (2022) estimate as a 15% toll on the annual income of the average rural Namibian family—expenses and lost productivity.\"",
+          "finding": "Economic friction: households lose 15% of annual income to coping with water insecurity—money that could otherwise support development.",
+          "theme": "Economic; Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "ECONOMIC_COPING_COST",
+          "notes": "Directly comparable to SR-027-Q16 (avoidance costs) and SR-009 (affordability burden)."
+        },
+        {
+          "quote": "\"These places harvested water because they have facilities.\" While some isolated homesteads also participate in this practice, many community members lack the means to do so due to their housing structures.",
+          "finding": "Infrastructure inequality: water harvesting is only possible where facilities exist—excludes those with inadequate housing.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_INFRASTRUCTURE_INEQUALITY",
+          "notes": "Parallels Botswana's gazetted/ungazetted divide."
+        },
+        {
+          "quote": "\"covering well reduced evaporation and water lasted until the next rain.\"",
+          "finding": "Indigenous technical knowledge: simple, effective conservation practiced by communities.",
+          "theme": "Local Knowledge",
+          "barrier_facilitator": "Facilitator",
+          "code": "KNOWLEDGE_INDIGENOUS_CONSERVATION",
+          "notes": "Complements SR-030 (indigenous practices) and SR-018 (traditional RWH)."
+        },
+        {
+          "quote": "\"areas where there are dense forests receive good rainfall\"",
+          "finding": "Local ecological knowledge: communities understand forest-water linkages—basis for tree planting as adaptation.",
+          "theme": "Local Knowledge",
+          "barrier_facilitator": "Facilitator",
+          "code": "KNOWLEDGE_ECOLOGICAL_FOREST_WATER",
+          "notes": "Unique finding—adds dimension not常见 in other studies."
+        },
+        {
+          "quote": "\"Community members (men) put roots of a certain plant to kill fish.\"",
+          "finding": "Maladaptation: traditional practices (fish poisoning) threaten water quality—highlights need for education, not just technology.",
+          "theme": "Adaptation Barriers",
+          "barrier_facilitator": "Barrier",
+          "code": "MALADAPTATION_TRADITIONAL_PRACTICE",
+          "notes": "Nuanced finding—not all traditional practices are beneficial."
+        },
+        {
+          "quote": "\"The availability of piped water in some communities enhances equitable access to water. This creates equality\" (CM 4).",
+          "finding": "Piped water as equity mechanism—when present, it reduces inequality.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Facilitator",
+          "code": "GOVERNANCE_PIPED_WATER_EQUITY",
+          "notes": "Positive case—shows what works when infrastructure functions."
+        },
+        {
+          "quote": "\"The obvious benefit of sustainable water management is improved health. The community has access to clean water\" (CM 11).",
+          "finding": "Direct link between water management and health outcomes—community recognizes the connection.",
+          "theme": "Health; Local Knowledge",
+          "barrier_facilitator": "Facilitator",
+          "code": "HEALTH_WATER_LINK",
+          "notes": "Complements QL2—community awareness of health link."
+        },
+        {
+          "quote": "\"Taking charge of water sources by the community develops responsibility and empowerment\" (OF 1).",
+          "finding": "Community management as empowerment—the theory behind CBNRM",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Facilitator",
+          "code": "GOVERNANCE_CBNRM_EMPOWERMENT_THEORY",
+          "notes": "The ideal against which failure is measured."
+        },
+        {
+          "quote": "\"Water is conveniently available and it creates more time to do other commitments, hence enhancing community development\" (OF 3).",
+          "finding": "Time poverty reduction: when water is available, time is freed for other development activities.",
+          "theme": "Time Poverty; Development",
+          "barrier_facilitator": "Facilitator",
+          "code": "ADAPTATION_TIME_POVERTY_REDUCTION",
+          "notes": "Complements SR-001-Q11 (distance) and SR-020-Q3 (donkey carts)—shows positive opposite."
+        },
+        {
+          "quote": "\"Both directing running water into fields and drip irrigation has impact on group growth. This ensures high crop productivity\" (CM 12).",
+          "finding": "Irrigation as productivity enhancement—economic benefit of water management.",
+          "theme": "Economic; Adaptation",
+          "barrier_facilitator": "Facilitator",
+          "code": "ADAPTATION_IRRIGATION_PRODUCTIVITY",
+          "notes": "Complements SR-030-Q4 (irrigation adoption)."
+        },
+        {
+          "quote": "\"Sometimes it takes more than two months for the responsible team to report for repairs\" (CM 6).",
+          "finding": "Institutional failure: delayed repairs leave communities without water for months.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_DELAYED_REPAIRS",
+          "notes": "Complements SR-027 (broken standpipes) and SR-026 (institutional failure)."
+        },
+        {
+          "quote": "\"Sometimes the community leaders sit on the information, or do not report to the grassroots level\" (CM 7).",
+          "finding": "Information hierarchy failure: knowledge stops at leadership, doesn't reach those who need it.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_INFORMATION_BOTTLENECK",
+          "notes": "Parallels SR-007 (low institutional trust) and SR-026 (participatory governance failure)."
+        },
+        {
+          "quote": "\"meetings on sustainable water management are mostly held at constituency or regional level\" (CM 13).",
+          "finding": "Participatory governance failure: meetings happen above community level—grassroots excluded.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_PARTICIPATION_EXCLUSION",
+          "notes": "Echoes SR-026 (tokenistic participation) and SR-007 (trust gap)."
+        },
+        {
+          "quote": "\"a Protect source of domestic water ensure access to clean water and promotes health\" (CM 8).",
+          "finding": "Protected sources work—when they exist, health improves.",
+          "theme": "Health; Infrastructure",
+          "barrier_facilitator": "Facilitator",
+          "code": "INFRASTRUCTURE_PROTECTED_SOURCE_SUCCESS",
+          "notes": "Positive case—what works."
+        },
+        {
+          "quote": "\"The majority of the people who live along the Kavango River still use water from Kavango... There is no quality\" (CM 6).",
+          "finding": "River water reliance persists despite risks—lack of alternatives.",
+          "theme": "Adaptation; Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "ADAPTATION_RIVER_RELIANCE",
+          "notes": "Complements SR-020, SR-021 (river dependence)."
+        },
+        {
+          "quote": "families rely on open wells, leading to reported cases of waterborne diseases.",
+          "finding": "Open wells = health risk. Direct link between source type and health outcomes.",
+          "theme": "Health; Vulnerability",
+          "barrier_facilitator": "Barrier",
+          "code": "HEALTH_OPEN_WELL_RISK",
+          "notes": "Parallels SR-010 (diarrhea prevalence)."
+        },
+        {
+          "quote": "\"development and provision of better water services follow institutions\"",
+          "finding": "Institutional bias: water services follow institutions (schools, clinics), not people. Communities are left out.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_INSTITUTIONAL_BIAS",
+          "notes": "Core finding: parallels Botswana's gazetted/ungazetted policy exclusion."
+        },
+        {
+          "quote": "\"some of the community members are conservative\" (OF 4), particularly the elderly, who view traditional practices, like using water from open sources, as safe.",
+          "finding": "Cultural barrier: traditional beliefs about water safety persist, hindering adoption of improved sources.",
+          "theme": "Culture; Adaptation Barriers",
+          "barrier_facilitator": "Barrier",
+          "code": "BARRIER_CULTURAL_TRADITION",
+          "notes": "Nuanced finding—not just infrastructure, but beliefs."
+        },
+        {
+          "quote": "\"practical demonstrations would convince the community members\" (OF 4).",
+          "finding": "Demonstration as effective extension—showing, not just telling.",
+          "theme": "Governance; Extension",
+          "barrier_facilitator": "Facilitator",
+          "code": "ADAPTATION_EXTENSION_DEMONSTRATION",
+          "notes": "Policy-relevant: how to change behavior."
+        },
+        {
+          "quote": "\"The tradition of abandoning projects makes the community lose confidence\" (CM 6).",
+          "finding": "Project abandonment destroys trust—once burned, twice shy.",
+          "theme": "Governance & Institutions",
+          "barrier_facilitator": "Barrier",
+          "code": "GOVERNANCE_PROJECT_ABANDONMENT_TRUST",
+          "notes": "Complements SR-007 (low institutional trust)."
+        }
+      ],
+      "friction_patterns": [
+        "Implementation Collapse",
+        "Policy Fantasy",
+        "Equity Gap"
+      ],
+      "tags": [
+        "governance",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "barrier",
+        "facilitator",
+        "facilitator",
+        "barrier",
+        "governance",
+        "facilitator",
+        "facilitator",
+        "governance",
+        "facilitator",
+        "facilitator",
+        "facilitator",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "governance",
+        "barrier",
+        "facilitator",
+        "vulnerability",
+        "barrier",
+        "vulnerability",
+        "barrier",
+        "governance",
+        "barrier",
+        "barrier",
+        "governance",
+        "facilitator",
+        "governance",
+        "barrier"
+      ]
+    }
+  ]
+}
