@@ -79,8 +79,6 @@
         .scale-color.high { background: #E76F51; }
         .scale-color.crit { background: #D62828; }
         .gap-info { display: inline-flex; align-items: center; gap: 5px; cursor: help; border-bottom: 1px dotted #2C7DA0; }
-        .dominant-gap-container { display: flex; align-items: center; justify-content: center; gap: 8px; }
-        .info-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; background: #2C7DA0; color: white; border-radius: 50%; font-size: 12px; cursor: help; margin-left: 6px; }
         .analysis-row { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
         .analysis-box { flex: 1; background: white; border-radius: 12px; padding: 18px; border-left: 4px solid #2C7DA0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .analysis-box h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #2C7DA0; margin-bottom: 12px; }
@@ -231,12 +229,12 @@
     let radarChart = null;
     let papersDatabase = null;
     
-    // Pattern mapping (dominant gap -> pattern name)
+    // Pattern mapping (dominant gap -> pattern name) - EXPANDED FOR BETTER MATCHING
     const gapToPattern = {
-        "P-H": ["Policy Fantasy", "Equity Gap", "Last-Mile Failure"],
-        "P-I": ["Policy Fantasy", "Institutional Overstretch"],
-        "I-E": ["Implementation Collapse", "Idle Capacity"],
-        "E-H": ["Last-Mile Failure", "Equity Gap", "Delivery without Benefit"]
+        "P-H": ["Policy Fantasy", "Equity Gap", "Last-Mile Failure", "Implementation Collapse", "Resilience Gap"],
+        "P-I": ["Policy Fantasy", "Institutional Overstretch", "Implementation Collapse", "Equity Gap"],
+        "I-E": ["Implementation Collapse", "Idle Capacity", "Equity Gap", "Policy Fantasy"],
+        "E-H": ["Last-Mile Failure", "Equity Gap", "Delivery without Benefit", "Implementation Collapse"]
     };
     
     // Tooltips and descriptions
@@ -269,30 +267,29 @@
         }
     }
     
-    // ========== EVIDENCE RETRIEVAL ==========
+    // ========== IMPROVED EVIDENCE RETRIEVAL (Option C) ==========
     function getEvidenceForPattern(dominantGap, patternName) {
         if (!papersDatabase || papersDatabase.length === 0) return [];
         
-        // Determine which patterns to search for based on dominant gap
-        const searchPatterns = gapToPattern[dominantGap] || [patternName];
+        const searchPatterns = gapToPattern[dominantGap] || ["Policy Fantasy", "Equity Gap", "Implementation Collapse"];
         
-        // Find papers that match any of the search patterns
         const matches = papersDatabase.filter(paper => {
             const paperPatterns = paper.friction_patterns || [];
             return searchPatterns.some(sp => paperPatterns.includes(sp));
         });
         
-        // Sort by relevance: papers with both quant and qual first, then by number of findings
+        // Sort by relevance: papers that match MORE of the searchPatterns first
         matches.sort((a, b) => {
-            const aHasBoth = (a.quant_findings?.length > 0 && a.qual_findings?.length > 0);
-            const bHasBoth = (b.quant_findings?.length > 0 && b.qual_findings?.length > 0);
-            if (aHasBoth && !bHasBoth) return -1;
-            if (!aHasBoth && bHasBoth) return 1;
-            return (b.quant_findings?.length + b.qual_findings?.length) - (a.quant_findings?.length + a.qual_findings?.length);
+            const aMatches = searchPatterns.filter(sp => (a.friction_patterns || []).includes(sp)).length;
+            const bMatches = searchPatterns.filter(sp => (b.friction_patterns || []).includes(sp)).length;
+            if (aMatches !== bMatches) return bMatches - aMatches;
+            // Then by total findings (more findings = richer evidence)
+            return (b.quant_findings?.length + b.qual_findings?.length) - 
+                   (a.quant_findings?.length + a.qual_findings?.length);
         });
         
-        // Take top 3
-        return matches.slice(0, 3);
+        // Show top 5
+        return matches.slice(0, 5);
     }
     
     function formatEvidence(evidence) {
@@ -300,23 +297,17 @@
         
         let html = '';
         for (const paper of evidence) {
-            // Extract author/year from citation
             let authorYear = paper.citation || paper.id;
             if (authorYear.length > 60) authorYear = authorYear.substring(0, 60) + '...';
             
-            // Get country and area from quant or qual findings
             let location = paper.country || '';
             if (paper.quant_findings && paper.quant_findings.length > 0 && paper.quant_findings[0].context) {
                 location += location ? ' (' + paper.quant_findings[0].context + ')' : paper.quant_findings[0].context;
-            } else if (paper.qual_findings && paper.qual_findings.length > 0 && paper.qual_findings[0].notes) {
-                const notes = paper.qual_findings[0].notes;
-                if (notes && notes.length < 60) location += location ? ' (' + notes + ')' : notes;
             }
             
             html += `<div class="evidence-item">`;
             html += `<div class="evidence-header">📄 ${authorYear} – ${location || 'Location not specified'}</div>`;
             
-            // Add quantitative finding if available
             if (paper.quant_findings && paper.quant_findings.length > 0) {
                 const q = paper.quant_findings[0];
                 if (q.value) {
@@ -326,7 +317,6 @@
                 }
             }
             
-            // Add qualitative finding / quote if available
             if (paper.qual_findings && paper.qual_findings.length > 0) {
                 const q = paper.qual_findings[0];
                 if (q.finding) {
@@ -374,7 +364,6 @@
         return tooltips[gap] || "Friction between these domains is highest.";
     }
     
-    // Full pattern analysis (16+ patterns from v5.3)
     function getPatternAnalysis(P, I, E, H) {
         const gapPI = Math.pow(P - I, 2);
         const gapIE = Math.pow(I - E, 2);
@@ -382,7 +371,6 @@
         const gapPH = Math.pow(P - H, 2);
         const gaps = { "P-I": gapPI, "I-E": gapIE, "E-H": gapEH, "P-H": gapPH };
         const dominant = Object.keys(gaps).reduce((a, b) => gaps[a] > gaps[b] ? a : b);
-        const dominantDesc = { "P-I": "Policy vs Capacity", "I-E": "Institutional vs Execution", "E-H": "Execution vs Household", "P-H": "Policy vs Household" }[dominant];
         
         if (P === 1 && I === 1 && E === 1 && H === 1) return { analysis: "Complete governance collapse across all domains. No functional policy framework – existing laws are outdated, unenforced, or absent. Institutional capacity is non‑existent: chronic skill deficits, high vacancy rates, no operational budget, and no maintenance systems. Infrastructure is non‑functional or never existed. Households rely on unsafe surface water or expensive informal vendors.", intervention: "Immediate emergency water supply to affected communities. Conduct rapid assessment to identify minimal infrastructure that can be restored or installed. Engage local leaders to establish interim community water committees." };
         if (P === 5 && I === 5 && E === 5 && H === 5) return { analysis: "Optimal alignment across all domains. Policy is progressive, well‑coordinated, and responsive to local conditions. Institutional capacity is strong with skilled staff, adequate budget, and proactive planning. Infrastructure is well‑maintained with preventive schedules. Households experience reliable, affordable, safe water with reasonable access distance. Trust in service providers is high.", intervention: "Document best practices as a case study for replication. Establish early‑warning monitoring to detect emerging gaps before they become crises. Mentor neighbouring communities through peer‑learning exchanges." };
@@ -457,12 +445,11 @@
         
         document.getElementById('gapBreakdown').innerHTML = `✓ Gap contributions: P-I:${gaps["P-I"]} | I-E:${gaps["I-E"]} | E-H:${gaps["E-H"]} | P-H:${gaps["P-H"]}`;
         
-        // Get pattern analysis
         const patternResult = getPatternAnalysis(P, I, E, H);
         document.getElementById('analysisBox').innerHTML = `<h4>📊 System Friction Analysis</h4><p>${patternResult.analysis}</p>`;
         document.getElementById('interventionBox').innerHTML = `<h4>🎯 Priority Intervention</h4><p>${patternResult.intervention}</p>`;
         
-        // Get evidence from JSON
+        // Get evidence using improved function
         const evidence = getEvidenceForPattern(dominant, "");
         document.getElementById('evidenceBox').innerHTML = `<h4>📚 Evidence from Research</h4>${formatEvidence(evidence)}`;
         
