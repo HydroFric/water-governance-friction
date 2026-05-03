@@ -198,7 +198,7 @@
         </div>
     </div>
 
-    <!-- ABOUT SECTION – RESTORED FROM v5.3 -->
+    <!-- ABOUT SECTION -->
     <div id="about" class="about-section"><h2>About HydroFric</h2>
         <div class="accordion-item"><div class="accordion-header">📌 Purpose & Scope – For rural water supply</div><div class="accordion-content"><p>The mission of HydroFric is to help rural water service providers and community members diagnose the most urgent gaps between policy promises, available resources, on‑ground infrastructure, and what families actually experience at the tap. The tool is suitable for any rural setting – from a single water point to a small piped scheme serving several villages – and can be used by village water committees, district water officers, NGO field staff, local government planners, and community health workers.</p></div></div>
         
@@ -267,7 +267,7 @@
         }
     }
     
-    // ========== IMPROVED EVIDENCE RETRIEVAL (Option C) ==========
+    // ========== IMPROVED EVIDENCE RETRIEVAL ==========
     function getEvidenceForPattern(dominantGap, patternName) {
         if (!papersDatabase || papersDatabase.length === 0) return [];
         
@@ -288,7 +288,7 @@
                    (a.quant_findings?.length + a.qual_findings?.length);
         });
         
-        // Show top 5
+        // SHOW TOP 5 (CORRECTED)
         return matches.slice(0, 5);
     }
     
@@ -449,7 +449,7 @@
         document.getElementById('analysisBox').innerHTML = `<h4>📊 System Friction Analysis</h4><p>${patternResult.analysis}</p>`;
         document.getElementById('interventionBox').innerHTML = `<h4>🎯 Priority Intervention</h4><p>${patternResult.intervention}</p>`;
         
-        // Get evidence using improved function
+        // Get evidence using improved function (returns 5 items)
         const evidence = getEvidenceForPattern(dominant, "");
         document.getElementById('evidenceBox').innerHTML = `<h4>📚 Evidence from Research</h4>${formatEvidence(evidence)}`;
         
